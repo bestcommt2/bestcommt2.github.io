@@ -1319,6 +1319,12 @@ http://iptv12k.com:35461/live/654321/123456/3137.m3u8
 #EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-id="" tvg-logo="https://img2.pic.in.th/pic/images52505e220d433d2a.png" , GO Sports
 https://cdn-th-vip.livestreaming.in.th/gosporttv/gosporttv/playlist.m3u8
 
+#EXTINF:-1 cuid="1048" tvg-chno="1050" tvg-name="Eurosport 1 🇪🇸" tvg-id="Eurosport.1.es" tvg-logo="https://raw.githubusercontent.com/inspirationlinks/m3u/live/LogosTv/eurosport1.png" group-title="6️⃣ ช่องกีฬา", Eurosport 1 España (Backup)
+http://185.189.225.150:85/Eurosport1/index.m3u8
+
+#EXTINF:-1 cuid="1062" tvg-chno="1062" tvg-name="Eurosport 2 🇪🇸" tvg-id="Eurosport.2.es" tvg-logo="https://raw.githubusercontent.com/inspirationlinks/m3u/live/LogosTv/Eurosport2.png" group-title="6️⃣ ช่องกีฬา", Eurosport 2 España (Backup)
+http://185.189.225.150:85/Eurosport2/index.m3u8
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 ###กีฬาต่างประเทศ### 
 #EXTINF:-1 group-title="7️⃣ ช่องกีฬาต่างประเทศ" tvg-name="Astro SuperSport 1" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/7/7d/Astro_SuperSport_1.png" ,000.Astro SuperSport 1
@@ -2159,27 +2165,42 @@ https://webhdrunns.iosplayer.ru/ddh2/premium775/mono.m3u8
 --------------------------------------------
 ###8️⃣ ช่องกีฬา4K###
 
-#EXTINF:-1 tvg-id="10031" tvg-name="英超-1" tvg-logo="https://gitee.com/ttxsxs/home-tv/raw/master/tvicon/SliveYC.png" group-title="8️⃣ ช่องกีฬา4K",Now Sports  4K
-http://apptv.xyz:80/alia4remz/rrynDeBGS/86258
+
 #EXTINF:-1 tvg-id="10031" tvg-name="英超-1" tvg-logo="https://gitee.com/ttxsxs/home-tv/raw/master/tvicon/SliveYC.png" group-title="8️⃣ ช่องกีฬา4K",UK: Sky Sports Premier League FHD 1
 http://rhsbjv7k.tvclub.xyz/iptv/FAGK589PV9BQAG/9334/mono.m3u8
 #EXTINF:-1 tvg-id="10031" tvg-name="英超-1" tvg-logo="https://gitee.com/ttxsxs/home-tv/raw/master/tvicon/SliveYC.png" group-title="8️⃣ ช่องกีฬา4K",UK: Sky Sports Premier League FHD 2
 http://rhsbjv7k.tvclub.xyz/iptv/FAGK589PV9BQAG/7335/mono.m3u8
-#EXTINF:-1 tvg-id="10031" tvg-name="英超-1" tvg-logo="https://gitee.com/ttxsxs/home-tv/raw/master/tvicon/SliveYC.png" group-title="8️⃣ ช่องกีฬา4K",NO: VIASAT SPORTS 1 FHD
-http://extraott.com//7795309038/1092686646/63953
-#EXTINF:-1 tvg-id="10031" tvg-name="英超-1" tvg-logo="https://gitee.com/ttxsxs/home-tv/raw/master/tvicon/SliveYC.png" group-title="8️⃣ ช่องกีฬา4K",NO: VIASAT SPORTS 2 FHD
-http://extraott.com//7795309038/1092686646/63951
-#EXTINF:-1 tvg-id="10031" tvg-name="英超-1" tvg-logo="https://gitee.com/ttxsxs/home-tv/raw/master/tvicon/SliveYC.png" group-title="8️⃣ ช่องกีฬา4K",Hub Premier 2 4K
-http://apptv.xyz:80/alia4remz/rrynDeBGS/86270
 #EXTINF:-1 tvg-id="10031" tvg-name="英超-1" tvg-logo="https://gitee.com/ttxsxs/home-tv/raw/master/tvicon/SliveYC.png" group-title="8️⃣ ช่องกีฬา4K",Eleven Sports 1 4K
 https://stream1.freetv.fun/eleven-sports-1-4k-1.ctv
-#EXTINF:-1 tvg-id="10031" tvg-name="英超-1" tvg-logo="https://gitee.com/ttxsxs/home-tv/raw/master/tvicon/SliveYC.png" group-title="8️⃣ ช่องกีฬา4K",Astro SuperSport 4K
-http://apptv.xyz:80/alia4remz/rrynDeBGS/86257
-#EXTINF:-1 tvg-id="10031" tvg-name="英超-1" tvg-logo="https://gitee.com/ttxsxs/home-tv/raw/master/tvicon/SliveYC.png" group-title="8️⃣ ช่องกีฬา4K",BeIN Sport Arabic 4K
-http://apptv.xyz:80/alia4remz/rrynDeBGS/86259
 #EXTINF:-1 tvg-id="10031" tvg-name="英超-1" tvg-logo="https://gitee.com/ttxsxs/home-tv/raw/master/tvicon/SliveYC.png" group-title="8️⃣ ช่องกีฬา4K",Sky Sports Main Event 4K
 http://doubleclicktv.live/70376812/52663544/620667
 
+#EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Eurosport_1_Logo_2015.svg/1280px-Eurosport_1_Logo_2015.svg.png" group-title="8️⃣ ช่องกีฬา4K", EUROSPORT 1 España 
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"Facjdzw7PLzilcCu0Lxxww", "kid":"I3voypODdV6fV4TdI/VF6w" } ], "type":"temporary" }
+https://ott.zapitv.com/live/eds_c2/eurosport_1_hd/dash_live_enc/eurosport_1_hd.mpd
+
+#EXTINF:-1 tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Eurosport_2_Logo_2015.svg/1280px-Eurosport_2_Logo_2015.svg.png" group-title="8️⃣ ช่องกีฬา4K", EUROSPORT 2 España
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"ZkJBEzNoqwOdwfsVIGulSw", "kid":"FTgoeam8+m8aBKhtW0Mk6Q" } ], "type":"temporary" }
+https://ott.zapitv.com/live/eds_c2/eurosport_2_hd/dash_live_enc/eurosport_2_hd.mpd
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Logo_TVE-1.svg/1280px-Logo_TVE-1.svg.png" group-title="8️⃣ ช่องกีฬา4K", LA 1 España 
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"d0D4rkIjzluikwKPf3jxwQ", "kid":"o6vERSXu87Cnr5E4qdvjSg" } ], "type":"temporary" }
+https://ott.zapitv.com/live/eds_c2/la1_4k/dash_live_enc/la1_4k.mpd
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Logo_TVE-2.svg/1280px-Logo_TVE-2.svg.png" group-title="8️⃣ ช่องกีฬา4K", LA 2 España
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"6xltKy3ChBj0ZVMsXRGCwA", "kid":"7NfudeDojyZ6zmvX2dcNgw" } ], "type":"temporary" }
+https://ott.zapitv.com/live/eds_c2/la_2/dash_live_enc/la_2.mpd
+
+#EXTINF:-1 tvg-id="BeinSportXtraEspaña" tvg-name="BeinSportXtraÑ" tvg-logo="https://images.pluto.tv/channels/60492fdd9989d30007ccd30a/thumbnail.jpg" group-title="TeleZap España", beIN Sports Xtra Ñ
+https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8
 
 --------------------------------------------
 ###9️⃣ ช่องการ์ตูน###
@@ -2361,7 +2382,12 @@ https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxpeopleareawesome/CDN/playli
 #EXTINF:0 tvg-name="DMAX UK" group-title="1️⃣ 1️⃣ ช่องสารคดี" tvg-logo="https://i.postimg.cc/PxjwjZPw/GANAS-DMAX.png", DMAX
 https://varun-iptv.netlify.app/m3u/DMAX.m3u8
 
-
+EXTINF:-1 tvg-id="TravelChannel" tvg-logo="http://playtv.unifi.com.my:7037/CPS/images/universal/film/logo/202108/20210831/20210831161520835mdk.png" group-title="1️⃣ 1️⃣ ช่องสารคดี", Travel Channel Asia (Unifi)
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=b125629ad757520ac833a40e4b4f22e8:4d027e6b858d68fdde37270b2cd0172b
+https://web.hypp.tv:443/PLTV/88888888/224/3221227593/3221227593.mpd?rrsip=web.hypp.tv:443&zoneoffset=0&servicetype=1&icpid=&accounttype=1&limitflux=-1&limitdur=-1&accountinfo=00m%2FA1gVngRZDLAcDG2%2BMWbuVTT0kQ7uQ6vwRhl32tZfEg2x34ieDQHngPU9P4aoumIekQBXXHJTV%2FlcIMzKQARE3mdVv54VWwAPr54dFy6yoKcpl0e4a0zbHhKPy16D%3A20240429163850%3AUTC%2C10001002674168%2C27.125.245.253%2C20240429163850%2Curn:Huawei:liveTV:iptv17606%2C10001002674168%2C-1%2C0%2C1%2C%2C%2C2%2C1024%2C%2C%2C2%2C10000105575216%2C0%2C10000104356656%2C609129027%2C%2C%2C2%2C1%2CEND&GuardEncType=2&it=H4sIAAAAAAAAADWOQY_CIBhE_w1HUiiteuCk2WSTTdfEulczwFe2kRYXqon_XrvW68y8yZsSLH3utCsMzArOmMqoqhSwVS2o29haQtalYZn-mqglswihH30T3Yz9HLYnUfCCSyn4mrXz20eAX4bNdTCUtHhTB0q33pJ2ueM3ZA7vE3lMfRz5PuB-TGGZMGoXM7ESSkm1luVGSTbNaYt8fjbsF3kbhwsSua_o_wHdIWRiF9gzPDUYSI_XEF7cd3JPmwd5l3rk8wAAAA&tenantId=6001
 
 
 
