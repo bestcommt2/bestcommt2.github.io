@@ -68,6 +68,12 @@ http://45.144.165.187:8080/playidtv1/12345/11052
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://i.ibb.co/GvmwFpv/movth.png", PlayID หนังไทย
 #EXTVLCOPT:http-user-agent=playidtv
 http://45.144.165.187:8080/live/playidtv1/12345/9198.m3u8
+#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://i.ibb.co/x5LCMKZ/20250108-170408.png", PLAYIDTV เป็นต่อ
+#EXTVLCOPT:http-user-agent=playidtv
+http://45.144.165.187:8080/playidtv1/12345/17715
+#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://i.ibb.co/jZ7P3hJ/vvt.png",PlayID STREAM 2
+#EXTVLCOPT:http-user-agent=playidtv
+http://45.144.165.187:8080/playidtv1/12345/11051
 
 
 --------------------------------------------------------------------------------------
