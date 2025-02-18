@@ -2376,7 +2376,7 @@ https://d18dyiwu97wm6q.cloudfront.net/playlist.m3u8
 #EXTINF:-0 tvg-id="OUTDOOR" tvg-name="" tvg-logo="https://dl.dropbox.com/s/ed7x1ozg9iz4s0l/outdoor.png?dl=0" group-title="1️⃣ 1️⃣ ช่องสารคดี",OUTDOOR
 https://github.com/bestcommt2/m3u8/raw/refs/heads/master/outdoor.m3u8
 
-#EXTINF:-1 group-title="1️⃣ 1️⃣ ช่องสารคดี"  tvg-logo="https://1000logos.net/wp-content/uploads/2020/11/Smithsonian-Logo.png",Smithsonian
+#EXTINF:-1 group-title="1️⃣ 1️⃣ ช่องสารคดี"  tvg-logo="https://astromedia.com.my/wp-content/uploads/2023/12/global-trekker2.png",Global Trekker
 http://49.0.64.96:8007/Smithsonian
 
 #EXTINF:-1 group-title="1️⃣ 1️⃣ ช่องสารคดี" tvg-id="peopleareawesome.us" tvg-logo="https://cdn.shopify.com/s/files/1/0021/6029/6048/t/15/assets/logo-image-file.png",People Are Awesome
@@ -2385,7 +2385,7 @@ https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxpeopleareawesome/CDN/playli
 #EXTINF:0 tvg-name="DMAX UK" group-title="1️⃣ 1️⃣ ช่องสารคดี" tvg-logo="https://i.postimg.cc/PxjwjZPw/GANAS-DMAX.png", DMAX
 https://varun-iptv.netlify.app/m3u/DMAX.m3u8
 
-EXTINF:-1 tvg-id="TravelChannel" tvg-logo="http://playtv.unifi.com.my:7037/CPS/images/universal/film/logo/202108/20210831/20210831161520835mdk.png" group-title="1️⃣ 1️⃣ ช่องสารคดี", Travel Channel Asia (Unifi)
+#EXTINF:-1 tvg-id="TravelChannel" tvg-logo="http://playtv.unifi.com.my:7037/CPS/images/universal/film/logo/202108/20210831/20210831161520835mdk.png" group-title="1️⃣ 1️⃣ ช่องสารคดี", Travel Channel Asia (Unifi)
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
@@ -2420,12 +2420,12 @@ https://live.thaitvstream.com/play/chiangrai/mono.m3u8
 
 ###NEWS###
 
-#EXTINF:-1 group-title="1️⃣ 3️⃣ ช่องข่าว" tvg-id="" tvg-logo="https://i.ibb.co/MkJDKxdp/png-clipart-abc-news-logo-graphics-american-broadcasting-company-news-corp-text-logo.png",BBC NEW
+#EXTINF:-1 group-title="1️⃣ 3️⃣ ช่องข่าว" tvg-id="" tvg-logo="https://i.ibb.co/MkJDKxdp/png-clipart-abc-news-logo-graphics-american-broadcasting-company-news-corp-text-logo.png",ABC NEW
 http://49.0.64.96:8007/ABC
 #EXTINF:-1 group-title="1️⃣ 3️⃣ ช่องข่าว" tvg-id="" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch714_425_305",TV5MONDE ASIE
 http://49.0.64.96:8007/TV5
 
-#EXTINF:1 tvg-id="TOP News.th"  tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Aljazeera_eng.svg/200px-Aljazeera_eng.svg.png" group-title="1️⃣ 3️⃣ ช่องข่าว", TOP NEWS
+#EXTINF:1 tvg-id="TOP News.th"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fe/Cropped-topnews-logo.png" group-title="1️⃣ 3️⃣ ช่องข่าว", TOP NEWS
 https://live.topnews.co.th/hls/topnews_a_720.m3u8
 
 #EXTINF:-1 tvg-chno="" tvg-id="AlJazeeraEnglish.qa" tvg-name="Al Jazeera English HD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Aljazeera_eng.svg/200px-Aljazeera_eng.svg.png" group-title="1️⃣ 3️⃣ ช่องข่าว",Al Jazeera English HD
