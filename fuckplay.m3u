@@ -245,16 +245,16 @@ https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/16/16.mpd
 https://vdo.plathong.net/wowza/muslimonair1/live/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://58-64-52-73-rewriter.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0036.png" group-title="2️⃣ ช่องทีวีดิจิตอลไทย",News1
 https://server1.streamssl.com/stream/news1_mid.m3u8
-#EXTINF:-1 tvg-logo="https://thumbor-ott.prd.go.th/unsafe/360x360/https%3A%2F%2Fcms-backend-ott.prd.go.th%2Fimages%2Fupload%2F1680683186938.png"group-title="2️⃣ ช่องทีวีดิจิตอลไทย",ช่อง NBT ภาคกลาง
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/KOGOCUNG/MOVIE/refs/heads/main/IMG_20250212_215657.png"group-title="2️⃣ ช่องทีวีดิจิตอลไทย",ช่อง NBT ภาคกลาง
 https://cdn-edge-ott.prd.go.th/live_vlc/smil:01f1-8b4b-971e-aa35-d5fa.smil/playlist.m3u8?DVR=
 
-#EXTINF:-1 tvg-logo="https://thumbor-ott.prd.go.th/unsafe/360x360/https%3A%2F%2Fcms-backend-ott.prd.go.th%2Fimages%2Fupload%2F1680683194715.png"group-title="2️⃣ ช่องทีวีดิจิตอลไทย",NBT ภาคอีสาน
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/KOGOCUNG/MOVIE/refs/heads/main/IMG_20250212_211516.png"group-title="2️⃣ ช่องทีวีดิจิตอลไทย",NBT ภาคอีสาน
 https://cdn-edge-ott.prd.go.th/live_vlc/smil:7721-732d-60a6-13c1-b16d.smil/chunklist_w579192591_b2128000.m3u8
 
-#EXTINF:-1 tvg-logo="https://thumbor-ott.prd.go.th/unsafe/360x360/https%3A%2F%2Fcms-backend-ott.prd.go.th%2Fimages%2Fupload%2F1680683209698.png"group-title="2️⃣ ช่องทีวีดิจิตอลไทย",NBT ภาคเหนือ
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/KOGOCUNG/MOVIE/refs/heads/main/IMG_20250212_211503.png"group-title="2️⃣ ช่องทีวีดิจิตอลไทย",NBT ภาคเหนือ
 https://cdn-edge-ott.prd.go.th/live_vlc/smil:bfe6-faf5-827f-6228-2aa1.smil/chunklist_w695610859_b2128000.m3u8
 
-#EXTINF:-1 tvg-logo="https://thumbor-ott.prd.go.th/unsafe/360x360/https%3A%2F%2Fcms-backend-ott.prd.go.th%2Fimages%2Fupload%2F1680683200917.png"group-title="2️⃣ ช่องทีวีดิจิตอลไทย",NBT ภาคใต้
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/KOGOCUNG/MOVIE/refs/heads/main/IMG_20250212_211528.png"group-title="2️⃣ ช่องทีวีดิจิตอลไทย",NBT ภาคใต้
 https://cdn-edge-ott.prd.go.th/live_vlc/smil:406a-211e-df39-045c-4048.smil/chunklist_w1186889088_b2128000.m3u8
 
 --------------------------------------------------------------------------------------
@@ -2421,9 +2421,9 @@ https://jmp2.uk/plu-563a970aa1a1f7fe7c9daad7.m3u8
 #EXTINF:-1 channel-id="66e0b4866ad04d0008fff4d8" tvg-id="66e0b4866ad04d0008fff4d8" tvg-chno="3115" tvg-name="MythBusters" tvg-logo="https://images.pluto.tv/channels/66e0b4866ad04d0008fff4d8/colorLogoPNG.png" group-title="1️⃣ 1️⃣ ช่องสารคดี", MythBusters
 https://jmp2.uk/plu-66e0b4866ad04d0008fff4d8.m3u8
 
-#EXTINF:-1 tvg-logo="https://cdn.shopify.com/s/files/1/0065/8076/4727/files/logo.png?height=628&pad_color=fff&v=1613611598&width=1200" group-title="1️⃣ 1️⃣ ช่องสารคดี",Wired 2 Fish
+#EXTINF:-1 tvg-logo="https://i.ibb.co/kscXG7sY/W2-FTVCircle-R2.png" group-title="1️⃣ 1️⃣ ช่องสารคดี",Wired 2 Fish
 https://linear-80.frequency.stream/dist/plex/80/hls/master/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i0.wp.com/wildearth.tv/wp-content/uploads/2021/12/wildearth8729.jpg" group-title="1️⃣ 1️⃣ ช่องสารคดี",  Wild Earth
+#EXTINF:-1 tvg-logo="https://i.ibb.co/B5PK610t/W2-FTVCircle-R22.png" group-title="1️⃣ 1️⃣ ช่องสารคดี",  Wild Earth
 https://wildearth-roku.amagi.tv/masterR432p.m3u8
 
 #EXTINF:-1 channel-id="GBBB5000002PL-gb" tvg-id="GBBB5000002PL" tvg-chno="4486" tvg-name="Wild Planet" tvg-logo="https://raw.githubusercontent.com/warningfm/v3/cast/img/MLMWSCV.png" group-title="1️⃣ 1️⃣ ช่องสารคดี", Wild Planet
