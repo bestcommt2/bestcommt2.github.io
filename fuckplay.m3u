@@ -2240,7 +2240,7 @@ https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/303/303.mpd
 #EXTINF:-1 tvg-id="CartoonNetworkAsia.sg" tvg-name="Cartoon Network" tvg-logo="https://58-64-52-73-rewriter.ais-vidnt.com/ais/play/origin/LIVE///channelicon//0171.png" group-title="9️⃣ ช่องการ์ตูน",Cartoon Network TH 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
-https://cdn08jtedge.indihometv.com/dassdvr/133/cartoonnetwork/manifest.mpd
+#https://cdn08jtedge.indihometv.com/dassdvr/133/cartoonnetwork/manifest.mpd
 
 #EXTINF:-1 tvg-id="aniplus.th" group-title="9️⃣ ช่องการ์ตูน" tvg-logo="https://gdplayertv.top/assets/img/logo/aniplus.png", ANIPLUS
 #EXTVLCOPT:http-origin=https://gdplayertv.top
@@ -2418,7 +2418,7 @@ https://github.com/bestcommt2/m3u8/raw/refs/heads/master/outdoor.m3u8
 http://49.0.64.96:8007/Smithsonian
 
 #EXTINF:-1 group-title="1️⃣ 1️⃣ ช่องสารคดี" tvg-id="peopleareawesome.us" tvg-logo="https://cdn.shopify.com/s/files/1/0021/6029/6048/t/15/assets/logo-image-file.png",People Are Awesome
-https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxpeopleareawesome/CDN/playlist.m3u8
+#https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxpeopleareawesome/CDN/playlist.m3u8
 
 #EXTINF:0 tvg-name="DMAX UK" group-title="1️⃣ 1️⃣ ช่องสารคดี" tvg-logo="https://i.postimg.cc/PxjwjZPw/GANAS-DMAX.png", DMAX
 https://varun-iptv.netlify.app/m3u/DMAX.m3u8
@@ -2496,8 +2496,6 @@ https://cdn1.googlecdn.live/4k/cctv4/playlist.m3u8
 https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8
 #EXTINF:-1 tvg-id="TRT WORLD HD.tr" tvg-logo="https://iili.io/Jhks06Q.png" group-title="1️⃣ 3️⃣ ช่องข่าว", TRT World
 https://tv-trtworld.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-id="513.astro" tvg-logo="https://iili.io/JhksBZG.png" group-title="1️⃣ 3️⃣ ช่องข่าว", Al Jazeera English
-https://live-hls-web-aje.getaj.net/AJE/01.m3u8
 #EXTINF:-1 tvg-id="511.astro" tvg-logo="https://iili.io/JhksTaS.png" group-title="1️⃣ 3️⃣ ช่องข่าว", CNN International
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
