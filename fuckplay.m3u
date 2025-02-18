@@ -1295,7 +1295,7 @@ http://49.0.64.96:8007/NBA
 
 #EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-id="" tvg-logo="https://raz-media.se/wp-content/uploads/2022/04/fight-sports.png" ,Fight Sports
 https://cdn08jtedge.indihometv.com/dassdvr/133/fightsport/manifest.mpd
-#EXTINF:-1 group-title="6️⃣ ช่องกีฬา"tvg-logo="https://a.jsrdn.com/hls/22964/billiard-tv/thumbh_20210622_195955.png",สนุ๊กเกอร์
+#EXTINF:-1 group-title="6️⃣ ช่องกีฬา"tvg-logo="https://i.postimg.cc/Fs7MsvTL/BILLIARDTV.png",สนุ๊กเกอร์
 https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/billiard-tv/BILLIARDTV_SCTE.m3u8
 
 #EXTINF:-1 tvg-chno="" tvg-id="Tennis" tvg-name="Tennis" tvg-logo="https://img5.pic.in.th/file/secure-sv1/Zz0zN2MyODZlNjQ4M2QxMWVlYjE4YmYyOTc0ZmNlODAwZA.png" group-title="6️⃣ ช่องกีฬา",Tennis
@@ -1306,7 +1306,7 @@ https://tennischannel-intl-samsung-uk.amagi.tv/playlist.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36
 http://lightning-tracesportstars-xiaomi.amagi.tv/playlist.m3u8
 
-#EXTINF:-1 tvg-chno="" tvg-id="redbulltv.us" tvg-name="RED BULL TV" tvg-logo="https://e7.pngegg.com/pngimages/1004/93/png-clipart-red-bull-tv-television-film-streaming-media-red-bull-television-text.png" group-title="6️⃣ ช่องกีฬา",RED BULL TV
+#EXTINF:-1 tvg-chno="" tvg-id="redbulltv.us" tvg-name="RED BULL TV" tvg-logo="https://i.postimg.cc/rmVb62dz/Redbull1.png" group-title="6️⃣ ช่องกีฬา",RED BULL TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36
 https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
 
@@ -1338,7 +1338,8 @@ http://185.189.225.150:85/Eurosport2/index.m3u8
 #EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-id="" tvg-logo="https://e7.pngegg.com/pngimages/109/662/png-clipart-logo-page-footer-espn-magazine-television-text.png" , ESPN
 https://super-cdn.link/espn/index.m3u8
 
-
+#EXTINF:-1  group-title="💖ช่องกีฬาต่างประเทศ" tvg-logo="https://raw.githubusercontent.com/KOGOCUNG/MOVIE/refs/heads/main/IMG_20250213_081044.png",One Golf HD
+https://sscsott.com/pk/ONEGOLF/tracks-v1a1/mono.m3u8
 
 #EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA HD" tvg-logo="https://e7.pngegg.com/pngimages/80/3/png-clipart-nba-playoffs-nba-draft-sports-nba-blue-text-thumbnail.png" group-title="6️⃣ ช่องกีฬา",NBA HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
