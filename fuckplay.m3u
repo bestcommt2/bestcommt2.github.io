@@ -2306,7 +2306,7 @@ https://n-edge-1-th.v2h-cdn.com/mvtv/mvtv/playlist.m3u8
 https://n-edge-1-th.v2h-cdn.com/mvlao/mvlao/playlist.m3u8
 
 
-#EXTINF:-0 tvg-id="GEM" tvg-name="Gem" tvg-logo="https://dookeela.live/uploads/1716339097.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",AMC
+#EXTINF:-0 tvg-id="GEM" tvg-name="Gem" tvg-logo="https://i.ibb.co/mFVR8p3B/amc.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",AMC
 #EXTVLCOPT:http-referrer=https://soccertv4k.com/
 https://cdn1.googlecdn.live/4k/amc/chunks.m3u8
 #EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="AFN Network" tvg-logo="https://cms.dmpcdn.com/livetv/2019/11/29/adbcb600-1254-11ea-9794-5b629f5f6313_original.png",AFN Network
@@ -2324,7 +2324,7 @@ https://jmp2.uk/plu-5cb0cae7a461406ffe3f5213.m3u8
 https://jmp2.uk/plu-561d7d484dc7c8770484914a.m3u8
 
 
-#EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://www.mncvision.id/userfiles/image/channel/channel_22.png",Celestial Classic Movies
+#EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://i.imgur.com/KYP1xXZ.png",Celestial Classic Movies
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
 https://cdn08jtedge.indihometv.com/dassdvr/130/celestialmovie/manifest.mpd
@@ -2339,7 +2339,7 @@ https://cdn08jtedge.indihometv.com/dassdvr/133/kix/manifest.mpd
 #EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/K_Plus_Asia_Logo.jpg/250px-K_Plus_Asia_Logo.jpg",KPlus
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
-https://cdn08jtedge.indihometv.com/dassdvr/133/kplus/manifest.mpd
+#https://cdn08jtedge.indihometv.com/dassdvr/133/kplus/manifest.mpd
 #EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="FoodNetwork" tvg-logo="https://dookeela.live/uploads/1703833429.png",TVN-indonesia
 #EXTVLCOPT:http-referrer=https://soccertv4k.com/
 https://cdn1.googlecdn.live/4k/tvn-indonesia/chunks.m3u8
@@ -2354,7 +2354,7 @@ https://cdn08jtedge.indihometv.com/dassdvr/133/tvnmovies/manifest.mpd
 
 
 
-#EXTINF:-0 tvg-id="" tvg-name="TH - TR FILM HD" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs2H0U8S_BjEWSBUOx6CB5dgC5u5pVzFsi8A&usqp=CAU" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" , Mov 1
+#EXTINF:-0 tvg-id="" tvg-name="TH - TR FILM HD" tvg-logo="https://i.ibb.co/xK8W9pQn/my-movie-1.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" , Mov 1
 https://github.com/bestcommt2/m3u8/raw/refs/heads/master/movie1.m3u8
 
 #EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="TVB Thai" tvg-logo="https://58-64-52-73-rewriter.ais-vidnt.com/ais/play/origin/LIVE/channelicon/TVBThai.png",TVB Thai
@@ -2362,10 +2362,10 @@ https://github.com/bestcommt2/m3u8/raw/refs/heads/master/movie1.m3u8
 https://edge6a.v2h-cdn.com/tvb_thai/tvb_thai.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Channel 8 THAILAND" tvg-logo="http://www.channel8thailand.com/img/18378709_1492777084098686_554998105_o.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",Channel 8 THAILAND
 https://cdn-th-vip.livestreaming.in.th/ch8/ch8/playlist.m3u8
-#EXTINF:-1 tvg-id="Mangorn" tvg-name="Mangorn" tvg-logo="https://www.dropbox.com/s/nkkosptjc8tz5cr/ky2rhir7.png?dl=1" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",MANGORN
+#EXTINF:-1 tvg-id="Mangorn" tvg-name="Mangorn" tvg-logo="https://i.ibb.co/RGL1bYjc/image.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",มังกร Channel
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 7.1.2; TV BOX Build/NHG47L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
 http://49.0.87.24:1936/HDDragon/Dragon/playlist.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://www.dropbox.com/s/0ujh0g2xl868goh/ky2rgt4q.png?dl=1" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",Jomyut
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://i.ibb.co/1f713qzj/image.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",จอมยุทธ Channel
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 7.1.2; TV BOX Build/NHG47L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
 http://49.0.87.24:1936/HDJomyut/Jomyut/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://cms.dmpcdn.com/livetv/2021/02/24/cc08cbe0-764d-11eb-b272-17d04980ce1e_original.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",แอดทีวี
@@ -2380,7 +2380,7 @@ https://live-iptv.cool-channel.com/cool/live-720P.m3u8
 http://fash2043.cloudycdn.services//slive/_definst_/ftv_ftv_4k_hevc_73d_42080_default_466_hls.smil/chunklist_b10668000_t64NGs=.m3u8
 
 
-#EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="FTV" tvg-logo="https://images.gofreedownload.net/ftv-65610.jpg",FTV
+#EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="FTV" tvg-logo="https://i.ibb.co/N2c6N5Ym/FTV.png",FTV
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
 https://cdn08jtedge.indihometv.com/dassdvr/133/fashiontv/manifest.mpd
@@ -2391,7 +2391,7 @@ https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8
 
 #EXTINF:-1 tvg-name="" tvg-id="" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/8/89/NOW_Rock_logo.png/200px-NOW_Rock_logo.png",NOW ROCK
 https://lightning-now90s-samsungnz.amagi.tv/playlist.m3u8
-#EXTINF:-0 tvg-id="" tvg-name="" tvg-logo="https://www.img06.xyz/assets/img/ch_logo/sd-mtvasia.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",MTV
+#EXTINF:-0 tvg-id="" tvg-name="" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/mtv-uk.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",MTV
 http://178.162.225.182:2082/live/Tourobox1-y85tOTzw47/Att3piLtZf/422.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://img2.pic.in.th/pic/445cf13921c3cc0b043e591a01f3c575.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง", KPOP
 https://marine2.miplay.cl/kpop/playlist.m3u8
@@ -2399,9 +2399,9 @@ https://marine2.miplay.cl/kpop/playlist.m3u8
 #EXTVLCOPT:http-referrer=https://www.indihometv.com
 #EXTVLCOPT:http-user-agent=IndiHomeTV/8.7.12 (Linux;Android 15.0.0;) ExoPlayerLib/2.19.1
 #EXTINF:-1 tvg-logo="https://cdn4.mbahnunungonline.net/img/4gNhVWH.png?v=1.1.1.1" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="Warner.id" tvg-name="Warner TV", Warner TV
-https://warningfm.github.io/v3/live/str/Mov/warner.m3u8
+#https://warningfm.github.io/v3/live/str/Mov/warner.m3u8
 
-#EXTINF:-1 tvg-logo="https://cdn4.mbahnunungonline.net/img/rCLnw5V.png?v=1.0.0.1" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="mjh-ahm-FAST" tvg-name="Action Hollywood Movies", Action Hollywood Movies
+#EXTINF:-1 tvg-logo="https://provider-static.plex.tv/epg/cms/production/c94e3220-9a45-42e9-8bdb-01fc43e0f27c/white_textAction_Hollywood_Movies_logo_dark_-_Angela_Chan.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="mjh-ahm-FAST" tvg-name="Action Hollywood Movies", Action Hollywood Movies
 https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8
 
 #EXTINF:-1 tvg-id=""  tvg-logo="https://i.ibb.co/JRrw8YxS/M2-ROCK.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",M2rock HD
