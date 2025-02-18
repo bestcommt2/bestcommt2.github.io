@@ -2204,7 +2204,7 @@ https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8
 #EXTINF:-1 group-title="9️⃣ ช่องการ์ตูน" tvg-logo="https://i.ibb.co/vJdY0NG/animax.png",ANIMAX
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
-https://cdn08jtedge.indihometv.com/dassdvr/133/hgtv/animax/manifest.mpd
+https://cdn08jtedge.indihometv.com/dassdvr/133/animax/manifest.mpd
 
 
 #EXTINF:-1 group-title="9️⃣ ช่องการ์ตูน" tvg-logo="https://i.ytimg.com/vi/Zn1yvsGD-TU/maxresdefault.jpg",BabyBus
@@ -2234,7 +2234,9 @@ https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/303/303.mpd
 
 
 #EXTINF:-1 tvg-id="CartoonNetworkAsia.sg" tvg-name="Cartoon Network" tvg-logo="https://58-64-52-73-rewriter.ais-vidnt.com/ais/play/origin/LIVE///channelicon//0171.png" group-title="9️⃣ ช่องการ์ตูน",Cartoon Network TH 
-https://cdn08jtedge.indihometv.com/dassdvr/133/hgtv/cartoonnetwork/manifest.mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
+https://cdn08jtedge.indihometv.com/dassdvr/133/cartoonnetwork/manifest.mpd
 
 #EXTINF:-1 tvg-id="aniplus.th" group-title="9️⃣ ช่องการ์ตูน" tvg-logo="https://gdplayertv.top/assets/img/logo/aniplus.png", ANIPLUS
 #EXTVLCOPT:http-origin=https://gdplayertv.top
@@ -2381,7 +2383,7 @@ https://cdn08jtedge.indihometv.com/dassdvr/133/crimeinvestigation/manifest.mpd
 #EXTINF:-0 tvg-id="History" tvg-name="HistoryHD" tvg-logo="https://dl.dropbox.com/s/ok5j2fbe9y54b4s/history.png?dl=0" group-title="1️⃣ 1️⃣ ช่องสารคดี",History
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
-https://cdn08jtedge.indihometv.com/dassdvr/133/hgtv/history/manifest.mpd
+https://cdn08jtedge.indihometv.com/dassdvr/133/history/manifest.mpd
 #EXTINF:-0 tvg-id="History" tvg-name="H2" tvg-logo="https://i.ibb.co/S48bjQhv/640px-History2-Logo2019.png" group-title="1️⃣ 1️⃣ ช่องสารคดี",H2
 http://178.162.225.182:2082/live/Tourobox1-y85tOTzw47/Att3piLtZf/81.m3u8
 #EXTINF:-0 tvg-id="HGTV" tvg-name="" tvg-logo="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/198_144.png" group-title="1️⃣ 1️⃣ ช่องสารคดี",HGTV
