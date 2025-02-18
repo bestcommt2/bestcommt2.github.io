@@ -21,8 +21,8 @@ https://ctrl.laotv.la/live/WWE/mono.m3u8
 #EXTVLCOPT:http-user-agent=ห้ามแชร์
 http://203.154.243.89:11001/izaa?m3u8
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-logo="https://i.ibb.co/MxZHkhvV/logo-universal.png",Universal
-#EXTVLCOPT:http-user-agent=playidtv
-http://45.144.165.187:8080/playidtv1/12345/17237
+#EXTVLCOPT:http-user-agent=ห้ามแชร์
+http://49.0.64.96:8007/H-Channel
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-logo="https://provider-static.plex.tv/epg/cms/production/c94e3220-9a45-42e9-8bdb-01fc43e0f27c/white_textAction_Hollywood_Movies_logo_dark_-_Angela_Chan.png",Action Hollywood 
 #EXTVLCOPT:http-user-agent=ห้ามแชร์
 http://49.0.64.96:8007/Action
@@ -45,8 +45,12 @@ http://49.0.64.96:8007/AMAZING
 #EXTVLCOPT:http-user-agent=ห้ามแชร์
 http://49.0.64.96:8007/Animal
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-logo="https://i.ibb.co/gQLyLmK/logo-seience.png",Science
-#EXTVLCOPT:http-user-agent=playidtv
-http://45.144.165.187:8080/playidtv1/12345/84
+#EXTVLCOPT:http-user-agent=ห้ามแชร์
+http://49.0.64.96:8007/WSCI
+#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-logo="https://i.ibb.co/pBHghpSx/237x0-icon.png",Superrix
+#EXTVLCOPT:http-user-agent=ห้ามแชร์
+http://49.0.64.96:8007/Cinemachi
+
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://i.ibb.co/Q7vHFFZx/logo-iplay.png",IPLAY Media
 #EXTVLCOPT:http-user-agent=playidtv
 http://45.144.165.187:8080/playidtv1/12345/37
@@ -1280,14 +1284,28 @@ https://cdnsv1.bunnycdncloud.com/andaman888th/truesport5/th-sport/truesport5/chu
 https://cdnsv1.bunnycdncloud.com/andaman888th/truesport6/th-sport/truesport7/chunks.m3u8
 
 
-#EXTINF:-1 tvg-id=""  tvg-logo="https://cms.dmpcdn.com/livetv/2023/07/18/7cb4aae0-2515-11ee-9407-9367a664b338_webp_original.webp" group-title="6️⃣ ช่องกีฬา",Golf Channel
+#EXTINF:-1 tvg-id=""  tvg-logo="https://cms.dmpcdn.com/livetv/2023/07/18/7cb4aae0-2515-11ee-9407-9367a664b338_webp_original.webp" group-title="6️⃣ ช่องกีฬา",Golf Channel Asian
 http://iptv12k.com:35461/live/654321/123456/651.m3u8
+#EXTINF:-1 tvg-id=""  tvg-logo="https://i.ibb.co/27Ykhmzt/images.jpg" group-title="6️⃣ ช่องกีฬา",Golf Channel
+http://49.0.64.96:8007/GOLF
+#EXTINF:-1 tvg-id=""  tvg-logo="https://i.ibb.co/60kkgs2x/logo-HIFIGHT.png" group-title="6️⃣ ช่องกีฬา",HIFIGHT
+http://49.0.64.96:8007/HIFIGHT
+#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-logo="https://img2.pic.in.th/pic/308864143_166781909281516_6364889195803126705_n.jpg", HiSports HD
+http://203.154.243.89:11001/hisport?m3u8
+#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-logo="https://i.ibb.co/tMGhSds1/logo-tennis-tv.png",Tennis HD
+http://49.0.64.96:8007/TENNIS
+#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-logo="https://i.ibb.co/pgJmNNT/TOPFIGHT.png",Top Fight HD
+http://49.0.64.96:8007/TOPFIGHT
+#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-id="" tvg-logo="https://i.ibb.co/60wV9wY1/s-1366-x.png" , GINX SPORT
+http://49.0.64.96:8007/GINX
+#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fb/NBC_Sports_Washington.png" , NBC Sports Washington
+http://49.0.64.96:8007/NBA
+
 #EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-id="" tvg-logo="https://raz-media.se/wp-content/uploads/2022/04/fight-sports.png" ,Fight Sports
 https://cdn09jtedge.indihometv.com/joss/133/fightsport/mono.m3u8
 #EXTINF:-1 group-title="6️⃣ ช่องกีฬา"tvg-logo="https://a.jsrdn.com/hls/22964/billiard-tv/thumbh_20210622_195955.png",สนุ๊กเกอร์
 https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/billiard-tv/BILLIARDTV_SCTE.m3u8
-#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-logo="https://img2.pic.in.th/pic/308864143_166781909281516_6364889195803126705_n.jpg", HiSports HD
-http://203.154.243.89:11001/hisport?m3u8
+
 #EXTINF:-1 tvg-chno="" tvg-id="Tennis" tvg-name="Tennis" tvg-logo="https://img5.pic.in.th/file/secure-sv1/Zz0zN2MyODZlNjQ4M2QxMWVlYjE4YmYyOTc0ZmNlODAwZA.png" group-title="6️⃣ ช่องกีฬา",Tennis
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36
 https://tennischannel-intl-samsung-uk.amagi.tv/playlist.m3u8
@@ -1324,6 +1342,9 @@ http://185.189.225.150:85/Eurosport1/index.m3u8
 
 #EXTINF:-1 cuid="1062" tvg-chno="1062" tvg-name="Eurosport 2 🇪🇸" tvg-id="Eurosport.2.es" tvg-logo="https://raw.githubusercontent.com/inspirationlinks/m3u/live/LogosTv/Eurosport2.png" group-title="6️⃣ ช่องกีฬา", Eurosport 2 España (Backup)
 http://185.189.225.150:85/Eurosport2/index.m3u8
+
+
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 ###กีฬาต่างประเทศ### 
@@ -2270,17 +2291,16 @@ https://cdn09jtedge.indihometv.com/joss/133/tvn/mono.m3u8
 #EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://i.imgur.com/c4XvwO2.png",tvNMOVIE
 https://cdn09jtedge.indihometv.com/joss/133/tvnmovies/mono.m3u8
 
+
+
 #EXTINF:-0 tvg-id="" tvg-name="TH - TR FILM HD" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs2H0U8S_BjEWSBUOx6CB5dgC5u5pVzFsi8A&usqp=CAU" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" , Mov 1
 https://github.com/bestcommt2/m3u8/raw/refs/heads/master/movie1.m3u8
-
 
 #EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="TVB Thai" tvg-logo="https://58-64-52-73-rewriter.ais-vidnt.com/ais/play/origin/LIVE/channelicon/TVBThai.png",TVB Thai
 #EXTVLCOPT:http-referrer=https://ais-vidnt.com
 https://edge6a.v2h-cdn.com/tvb_thai/tvb_thai.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Channel 8 THAILAND" tvg-logo="http://www.channel8thailand.com/img/18378709_1492777084098686_554998105_o.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",Channel 8 THAILAND
 https://cdn-th-vip.livestreaming.in.th/ch8/ch8/playlist.m3u8
-
-
 #EXTINF:-1 tvg-id="Mangorn" tvg-name="Mangorn" tvg-logo="https://www.dropbox.com/s/nkkosptjc8tz5cr/ky2rhir7.png?dl=1" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",MANGORN
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 7.1.2; TV BOX Build/NHG47L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
 http://49.0.87.24:1936/HDDragon/Dragon/playlist.m3u8
@@ -2301,17 +2321,24 @@ http://fash2043.cloudycdn.services//slive/_definst_/ftv_ftv_4k_hevc_73d_42080_de
 
 #EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="FTV" tvg-logo="https://images.gofreedownload.net/ftv-65610.jpg",FTV
 https://cdn09jtedge.indihometv.com/joss/133/fashiontv/mono.m3u8
-#EXTINF:-0 tvg-id="" tvg-name="" tvg-logo="https://www.img06.xyz/assets/img/ch_logo/sd-mtvasia.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",MTV
-http://178.162.225.182:2082/live/Tourobox1-y85tOTzw47/Att3piLtZf/422.m3u8
+
+#EXTINF:-1 tvg-name="" tvg-id="" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Traceurban2022.png/200px-Traceurban2022.png",Trace Urban
+https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8
 
 
 #EXTINF:-1 tvg-name="" tvg-id="" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/8/89/NOW_Rock_logo.png/200px-NOW_Rock_logo.png",NOW ROCK
 https://lightning-now90s-samsungnz.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-name="" tvg-id="" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Traceurban2022.png/200px-Traceurban2022.png",Trace Urban
-https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8
-
+#EXTINF:-0 tvg-id="" tvg-name="" tvg-logo="https://www.img06.xyz/assets/img/ch_logo/sd-mtvasia.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",MTV
+http://178.162.225.182:2082/live/Tourobox1-y85tOTzw47/Att3piLtZf/422.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://img2.pic.in.th/pic/445cf13921c3cc0b043e591a01f3c575.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง", KPOP
 https://marine2.miplay.cl/kpop/playlist.m3u8
+
+#EXTINF:-1 tvg-id=""  tvg-logo="https://i.ibb.co/JRrw8YxS/M2-ROCK.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",M2rock HD
+http://49.0.64.96:8007/M2ROCK
+#EXTINF:-1 tvg-id=""  tvg-logo="https://i.ibb.co/LDmsSMbz/M4-jazz.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",M4JAZZ HD
+http://49.0.64.96:8007/M4JAZZ
+#EXTINF:-1 tvg-id=""  tvg-logo="https://i.ibb.co/GQBG7k8D/M6-country.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",M6country HD
+http://49.0.64.96:8007/M6COUNTRY
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -2349,7 +2376,8 @@ https://d18dyiwu97wm6q.cloudfront.net/playlist.m3u8
 #EXTINF:-0 tvg-id="OUTDOOR" tvg-name="" tvg-logo="https://dl.dropbox.com/s/ed7x1ozg9iz4s0l/outdoor.png?dl=0" group-title="1️⃣ 1️⃣ ช่องสารคดี",OUTDOOR
 https://github.com/bestcommt2/m3u8/raw/refs/heads/master/outdoor.m3u8
 
-
+#EXTINF:-1 group-title="1️⃣ 1️⃣ ช่องสารคดี"  tvg-logo="https://1000logos.net/wp-content/uploads/2020/11/Smithsonian-Logo.png",Smithsonian
+http://49.0.64.96:8007/Smithsonian
 
 #EXTINF:-1 group-title="1️⃣ 1️⃣ ช่องสารคดี" tvg-id="peopleareawesome.us" tvg-logo="https://cdn.shopify.com/s/files/1/0021/6029/6048/t/15/assets/logo-image-file.png",People Are Awesome
 https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxpeopleareawesome/CDN/playlist.m3u8
@@ -2391,6 +2419,11 @@ https://live.thaitvstream.com/play/chiangrai/mono.m3u8
 -----------------------------------------------------------------------------------------
 
 ###NEWS###
+
+#EXTINF:-1 group-title="1️⃣ 3️⃣ ช่องข่าว" tvg-id="" tvg-logo="https://i.ibb.co/MkJDKxdp/png-clipart-abc-news-logo-graphics-american-broadcasting-company-news-corp-text-logo.png",BBC NEW
+http://49.0.64.96:8007/ABC
+#EXTINF:-1 group-title="1️⃣ 3️⃣ ช่องข่าว" tvg-id="" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch714_425_305",TV5MONDE ASIE
+http://49.0.64.96:8007/TV5
 
 #EXTINF:1 tvg-id="TOP News.th"  tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Aljazeera_eng.svg/200px-Aljazeera_eng.svg.png" group-title="1️⃣ 3️⃣ ช่องข่าว", TOP NEWS
 https://live.topnews.co.th/hls/topnews_a_720.m3u8
