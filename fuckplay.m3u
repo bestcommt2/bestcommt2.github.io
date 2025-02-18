@@ -229,7 +229,7 @@ https://live-cdn-hwc.ch7.com/livech7hd/HD_1080p.m3u8?vhost=streaming-hwc.ch7.com
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=0aeffa7753674e77b99443fac7757b8a:b8c8a462008a40aa91823e0b02e8dd31
 https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/36/36.mpd
-#EXTINF:-1 tvg-id="PPTVHD36.th" tvg-name="ไทยรัฐทีวี 32" tvg-logo="https://static.thairath.co.th/media/dFQROr7oWzulq5FZYjjA515688fYpq5TMLJD17vUyLlN8HXXTvARWsmL1j8q7THf3rE.jpg" group-title="2️⃣ ช่องทีวีดิจิตอลไทย" ,ไทยรัฐทีวี 32
+#EXTINF:-1 tvg-id="PPTVHD36.th" tvg-name="ไทยรัฐทีวี 32" tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0013_R.png" group-title="2️⃣ ช่องทีวีดิจิตอลไทย" ,ไทยรัฐทีวี 32
 #EXTVLCOPT:http-user-agent=AISPlay/2.9.17.29 (Linux;Android 11) ExoPlayerLib/2.9.6
 #EXTVLCOPT:http-referrer=https://www.thairath.co.th/
 http://appdootv2.dootvde.com:1935/live/50023_thairath_hd.stream.smil/playlist.m3u8
@@ -1278,7 +1278,7 @@ https://cdnsv1.bunnycdncloud.com/andaman888th/truesport6/th-sport/truesport7/chu
 
 #EXTINF:-1 tvg-id=""  tvg-logo="https://cms.dmpcdn.com/livetv/2023/07/18/7cb4aae0-2515-11ee-9407-9367a664b338_webp_original.webp" group-title="6️⃣ ช่องกีฬา",Golf Channel Asian
 http://iptv12k.com:35461/live/654321/123456/651.m3u8
-#EXTINF:-1 tvg-id=""  tvg-logo="https://i.ibb.co/27Ykhmzt/images.jpg" group-title="6️⃣ ช่องกีฬา",Golf Channel
+#EXTINF:-1 tvg-id=""  tvg-logo="https://i.ibb.co/9HBJp44q/golf-ch.png" group-title="6️⃣ ช่องกีฬา",Golf Channel
 http://49.0.64.96:8007/GOLF
 #EXTINF:-1 tvg-id=""  tvg-logo="https://i.ibb.co/60kkgs2x/logo-HIFIGHT.png" group-title="6️⃣ ช่องกีฬา",HIFIGHT
 http://49.0.64.96:8007/HIFIGHT
@@ -1335,13 +1335,13 @@ http://185.189.225.150:85/Eurosport1/index.m3u8
 #EXTINF:-1 cuid="1062" tvg-chno="1062" tvg-name="Eurosport 2 🇪🇸" tvg-id="Eurosport.2.es" tvg-logo="https://raw.githubusercontent.com/inspirationlinks/m3u/live/LogosTv/Eurosport2.png" group-title="6️⃣ ช่องกีฬา", Eurosport 2 España (Backup)
 http://185.189.225.150:85/Eurosport2/index.m3u8
 
-#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-id="" tvg-logo="https://e7.pngegg.com/pngimages/109/662/png-clipart-logo-page-footer-espn-magazine-television-text.png" , ESPN
+#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-id="" tvg-logo="https://i.ibb.co/tTqXqqrf/espn.png" , ESPN
 https://super-cdn.link/espn/index.m3u8
 
 #EXTINF:-1  group-title="6️⃣ ช่องกีฬา" tvg-logo="https://raw.githubusercontent.com/KOGOCUNG/MOVIE/refs/heads/main/IMG_20250213_081044.png",One Golf HD
 https://sscsott.com/pk/ONEGOLF/tracks-v1a1/mono.m3u8
 
-#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA HD" tvg-logo="https://e7.pngegg.com/pngimages/80/3/png-clipart-nba-playoffs-nba-draft-sports-nba-blue-text-thumbnail.png" group-title="6️⃣ ช่องกีฬา",NBA HD
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA HD" tvg-logo="https://i.ibb.co/V0CqBx96/nba.png" group-title="6️⃣ ช่องกีฬา",NBA HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
 https://cdn08jtedge.indihometv.com/dassdvr/133/nba/manifest.mpd
