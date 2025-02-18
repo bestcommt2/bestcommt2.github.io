@@ -2205,9 +2205,7 @@ https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8
 #KODIPROP:inputstream.adaptive.license_key=edf1a715de9748638dd2fad75a419af2:2f5a3199b26e9b693ae881af7ff864cf
 https://tglmp01.akamaized.net/out/v1/de55fad9216e4fe7ad8d2eed456ba1ec/manifest.mpd
 
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#EXTINF:-1 tvg-logo="https://cdn4.mbahnunungonline.net/img/VU2ZQbG.png?v=1.0.0.1" group-title="9️⃣ ช่องการ์ตูน" tvg-id="Aniplus.id" tvg-name="Aniplus", Aniplus
-https://raw.githubusercontent.com/warningfm/streams/master/live/m3u8/int/0c913970f4e013e.m3u8
+
 
 
 #EXTINF:-1 group-title="9️⃣ ช่องการ์ตูน" tvg-logo="https://i.postimg.cc/yWqNWZf5/Mr-Bean.png",Mr. Bean
@@ -2240,15 +2238,12 @@ https://jmp2.uk/plu-60faffc3fbbc120007fc4376.m3u8
 
 
 
-#EXTINF:-1 group-title="9️⃣ ช่องการ์ตูน" tvg-logo="https://img2.pic.in.th/pic/666-crop-crop3250632baf054ae1.png",BOOM ANIME
+#EXTINF:-1 group-title="9️⃣ ช่องการ์ตูน" tvg-logo="https://i.ibb.co/RpQdDxCS/logo-boom-ANIME.png",BOOM ANIME
 https://edge6a.v2h-cdn.com//boom_anime/boom_anime.stream/playlist.m3u8
 
 
 
-#EXTINF:-1 tvg-logo="https://cdn4.mbahnunungonline.net/img/3pc3BRz.png?v=1.0.0.1" group-title="9️⃣ ช่องการ์ตูน"  group-logo="https://i.imgur.com/BxvUXcn.png?v=1.0.0.1" tvg-id="FunPlanet.id" tvg-name="Fun Planet", FunPlanet
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
-https://cdn08jtedge.indihometv.com/dassdvr/134/indikids/manifest.mpd
+
 
 
 #EXTINF:-1 group-title="9️⃣ ช่องการ์ตูน" tvg-id="Cartoonito.th" tvg-logo="https://58-64-52-73-rewriter.ais-vidnt.com/ais/play/origin/LIVE/channelicon//Cartoonito.png",Cartoonito
@@ -2256,8 +2251,6 @@ https://warningfm.github.io/v3/live/str/Kids/86555c60e79d125.m3u8
 #EXTINF:-1 tvg-id="CartoonNetworkAsia.sg" tvg-name="Cartoon Network" tvg-logo="https://58-64-52-73-rewriter.ais-vidnt.com/ais/play/origin/LIVE///channelicon//0171.png" group-title="9️⃣ ช่องการ์ตูน",Cartoon Network
 https://warningfm.github.io/v3/live/str/Kids/20e3acedb66331e.m3u8
 
-#EXTINF:-1 tvg-id="aniplus.th" group-title="9️⃣ ช่องการ์ตูน" tvg-logo="https://gdplayertv.top/assets/img/logo/aniplus.png", ANIPLUS
-#EXTVLCOPT:http-origin=https://gdplayertv.top
 #EXTINF:-1 tvg-id="cartoonclub.iptv36.my.to" tvg-name="CARTOON CLUB" tvg-logo="https://49-231-37-237-rewriter.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0100.png" group-title="9️⃣ ช่องการ์ตูน",CARTOON CLUB
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36
 https://edge2-bkk.3bb.co.th:9443/Web_CartoonClub_Live/cartoonclub_480P.stream/chunklist.m3u8
@@ -2280,6 +2273,13 @@ https://amg01553-blueantmediaasi-zoomoonz-samsungnz-rdufn.amagi.tv/playlist/amg0
 #https://livestream.zazerconer.workers.dev/channel/UCpYye8D5fFMUPf9nSfgd4bA.m3u8
 #EXTINF:-1 group-title="9️⃣ ช่องการ์ตูน" tvg-logo="https://i.ibb.co/PTsGKkL/image.png" ,โรโบคาร์โพลีทีวี
 #https://livestream.zazerconer.workers.dev/channel/UCvKicVPiOrIuZdEYmxuRQug.m3u8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-logo="https://cdn4.mbahnunungonline.net/img/VU2ZQbG.png?v=1.0.0.1" group-title="9️⃣ ช่องการ์ตูน" tvg-id="Aniplus.id" tvg-name="Aniplus", Aniplus
+#https://raw.githubusercontent.com/warningfm/streams/master/live/m3u8/int/0c913970f4e013e.m3u8
+#EXTINF:-1 tvg-logo="https://cdn4.mbahnunungonline.net/img/3pc3BRz.png?v=1.0.0.1" group-title="9️⃣ ช่องการ์ตูน"  group-logo="https://i.imgur.com/BxvUXcn.png?v=1.0.0.1" tvg-id="FunPlanet.id" tvg-name="Fun Planet", FunPlanet
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
+#https://cdn08jtedge.indihometv.com/dassdvr/134/indikids/manifest.mpd
 
 --------------------------------------------------------------------------------------
 ###MOVIETV###
@@ -2287,9 +2287,7 @@ https://amg01553-blueantmediaasi-zoomoonz-samsungnz-rdufn.amagi.tv/playlist/amg0
 #EXTINF:-1 tvg-id="" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://media-mvtv-app.imgix.net/uploads/channel/35_x_TdjwNprxaEFS3qMQeU2obyO1AlufGCDW.png",ไทบ้านทีวี
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 14; K) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/127.0.6533.103 Mobile Safari/537.36
 https://n-edge-1-th.v2h-cdn.com/thaiban/thaiban/playlist.m3u8
-#EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="FoodNetwork" tvg-logo="https://dookeela.live/uploads/1703833429.png",TVN-indonesia
-#EXTVLCOPT:http-referrer=https://soccertv4k.com/
-https://cdn1.googlecdn.live/4k/tvn-indonesia/chunks.m3u8
+
 #EXTINF:-0 tvg-id="GEM" tvg-name="Gem" tvg-logo="https://dookeela.live/uploads/1716339097.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",AMC
 #EXTVLCOPT:http-referrer=https://soccertv4k.com/
 https://cdn1.googlecdn.live/4k/amc/chunks.m3u8
@@ -2324,6 +2322,9 @@ https://cdn08jtedge.indihometv.com/dassdvr/133/kix/manifest.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
 https://cdn08jtedge.indihometv.com/dassdvr/133/kplus/manifest.mpd
+#EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="FoodNetwork" tvg-logo="https://dookeela.live/uploads/1703833429.png",TVN-indonesia
+#EXTVLCOPT:http-referrer=https://soccertv4k.com/
+https://cdn1.googlecdn.live/4k/tvn-indonesia/chunks.m3u8
 #EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Logo_tvN.svg/300px-Logo_tvN.svg.png",tvN
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
@@ -2442,11 +2443,11 @@ https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master_2000.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
 https://cdn08jtedge.indihometv.com/dassdvr/133/techstorm/manifest.mpd
-#EXTINF:-0 tvg-id="CrimeInvestigation" tvg-name="" tvg-logo="https://dl.dropbox.com/s/glb7gxiextzw97k/ci.png?dl=0" group-title="1️⃣ 1️⃣ ช่องสารคดี",CrimeInvestigation
+#EXTINF:-0 tvg-id="CrimeInvestigation" tvg-name="" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/51/Crime%2BInvestigation_logo_2013.png" group-title="1️⃣ 1️⃣ ช่องสารคดี",CrimeInvestigation
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
 https://cdn08jtedge.indihometv.com/dassdvr/133/crimeinvestigation/manifest.mpd
-#EXTINF:-0 tvg-id="History" tvg-name="HistoryHD" tvg-logo="https://dl.dropbox.com/s/ok5j2fbe9y54b4s/history.png?dl=0" group-title="1️⃣ 1️⃣ ช่องสารคดี",History
+#EXTINF:-0 tvg-id="History" tvg-name="HistoryHD" tvg-logo="https://1000logos.net/wp-content/uploads/2023/01/History-Channel-logo.png" group-title="1️⃣ 1️⃣ ช่องสารคดี",History
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
 https://cdn08jtedge.indihometv.com/dassdvr/133/history/manifest.mpd
@@ -2457,20 +2458,20 @@ http://178.162.225.182:2082/live/Tourobox1-y85tOTzw47/Att3piLtZf/81.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
 https://cdn08jtedge.indihometv.com/dassdvr/133/hgtv/manifest.mpd
-#EXTINF:-0 tvg-id="HGTV" tvg-name="" tvg-logo="https://i.ibb.co/6RPjsCX0/png-clipart-logo-national-geographic-chaine-de-television-discovery-channel-hindi-geographie-texte-j.png" group-title="1️⃣ 1️⃣ ช่องสารคดี",National Geographic
+#EXTINF:-0 tvg-id="HGTV" tvg-name="" tvg-logo="https://1000logos.net/wp-content/uploads/2021/04/National-Geographic-logo-500x281.png" group-title="1️⃣ 1️⃣ ช่องสารคดี",National Geographic
 http://185.189.225.150:85/NationalGeographic/index.m3u8
 #EXTINF:-1 group-title="1️⃣ 1️⃣ ช่องสารคดี" tvg-id="discoveryturbouk.uk" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Discovery_Turbo_logo.svg/200px-Discovery_Turbo_logo.svg.png",Discovery Turbo
 http://178.162.225.182:2082/live/Tourobox1-y85tOTzw47/Att3piLtZf/75.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/Dgzgf8yL/png-clipart-discovery-science-discovery-channel-investigation-discovery-logo-science-television-text.png" group-title="1️⃣ 1️⃣ ช่องสารคดี", Discovery science
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Discovery_Science_-_Logo_2012.svg/512px-Discovery_Science_-_Logo_2012.svg.png" group-title="1️⃣ 1️⃣ ช่องสารคดี", Discovery science
 http://178.162.225.182:2082/live/Tourobox1-y85tOTzw47/Att3piLtZf/72.m3u8
 
 #EXTINF:-1 group-title="1️⃣ 1️⃣ ช่องสารคดี" tvg-logo="https://upload.wikimedia.org/wikipedia/en/1/1d/Love_Nature_TV.png",Love Nature 4K(EN)
 https://d18dyiwu97wm6q.cloudfront.net/playlist.m3u8
-#EXTINF:-0 tvg-id="OUTDOOR" tvg-name="" tvg-logo="https://dl.dropbox.com/s/ed7x1ozg9iz4s0l/outdoor.png?dl=0" group-title="1️⃣ 1️⃣ ช่องสารคดี",OUTDOOR
+#EXTINF:-0 tvg-id="OUTDOOR" tvg-name="" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Outdoor_Channel_logo_2007-2017.svg/1200px-Outdoor_Channel_logo_2007-2017.svg.png" group-title="1️⃣ 1️⃣ ช่องสารคดี",OUTDOOR
 https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00718-outdoorchannela-outdoortvnz-samsungnz/playlist.m3u8
 
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#EXTINF:-1 tvg-logo="https://cdn4.mbahnunungonline.net/img/VyqMhjx.png?v=1.0.0.1" group-title="1️⃣ 1️⃣ ช่องสารคดี" tvg-id="CAAJ2700030ON" tvg-name="Outside", Outside
+#EXTINF:-1 tvg-logo="https://i.ibb.co/B5TCrNVc/outside-tv-logo-vector.png" group-title="1️⃣ 1️⃣ ช่องสารคดี" tvg-id="CAAJ2700030ON" tvg-name="Outside", Outside
 https://outsidetvplus-xumo.amagi.tv/hls/amagi_hls_data_outsidetv-outsidetvplusxumo/CDN/master.m3u8
 
 #EXTINF:-1 group-title="1️⃣ 1️⃣ ช่องสารคดี"  tvg-logo="https://astromedia.com.my/wp-content/uploads/2023/12/global-trekker2.png",Global Trekker
@@ -2490,7 +2491,7 @@ https://cdn08jtedge.indihometv.com/dassdvr/194/discoveryasia/manifest.mpd
 https://cdn08jtedge.indihometv.com/dassdvr/133/disco/manifest.mpd
 
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#EXTINF:-1 tvg-logo="https://1.bp.blogspot.com/-7krwPaP-Yrg/YRUcA2uzEWI/AAAAAAAABS0/EMHIJUtHVKcoTpTtl9Kco64dC57uArURQCLcBGAsYHQ/s0/5znakl6.png?v=1.0.0.1" group-title="1️⃣ 1️⃣ ช่องสารคดี" tvg-id="5f21ea08007a49000762d349" tvg-name="Smithsonian Channel Selects", Smithsonian Channel
+#EXTINF:-1 tvg-logo="https://images.squarespace-cdn.com/content/v1/54e483f5e4b0b2f20e6bceb2/1506453010727-3K82IMBN91KM2UKQW3TX/smithsonian-channel.png" group-title="1️⃣ 1️⃣ ช่องสารคดี" tvg-id="5f21ea08007a49000762d349" tvg-name="Smithsonian Channel Selects", Smithsonian Channel
 https://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/5f21ea08007a49000762d349/master.m3u8?deviceType=samsung-tvplus&deviceMake=samsung&deviceModel=samsung&deviceVersion=unknown&appVersion=unknown&deviceLat=0&deviceLon=0&deviceDNT={TARGETOPT}&deviceId={PSID}&advertisingId={PSID}&us_privacy=1YNY&samsung_app_domain={APP_DOMAIN}&samsung_app_name={APP_NAME}&profileLimit=&profileFloor=&embedPartner=samsung-tvplus
 
 
