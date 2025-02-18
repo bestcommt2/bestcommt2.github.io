@@ -1128,7 +1128,7 @@ https://dolive.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-4/playlist
 #EXTVLCOPT:http-referrer=https://live-demo.iamtheme.com
 https://dolive.thaim3u.com/tFQe38qxw4awKkMJD3kcfcekVSrfLnY9/siamsport-5/playlist.m3u8
 
-#EXTINF:-1 tvg-id="EPL-1 (dookeela) tvg-logo="https://rentapi.blackboxsys.net/images/png/epl-1.png" group-title="6️⃣ ช่องกีฬา"EPL-1 dookeela
+#EXTINF:-1 tvg-id="EPL-1 (dookeela) tvg-logo="https://rentapi.blackboxsys.net/images/png/epl-1.png" group-title="6️⃣ ช่องกีฬา",EPL-1 dookeela
 #EXTVLCOPT:http-referrer=https://dookeela.live/
 https://cdn2.aws-live-streaming.com/lsmscore/epl1_sd/playlist.m3u8
 
@@ -1181,9 +1181,10 @@ https://fw4free.inwstream.com/fw4free/bein2.stream/playlist.m3u8
 #EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-id="beinsports3thailand.th" tvg-logo="https://58-64-52-73-rewriter.ais-vidnt.com/ais/play/origin/LIVE///channelicon//beIN_SPORTS_3.png", Bein Sports 3-livescorethai
 #EXTVLCOPT:http-referrer=https://fw4free.com/
 https://fw4free.inwstream.com/fw4free/bein3.stream/playlist.m3u8
+
 #EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-id="beinsports3thailand.th" tvg-logo="https://58-64-52-73-rewriter.ais-vidnt.com/ais/play/origin/LIVE///channelicon//beIN_SPORTS_3.png",Bein Sports 3-livedoomovies
 #EXTVLCOPT:http-referrer=https://www.doomovie-hd.comฟ
-https://sport.livedoomovies.com:4432/02_epl2_720p/chunklist.m3u8
+#https://sport.livedoomovies.com:4432/02_epl2_720p/chunklist.m3u8
 
 #EXTINF:-1 group-logo="https://3bbtv.co.th/wp-content/uploads/2020/08/Logo-3BBTV-500x500pix.png" 
 #EXTINF:-1 tvg-id="3BB Sports One.th" tvg-name="3BB Sports One.th" tvg-logo="https://49-231-37-237-rewriter.ais-vidnt.com/ais/play/origin/LIVE///channelicon//3BBsports1_new.png" group-title="6️⃣ ช่องกีฬา", 3BB Sport One
@@ -2339,7 +2340,7 @@ https://cdn08jtedge.indihometv.com/dassdvr/133/kix/manifest.mpd
 #EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/K_Plus_Asia_Logo.jpg/250px-K_Plus_Asia_Logo.jpg",KPlus
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
-https://cdn08jtedge.indihometv.com/dassdvr/133/kplus/manifest.mpd
+#https://cdn08jtedge.indihometv.com/dassdvr/133/kplus/manifest.mpd
 
 #EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Logo_tvN.svg/300px-Logo_tvN.svg.png",tvN
 #KODIPROP:inputstream.adaptive.license_type=clearkey
