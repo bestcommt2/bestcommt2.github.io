@@ -361,7 +361,7 @@ https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/30/30.mpd
 #KODIPROP:inputstream.adaptive.license_key=6529c8cd99db4489bd237f616f37124b:b9d299ba9ea94fd2ac4a77e8966dd91e
 https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/31/31.mpd
 
-#EXTINF:-1 tvg-id="Thairath TV.th" tvg-logo="https://gigatv.3bbtv.co.th/wp-content/themes/changwattana/assets/channel/32.png" group-title="3️⃣ ช่อง3BBTV", Thairath TV
+#EXTINF:-1 tvg-id="Thairath TV.th" tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0013_R.png" group-title="3️⃣ ช่อง3BBTV", Thairath TV
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -469,7 +469,7 @@ https://github.com/bestcommt2/m3u8/raw/refs/heads/master/aisDiscover.m3u8
 ###TRUEVISION NOW###
 
 
-#EXTINF:-1 group-title="4️⃣ ช่องทรูวิชั่น" tvg-logo="https://image.discovery.indazn.com/ca/v2/ca/image?id=1qw91euk893ki1kfiqn8zqugwl_image-header_pEs_1686061660000",NFL NETWORK
+#EXTINF:-1 group-title="4️⃣ ช่องทรูวิชั่น" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/NFL_Network_logo.svg/270px-NFL_Network_logo.svg.png",NFL NETWORK
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 7.1.2; TV BOX Build/NHG47L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
 #EXTVLCOPT:http-referrer=https://soccertv4k.com/
 https://cdn1.googlecdn.live/4k/nfl/playlist.m3u8
@@ -2517,17 +2517,32 @@ https://live2.thaitvstream.com/play/gochannel/manifest.mpd
 #EXTINF:-0 tvg-id="" tvg-name="" tvg-logo="https://thaitvstream.com/streaming/chiangrai/chiangrai.png" group-title="1️⃣ 2️⃣ ช่องสถานีทองถิ่นไทย", chiangrai
 https://live.thaitvstream.com/play/chiangrai/manifest.mpd
 
+#EXTINF:-1 group-title="1️⃣ 2️⃣ ช่องสถานีทองถิ่นไทย" tvg-logo="https://raw.githubusercontent.com/KOGOCUNG/MOVIE/refs/heads/main/IMG_20250215_155454.png",Dopa Channel
+http://dopachannel.truegse.com/live/dopatv03.m3u8
+
+
 -----------------------------------------------------------------------------------------
 
 ###NEWS###
+
+#EXTINF:-1  group-title="1️⃣ 3️⃣ ช่องข่าว" tvg-logo="https://policetv.tv/wp-content/uploads/elementor/thumbs/cropped-LOGO-POLICE-2019_512-qvss6q704vu39pig4g3aipjuvm1nbvj9ewxq7olxv4.png",Police TV
+https://cdn-th-vip.livestreaming.in.th/policetv/policetv/playlist.m3u8
+
+#EXTINF:-1 group-title="1️⃣ 3️⃣ ช่องข่าว" tvg-logo="https://58-64-52-73-rewriter.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0036.png",News1
+https://server1.streamssl.com/stream/news1_mid.m3u8
+
+#EXTINF:-1 group-title="1️⃣ 3️⃣ ช่องข่าว" tvg-logo="https://raw.githubusercontent.com/KOGOCUNG/MOVIE/refs/heads/main/IMG_20250212_224853.png",Suwannabhumi Channel
+https://live.bangkokstream.com:19360/suwannabhumi/suwannabhumi.m3u8
+
+#EXTINF:1 tvg-id="TOP News.th"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fe/Cropped-topnews-logo.png" group-title="1️⃣ 3️⃣ ช่องข่าว", TOP NEWS
+https://live.topnews.co.th/hls/topnews_a_720.m3u8
 
 #EXTINF:-1 group-title="1️⃣ 3️⃣ ช่องข่าว" tvg-id="" tvg-logo="https://i.ibb.co/MkJDKxdp/png-clipart-abc-news-logo-graphics-american-broadcasting-company-news-corp-text-logo.png",ABC NEW
 http://49.0.64.96:8007/ABC
 #EXTINF:-1 group-title="1️⃣ 3️⃣ ช่องข่าว" tvg-id="" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch714_425_305",TV5MONDE ASIE
 http://49.0.64.96:8007/TV5
 
-#EXTINF:1 tvg-id="TOP News.th"  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fe/Cropped-topnews-logo.png" group-title="1️⃣ 3️⃣ ช่องข่าว", TOP NEWS
-https://live.topnews.co.th/hls/topnews_a_720.m3u8
+
 
 #EXTINF:-1 tvg-chno="" tvg-id="AlJazeeraEnglish.qa" tvg-name="Al Jazeera English HD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Aljazeera_eng.svg/200px-Aljazeera_eng.svg.png" group-title="1️⃣ 3️⃣ ช่องข่าว",Al Jazeera English HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36
