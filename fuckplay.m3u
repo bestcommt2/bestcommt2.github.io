@@ -1338,7 +1338,7 @@ http://185.189.225.150:85/Eurosport2/index.m3u8
 #EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-id="" tvg-logo="https://e7.pngegg.com/pngimages/109/662/png-clipart-logo-page-footer-espn-magazine-television-text.png" , ESPN
 https://super-cdn.link/espn/index.m3u8
 
-#EXTINF:-1  group-title="💖ช่องกีฬาต่างประเทศ" tvg-logo="https://raw.githubusercontent.com/KOGOCUNG/MOVIE/refs/heads/main/IMG_20250213_081044.png",One Golf HD
+#EXTINF:-1  group-title="6️⃣ ช่องกีฬา" tvg-logo="https://raw.githubusercontent.com/KOGOCUNG/MOVIE/refs/heads/main/IMG_20250213_081044.png",One Golf HD
 https://sscsott.com/pk/ONEGOLF/tracks-v1a1/mono.m3u8
 
 #EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA HD" tvg-logo="https://e7.pngegg.com/pngimages/80/3/png-clipart-nba-playoffs-nba-draft-sports-nba-blue-text-thumbnail.png" group-title="6️⃣ ช่องกีฬา",NBA HD
@@ -2288,6 +2288,23 @@ https://amg01553-blueantmediaasi-zoomoonz-samsungnz-rdufn.amagi.tv/playlist/amg0
 #EXTINF:-1 tvg-id="" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://media-mvtv-app.imgix.net/uploads/channel/35_x_TdjwNprxaEFS3qMQeU2obyO1AlufGCDW.png",ไทบ้านทีวี
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 14; K) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/127.0.6533.103 Mobile Safari/537.36
 https://n-edge-1-th.v2h-cdn.com/thaiban/thaiban/playlist.m3u8
+#EXTINF:-1  group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://i.imgur.com/pnbzE2V.png",Rama Channel
+https://ramach.ddns.net/live/ramalive/index.m3u8
+#EXTINF:-1  group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://cablechannel37.net/assets/images/main/logos/cable_channel_37.png",Cble Channel 37
+http://www5.cabletv.co.th/StreamToCTV/cablechannel/playlist.m3u8
+#EXTINF:-1  group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง"tvg-logo="https://raw.githubusercontent.com/KOGOCUNG/MOVIE/refs/heads/main/IMG_20250212_221636.png",Oh Muang Lao TV
+https://livefta.malimarcdn.com/ftaedge00/ohmuanglao.stream/chunklist.m3u8
+#EXTINF:1  group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://raw.githubusercontent.com/KOGOCUNG/MOVIE/refs/heads/main/IMG_20250213_031155.png",อีสานทีวี
+https://psiiptv-b.sky-cdn.com/ttd20-playlist/tracks-v1a1/mono.m3u8
+#EXTINF:-1  group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://cool-channel.com/wp-content/uploads/2022/11/Logo-Final-03-10-59-768x512.png",Cool Channel
+https://live.cool-channel.com:443/cool/live-720P.m3u8
+#EXTINF:-1   group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://d198sf0nbhx18q.cloudfront.net/web/images/logo/logo.png",VIPA
+http://thaipbs-ophctt.cdn.byteark.com/0db95d655989436dbd571dcb8f70d98f/ap-southeast-1/6075037809001/profile_1/chunklist.m3u8
+#EXTINF:-1   group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://media-mvtv-app.imgix.net/uploads/channel/30_y_OuLc2f0Rn1YXrKzk9jZ6w53dWmGpaM4H.png",MVTV ท้องถิ่นไทย
+https://n-edge-1-th.v2h-cdn.com/mvtv/mvtv/playlist.m3u8
+#EXTINF:-1  group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://media-mvtv-app.imgix.net/uploads/channel/33_x_bMhkve5VyzXn2DTam83pIoHBNd9R41Jj.png",MV LAO TV
+https://n-edge-1-th.v2h-cdn.com/mvlao/mvlao/playlist.m3u8
+
 
 #EXTINF:-0 tvg-id="GEM" tvg-name="Gem" tvg-logo="https://dookeela.live/uploads/1716339097.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",AMC
 #EXTVLCOPT:http-referrer=https://soccertv4k.com/
@@ -2393,7 +2410,6 @@ http://49.0.64.96:8007/M2ROCK
 http://49.0.64.96:8007/M4JAZZ
 #EXTINF:-1 tvg-id=""  tvg-logo="https://i.ibb.co/GQBG7k8D/M6-country.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",M6country HD
 http://49.0.64.96:8007/M6COUNTRY
-
 
 
 
