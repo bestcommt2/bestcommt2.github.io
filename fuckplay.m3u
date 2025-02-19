@@ -75,7 +75,15 @@ http://45.144.165.187:8080/playidtv1/12345/17715
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://i.ibb.co/jZ7P3hJ/vvt.png",PlayID STREAM 2
 #EXTVLCOPT:http-user-agent=playidtv
 http://45.144.165.187:8080/playidtv1/12345/11051
-
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://45.150.128.170:8080/images/cb0880574c042710862bc5b02ff693c0.png" group-title="📺 PREMIUM PLAY TV",CONCERTS
+#EXTVLCOPT:http-user-agent=playidtv
+http://45.144.165.187:8080/playidtv1/12345/18671
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://45.150.128.170:8080/images/cffe819d4413b95dd8c35c0085930789.png" group-title="📺 PREMIUM PLAY TV",หนังเอเชีย เครดิตช่อง Moo7
+#EXTVLCOPT:http-user-agent=playidtv
+http://45.144.165.187:8080/playidtv1/12345/9197
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://45.150.128.170:8080/images/7ec8336709bf8a8d71d0ffff69127903.png" group-title="📺 PREMIUM PLAY TV",อินเตอร์  เครดิตช่อง Moo7
+#EXTVLCOPT:http-user-agent=playidtv
+http://45.144.165.187:8080/playidtv1/12345/9196
 
 --------------------------------------------------------------------------------------
 ###BallThai###
@@ -2187,7 +2195,7 @@ https://webhdrunns.iosplayer.ru/ddh2/premium775/manifest.mpd
 --------------------------------------------
 ###8️⃣ ช่องกีฬา4K###
 
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://i.ibb.co/pjQFsZD9/true4k.png" group-title="8️⃣ ช่องกีฬา4K", ลิงค์จะเป็น 4k แค่ เสาร์-อาทิตย์
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://i.ibb.co/pjQFsZD9/true4k.png" group-title="8️⃣ ช่องกีฬา4K", ลิงค์จะเปิด แค่ เสาร์-อาทิตย์ หรือ มีแข่ง
 #EXTVLCOPT:http-user-agent=playidtv
 https://github.com/user-attachments/assets/4f36ec6a-3679-47cb-ad78-dd0c6d217ecf
 
