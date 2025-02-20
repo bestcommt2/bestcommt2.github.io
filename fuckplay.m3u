@@ -53,10 +53,10 @@ http://49.0.64.96:8007/Cinemachi
 http://45.144.165.187:8080/live/playidtv1/12345/10581.m3u8
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://d2duuy9yo5pldo.cloudfront.net/dashboard-resources/roviosupport/720/8d5278ae-fb5c-4373-b6e3-c6f0f6ae4ff9.webp",PlayID AngryBirds1
 #EXTVLCOPT:http-user-agent=playidtv
-http://45.144.165.187:8080/live/playidtv1/12345/19222.m3u8
+https://bestcommt2.github.io/m3u8/AngryBirds1.m3u8
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://d2duuy9yo5pldo.cloudfront.net/dashboard-resources/roviosupport/720/8d5278ae-fb5c-4373-b6e3-c6f0f6ae4ff9.webp",PlayID AngryBirds2
 #EXTVLCOPT:http-user-agent=playidtv
-http://45.144.165.187:8080/live/playidtv1/12345/19218.m3u8
+https://bestcommt2.github.io/m3u8/AngryBirds2.m3u8
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://i.ibb.co/Q7vHFFZx/logo-iplay.png",IPLAY Media
 #EXTVLCOPT:http-user-agent=playidtv
 http://45.144.165.187:8080/playidtv1/12345/37
@@ -2325,11 +2325,11 @@ http://thaipbs-ophctt.cdn.byteark.com/0db95d655989436dbd571dcb8f70d98f/ap-southe
 #EXTINF:-0 tvg-id="GEM" tvg-name="Gem" tvg-logo="https://i.ibb.co/mFVR8p3B/amc.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",AMC
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 7.1.2; TV BOX Build/NHG47L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
 #EXTVLCOPT:http-referrer=https://soccertv4k.com/
-http://iptv12k.com:35461/live/654321/123456/15615.m3u8
-#EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="AFN Network" tvg-logo="https://cms.dmpcdn.com/livetv/2019/11/29/adbcb600-1254-11ea-9794-5b629f5f6313_original.png",AFN Network
-#EXTVLCOPT:http-referrer=https://soccertv4k.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.140
-https://cdn1.googlecdn.live/4k/foodnetwork/chunks.m3u8
+https://bestcommt2.github.io/m3u8/amc.m3u8
+#EXTINF:-1  group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://i.ibb.co/Kj8xx5xY/image.png",fyi
+https://bestcommt2.github.io/m3u8/fyi.m3u8
+#EXTINF:-1  group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/1a/E%21_Logo.svg",E!
+https://bestcommt2.github.io/m3u8/E!.m3u8
 #EXTINF:-0 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="KBSWorld" tvg-name="KBS World" tvg-logo="https://cms.dmpcdn.com/livetv/2023/05/26/e13eeed0-fb8a-11ed-9087-3197146bda13_webp_original.png" ,KBS World
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 7.1.2; TV BOX Build/NHG47L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
 #EXTVLCOPT:http-referrer=https://kbsworld-ott.akamaized.net
@@ -2466,6 +2466,14 @@ https://lightning-now90s-samsungnz.amagi.tv/playlist.m3u8
 
 ###Documentary###
 
+#EXTINF:-1 tvg-logo="https://i.ibb.co/ksMk8dyv/diy.png" group-title="1️⃣ 2️⃣ ช่องสารคดี",DIY Network
+https://linear-80.frequency.stream/dist/plex/80/hls/master/playlist.m3u8
+
+#EXTINF:-1 group-title="1️⃣ 2️⃣ ช่องสารคดี" tvg-id="AFN Network" tvg-logo="https://cms.dmpcdn.com/livetv/2019/11/29/adbcb600-1254-11ea-9794-5b629f5f6313_original.png",AFN Network
+#EXTVLCOPT:http-referrer=https://soccertv4k.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.140
+https://bestcommt2.github.io/m3u8/ASIA%20Food%20Network.m3u8
+
 #EXTINF:-1 channel-id="563a970aa1a1f7fe7c9daad7" tvg-id="563a970aa1a1f7fe7c9daad7" tvg-chno="3110" tvg-name="Pluto TV Science" tvg-logo="https://images.pluto.tv/channels/563a970aa1a1f7fe7c9daad7/colorLogoPNG.png" group-title="1️⃣ 2️⃣ ช่องสารคดี", Pluto TV Science
 https://jmp2.uk/plu-563a970aa1a1f7fe7c9daad7.m3u8
 #EXTINF:-1 channel-id="66e0b4866ad04d0008fff4d8" tvg-id="66e0b4866ad04d0008fff4d8" tvg-chno="3115" tvg-name="MythBusters" tvg-logo="https://images.pluto.tv/channels/66e0b4866ad04d0008fff4d8/colorLogoPNG.png" group-title="1️⃣ 2️⃣ ช่องสารคดี", MythBusters
@@ -2510,8 +2518,10 @@ http://178.162.225.182:2082/live/Tourobox1-y85tOTzw47/Att3piLtZf/81.m3u8
 https://cdn08jtedge.indihometv.com/dassdvr/133/hgtv/manifest.mpd
 #EXTINF:-0 tvg-id="HGTV" tvg-name="" tvg-logo="https://1000logos.net/wp-content/uploads/2021/04/National-Geographic-logo-500x281.png" group-title="1️⃣ 2️⃣ ช่องสารคดี",National Geographic
 http://185.189.225.150:85/NationalGeographic/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/v6JshDmB/geo-wild.png" group-title="1️⃣ 2️⃣ ช่องสารคดี",Nat Geo Wild
+https://bestcommt2.github.io/m3u8/Nat%20Geo%20Wild.m3u8
 #EXTINF:-1 group-title="1️⃣ 2️⃣ ช่องสารคดี" tvg-id="discoveryturbouk.uk" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Discovery_Turbo_logo.svg/200px-Discovery_Turbo_logo.svg.png",Discovery Turbo
-http://178.162.225.182:2082/live/Tourobox1-y85tOTzw47/Att3piLtZf/75.m3u8
+https://bestcommt2.github.io/m3u8/Discovery%20Turbo.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Discovery_Science_-_Logo_2012.svg/512px-Discovery_Science_-_Logo_2012.svg.png" group-title="1️⃣ 2️⃣ ช่องสารคดี", Discovery science
 http://178.162.225.182:2082/live/Tourobox1-y85tOTzw47/Att3piLtZf/72.m3u8
 
