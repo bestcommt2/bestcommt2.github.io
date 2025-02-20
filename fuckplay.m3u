@@ -2323,8 +2323,9 @@ http://thaipbs-ophctt.cdn.byteark.com/0db95d655989436dbd571dcb8f70d98f/ap-southe
 
 
 #EXTINF:-0 tvg-id="GEM" tvg-name="Gem" tvg-logo="https://i.ibb.co/mFVR8p3B/amc.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",AMC
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 7.1.2; TV BOX Build/NHG47L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
 #EXTVLCOPT:http-referrer=https://soccertv4k.com/
-https://cdn1.googlecdn.live/4k/amc/chunks.m3u8
+http://iptv12k.com:35461/live/654321/123456/15615.m3u8
 #EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="AFN Network" tvg-logo="https://cms.dmpcdn.com/livetv/2019/11/29/adbcb600-1254-11ea-9794-5b629f5f6313_original.png",AFN Network
 #EXTVLCOPT:http-referrer=https://soccertv4k.com/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.140
@@ -2403,8 +2404,6 @@ https://cdn08jtedge.indihometv.com/dassdvr/133/fashiontv/manifest.mpd
 https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8
 
 
-#EXTINF:-1 tvg-name="" tvg-id="" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/8/89/NOW_Rock_logo.png/200px-NOW_Rock_logo.png",NOW ROCK
-https://lightning-now90s-samsungnz.amagi.tv/playlist.m3u8
 
 
 #EXTVLCOPT:http-referrer=https://www.indihometv.com
@@ -2455,6 +2454,8 @@ https://stream.mediawork.cz/retrotv/retrotvHQ1/playlist.m3u8
 https://ocko-live.ssl.cdn.cra.cz/channels/ocko_gold/playlist.m3u8
 #EXTINF:-1 tvg-id=""  tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/%C3%93%C4%8Dko_Expres_logo.png/512px-%C3%93%C4%8Dko_Expres_logo.png" group-title="1️⃣ 1️⃣ ช่องมิวสิคและดนตรี",OckoGold
 https://ocko-live.ssl.cdn.cra.cz/channels/ocko_expres/playlist/cze/live_mq.m3u8
+#EXTINF:-1 tvg-name="" tvg-id="" group-title="1️⃣ 1️⃣ ช่องมิวสิคและดนตรี", tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/8/89/NOW_Rock_logo.png/200px-NOW_Rock_logo.png",NOW ROCK
+https://lightning-now90s-samsungnz.amagi.tv/playlist.m3u8
 
 
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.ibb.co/v4WmFXtH/kpop.png" group-title="1️⃣ 1️⃣ ช่องมิวสิคและดนตรี", KPOP
