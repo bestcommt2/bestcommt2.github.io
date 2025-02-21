@@ -2215,7 +2215,7 @@ https://webhdrunns.iosplayer.ru/ddh2/premium775/mono.m3u8
 #EXTVLCOPT:http-user-agent=playidtv
 http://playid.ddnsgeek.com:8080/live/Natt/12345/89.m3u8
 http://playid.ddnsgeek.com:8080/live/Natt/12345/90.m3u8
-
+#https://github.com/user-attachments/assets/4f36ec6a-3679-47cb-ad78-dd0c6d217ecf
 
 
 #EXTINF:-1 tvg-id="10031" tvg-name="英超-1" tvg-logo="https://gitee.com/ttxsxs/home-tv/raw/master/tvicon/SliveYC.png" group-title="8️⃣ ช่องกีฬา4K",UK: Sky Sports Premier League FHD 1
@@ -2236,7 +2236,8 @@ https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=edf1a715de9748638dd2fad75a419af2:2f5a3199b26e9b693ae881af7ff864cf
 https://tglmp01.akamaized.net/out/v1/de55fad9216e4fe7ad8d2eed456ba1ec/manifest.mpd
-
+#EXTINF:-1 tvg-ID="" tvg-name="ID ▎ANIPLUS" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/3/37/Aniplus.svg/revision/latest/smart/width/386/height/259?cb=20240505213033" group-title="9️⃣ ช่องการ์ตูน",ID ▎ANIPLUS
+http://aflaxtv.xyz:8080/test_acct/ohbo1veifa4AhD/298504
 
 #EXTINF:-1 group-title="9️⃣ ช่องการ์ตูน" tvg-logo="https://i.postimg.cc/yWqNWZf5/Mr-Bean.png",Mr. Bean
 https://amg00627-amg00627c30-rakuten-es-3990.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanescc-rakutenes/playlist.m3u8
