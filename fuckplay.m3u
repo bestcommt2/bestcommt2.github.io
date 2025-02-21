@@ -47,10 +47,12 @@ http://49.0.64.96:8007/WSCI
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-logo="https://i.ibb.co/pBHghpSx/237x0-icon.png",Superrix
 #EXTVLCOPT:http-user-agent=ห้ามแชร์
 http://49.0.64.96:8007/Cinemachi
-
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="http://45.150.128.170:8080/images/a7015e822ee44bbfed24ad119bc5b8bf.jpg",PlayID GAGS
-#EXTVLCOPT:http-user-agent=playidtv
-http://45.144.165.187:8080/live/playidtv1/12345/10581.m3u8
+#EXTVLCOPT:http-user-agent=ห้ามแชร์
+http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/60afa1508284e60007163c08/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=35fcc6e0-e986-11eb-a0af-c3b401f46211&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=a8b6a6bb-4f8c-438e-a638-d4cfa72ae69a
+
+
+
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://d2duuy9yo5pldo.cloudfront.net/dashboard-resources/roviosupport/720/8d5278ae-fb5c-4373-b6e3-c6f0f6ae4ff9.webp",PlayID AngryBirds1
 #EXTVLCOPT:http-user-agent=playidtv
 https://bestcommt2.github.io/m3u8/AngryBirds1.m3u8
@@ -2322,12 +2324,17 @@ http://thaipbs-ophctt.cdn.byteark.com/0db95d655989436dbd571dcb8f70d98f/ap-southe
 
 #EXTINF:-0 tvg-id="GEM" tvg-name="Gem" tvg-logo="https://i.ibb.co/mFVR8p3B/amc.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง",AMC
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 7.1.2; TV BOX Build/NHG47L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
-#EXTVLCOPT:http-referrer=https://soccertv4k.com/
+#EXTVLCOPT:http-user-agent=ห้ามแชร์
 https://bestcommt2.github.io/m3u8/amc.m3u8
 #EXTINF:-1  group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://i.ibb.co/Kj8xx5xY/image.png",fyi
+#EXTVLCOPT:http-user-agent=ห้ามแชร์
 https://bestcommt2.github.io/m3u8/fyi.m3u8
 #EXTINF:-1  group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/1a/E%21_Logo.svg",E!
+#EXTVLCOPT:http-user-agent=ห้ามแชร์
 https://bestcommt2.github.io/m3u8/E!.m3u8
+#EXTINF:-0 tvg-id="" tvg-name="TH - TR FILM HD" tvg-logo="https://i.ibb.co/xK8W9pQn/my-movie-1.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" , Mov 1
+#EXTVLCOPT:http-user-agent=ห้ามแชร์
+https://github.com/bestcommt2/m3u8/raw/refs/heads/master/movie1.m3u8
 #EXTINF:-0 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="KBSWorld" tvg-name="KBS World" tvg-logo="https://cms.dmpcdn.com/livetv/2023/05/26/e13eeed0-fb8a-11ed-9087-3197146bda13_webp_original.png" ,KBS World
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 7.1.2; TV BOX Build/NHG47L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
 #EXTVLCOPT:http-referrer=https://kbsworld-ott.akamaized.net
@@ -2367,8 +2374,7 @@ https://cdn08jtedge.indihometv.com/dassdvr/133/tvnmovies/manifest.mpd
 
 
 
-#EXTINF:-0 tvg-id="" tvg-name="TH - TR FILM HD" tvg-logo="https://i.ibb.co/xK8W9pQn/my-movie-1.png" group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" , Mov 1
-https://github.com/bestcommt2/m3u8/raw/refs/heads/master/movie1.m3u8
+
 
 #EXTINF:-1 group-title="1️⃣ 0️⃣ ช่องหนังและความบันเทิง" tvg-id="TVB Thai" tvg-logo="https://58-64-52-73-rewriter.ais-vidnt.com/ais/play/origin/LIVE/channelicon/TVBThai.png",TVB Thai
 #EXTVLCOPT:http-referrer=https://ais-vidnt.com
