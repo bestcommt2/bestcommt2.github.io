@@ -96,7 +96,7 @@ http://45.144.165.187:8080/playidtv1/12345/9197
 #EXTVLCOPT:http-user-agent=playidtv
 http://45.144.165.187:8080/playidtv1/12345/9196
 
-#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="http://moo7hd.myddns.me:5103/logo/thai.png"หนังไทย เครดิตช่อง Moo7
+#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="http://moo7hd.myddns.me:5103/logo/thai.png",หนังไทย เครดิตช่อง Moo7
 #EXTVLCOPT:http-user-agent=ห้ามแชร์
 https://bestcommt2.github.io/m3u8/4k-thgh7vdaimghijnhovie.m3u8
 --------------------------------------------------------------------------------------
