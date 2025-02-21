@@ -55,10 +55,10 @@ http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/60afa1508284e600071
 
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://d2duuy9yo5pldo.cloudfront.net/dashboard-resources/roviosupport/720/8d5278ae-fb5c-4373-b6e3-c6f0f6ae4ff9.webp",PlayID AngryBirds1
 #EXTVLCOPT:http-user-agent=playidtv
-https://bestcommt2.github.io/m3u8/AngryBirds1.m3u8
+http://playid.ddnsgeek.com:8080/live/Natt/12345/19222.m3u8
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://d2duuy9yo5pldo.cloudfront.net/dashboard-resources/roviosupport/720/8d5278ae-fb5c-4373-b6e3-c6f0f6ae4ff9.webp",PlayID AngryBirds2
 #EXTVLCOPT:http-user-agent=playidtv
-https://bestcommt2.github.io/m3u8/AngryBirds2.m3u8
+http://playid.ddnsgeek.com:8080/live/Natt/12345/19218.m3u8
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://i.ibb.co/Q7vHFFZx/logo-iplay.png",IPLAY Media
 #EXTVLCOPT:http-user-agent=playidtv
 http://45.144.165.187:8080/playidtv1/12345/37
@@ -2213,8 +2213,9 @@ https://webhdrunns.iosplayer.ru/ddh2/premium775/mono.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://i.ibb.co/pjQFsZD9/true4k.png" group-title="8️⃣ ช่องกีฬา4K", ลิงค์จะเปิด แค่ เสาร์-อาทิตย์ หรือ มีแข่ง
 #EXTVLCOPT:http-user-agent=playidtv
-https://bestcommt2.github.io/m3u8/True4K.m3u8
-https://bestcommt2.github.io/m3u8/True4Kblackup.m3u8
+http://playid.ddnsgeek.com:8080/live/Natt/12345/89.m3u8
+http://45.144.165.187:8080/live/playidtv1/12345/89.m3u8
+http://45.144.165.187:8080/live/Natt/12345/89.m3u8
 
 
 #EXTINF:-1 tvg-id="10031" tvg-name="英超-1" tvg-logo="https://gitee.com/ttxsxs/home-tv/raw/master/tvicon/SliveYC.png" group-title="8️⃣ ช่องกีฬา4K",UK: Sky Sports Premier League FHD 1
