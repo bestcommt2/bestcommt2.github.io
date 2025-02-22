@@ -1370,6 +1370,17 @@ https://sscsott.com/pk/ONEGOLF/tracks-v1a1/mono.m3u8
 #KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
 https://cdn08jtedge.indihometv.com/dassdvr/133/nba/manifest.mpd
 
+#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-logo="https://dookeela.live/uploads/1728462430.png" ,Volleyball 1
+https://cdn1.googlecdn.live/4k/volleyball1/playlist.m3u8|referrer=https://soccertv4k.com/
+#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-logo="https://dookeela.live/uploads/1728462447.png" ,Volleyball 2
+https://cdn1.googlecdn.live/4k/volleyball2/playlist.m3u8|referrer=https://soccertv4k.com/
+#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-logo="https://dookeela.live/uploads/1728462457.png" ,Volleyball 3
+https://cdn1.googlecdn.live/4k/volleyball3/playlist.m3u8|referrer=https://soccertv4k.com/
+#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-logo="https://dookeela.live/uploads/1728462466.png" ,Volleyball 4
+https://cdn1.googlecdn.live/4k/volleyball4/playlist.m3u8|referrer=https://soccertv4k.com/
+#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-logo="https://dookeela.live/uploads/1728462475.png" ,Volleyball 5
+https://cdn1.googlecdn.live/4k/volleyball5/playlist.m3u8|referrer=https://soccertv4k.com/
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 ###กีฬาต่างประเทศ### 
 #EXTINF:-1 group-title="7️⃣ ช่องกีฬาต่างประเทศ" tvg-name="Astro SuperSport 1" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/7/7d/Astro_SuperSport_1.png" ,000.Astro SuperSport 1
