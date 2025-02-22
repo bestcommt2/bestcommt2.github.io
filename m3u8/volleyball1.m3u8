@@ -1,0 +1,5 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2700000
+#EXTVLCOPT:http-referrer=https://goal-th.com
+https://dkl-o53d.cdn.akamaiz.com/goalthcom_x5/volleyball1/playlist.m3u8
