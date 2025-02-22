@@ -51,7 +51,18 @@ http://49.0.64.96:8007/Cinemachi
 #EXTVLCOPT:http-user-agent=ห้ามแชร์
 http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/60afa1508284e60007163c08/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=35fcc6e0-e986-11eb-a0af-c3b401f46211&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=a8b6a6bb-4f8c-438e-a638-d4cfa72ae69a
 
-
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://googlestreamthai.sytes.net/images/6Nj6Zksh_mahxcpy7TqctVE0TFlqYrSYoh1HrfmSE9CTIFkGFAxg2hahLRWLP_R4qMELcmq3calJpzus7adTfqh3HJpFl_IJLweRQPHspSM.png" group-title="📺 PREMIUM PLAY TV",หนังเอเชีย เครดิตช่อง Moo7
+#EXTVLCOPT:http-user-agent=ห้ามแชร์
+http://45.144.165.223:9090/memfs/2d8a0d34-c005-45f6-9a20-85efe6186a0a.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://googlestreamthai.sytes.net/images/hwEKphjWX_0D_67iyvpU5Sjjjt1grdWy_75PfZEoAeX3u4kmx_M4hSOWsmWvVvZnWiik65BP9U3QWoE_irvWmOvs_hiLlfGwXR9VmhOTuLLT4kjOV3AH3xNt8tmbKGwc.png" group-title="📺 PREMIUM PLAY TV",อินเตอร์  เครดิตช่อง Moo7
+#EXTVLCOPT:http-user-agent=ห้ามแชร์
+http://45.144.165.223:9090/memfs/3ef36d57-1d43-4502-ba80-9453b3bcbf05.m3u8
+#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://img2.pic.in.th/pic/-Healthy-Care-Logo_20250129_020436_0000.png",หนังไทย เครดิตช่อง Moo7
+#EXTVLCOPT:http-user-agent=ห้ามแชร์
+http://45.144.165.223:9090/memfs/bac4e40a-9545-4c92-b778-c2a836aeab0b.m3u8
+#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://ibb.co/3mKDMxPR",คาราโอเกะ เครดิตช่อง Moo7
+#EXTVLCOPT:http-user-agent=ห้ามแชร์
+http://45.144.165.223:9090/memfs/bac4e40a-9545-4c92-b778-c2a836aeab0b.m3u8
 
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://d2duuy9yo5pldo.cloudfront.net/dashboard-resources/roviosupport/720/8d5278ae-fb5c-4373-b6e3-c6f0f6ae4ff9.webp",PlayID AngryBirds1
 #EXTVLCOPT:http-user-agent=playidtv
@@ -89,16 +100,6 @@ http://45.144.165.187:8080/playidtv1/12345/11051
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://45.150.128.170:8080/images/cb0880574c042710862bc5b02ff693c0.png" group-title="📺 PREMIUM PLAY TV",CONCERTS
 #EXTVLCOPT:http-user-agent=playidtv
 http://45.144.165.187:8080/playidtv1/12345/18671
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://45.150.128.170:8080/images/cffe819d4413b95dd8c35c0085930789.png" group-title="📺 PREMIUM PLAY TV",หนังเอเชีย เครดิตช่อง Moo7
-#EXTVLCOPT:http-user-agent=playidtv
-http://playid.ddnsgeek.com:8080/Natt/12345/9197
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://45.150.128.170:8080/images/7ec8336709bf8a8d71d0ffff69127903.png" group-title="📺 PREMIUM PLAY TV",อินเตอร์  เครดิตช่อง Moo7
-#EXTVLCOPT:http-user-agent=playidtv
-http://playid.ddnsgeek.com:8080/Natt/12345/9196
-
-#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="http://moo7hd.myddns.me:5103/logo/thai.png",หนังไทย เครดิตช่อง Moo7
-#EXTVLCOPT:http-user-agent=ห้ามแชร์
-http://45.144.165.223:9090/memfs/bac4e40a-9545-4c92-b778-c2a836aeab0b.m3u8
 
 --------------------------------------------------------------------------------------
 ###BallThai###
