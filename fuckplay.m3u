@@ -17,89 +17,49 @@ https://ctrl.laotv.la/live/WWE/manifest.mpd
 
 --------------------------------------------------------------------------------------
 ###PREMIUM PLAY TV###
-#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-logo="https://i.ibb.co/B53tBWkh/logoizaamovie.png",IZAAMOVIE
-#EXTVLCOPT:http-user-agent=ห้ามแชร์
-http://203.154.243.89:11001/izaa?m3u8
-#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-logo="https://i.ibb.co/MxZHkhvV/logo-universal.png",Universal
-#EXTVLCOPT:http-user-agent=ห้ามแชร์
-http://49.0.64.96:8007/H-Channel
-#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-logo="https://i.ibb.co/7xf3sR9Z/logo-pluse.png",Pluse Channel 
-#EXTVLCOPT:http-user-agent=ห้ามแชร์
-http://49.0.64.96:8007/PLUSE
-#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-logo="https://i.ibb.co/wFSYqgpG/logo-fuckseries.png",FuckIDSeries
-#EXTVLCOPT:http-user-agent=ห้ามแชร์
-http://49.0.64.96:8007/SERIES
-#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-logo="https://i.ibb.co/qYGcDkdc/logo-fuck-toon.png",FuckIDTOON
-#EXTVLCOPT:http-user-agent=ห้ามแชร์
-http://49.0.64.96:8007/Cartoonumi
-#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-logo="https://i.ibb.co/nqWvLRYF/logo-fuckmovie.png",FuckIDMovie
-#EXTVLCOPT:http-user-agent=ห้ามแชร์
-http://49.0.64.96:8007/PING
-#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-logo="https://i.ibb.co/zv40P0s/logo-amazing.png",AMAZING
-#EXTVLCOPT:http-user-agent=ห้ามแชร์
-http://49.0.64.96:8007/AMAZING
-#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-logo="https://i.ibb.co/bMtB5NKS/logo-animal.png",Animal
-#EXTVLCOPT:http-user-agent=ห้ามแชร์
-http://49.0.64.96:8007/Animal
-#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-logo="https://i.ibb.co/gQLyLmK/logo-seience.png",Science
-#EXTVLCOPT:http-user-agent=ห้ามแชร์
-http://49.0.64.96:8007/WSCI
-#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-logo="https://i.ibb.co/pBHghpSx/237x0-icon.png",Superrix
-#EXTVLCOPT:http-user-agent=ห้ามแชร์
-http://49.0.64.96:8007/Cinemachi
+ของฟรีกูเอามาแจก พวกมึงก็เอาแต่ก๊อป ดับสิรอไร
+
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="http://45.150.128.170:8080/images/a7015e822ee44bbfed24ad119bc5b8bf.jpg",PlayID GAGS
 #EXTVLCOPT:http-user-agent=ห้ามแชร์
 http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/60afa1508284e60007163c08/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=35fcc6e0-e986-11eb-a0af-c3b401f46211&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=a8b6a6bb-4f8c-438e-a638-d4cfa72ae69a
 
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://googlestreamthai.sytes.net/images/6Nj6Zksh_mahxcpy7TqctVE0TFlqYrSYoh1HrfmSE9CTIFkGFAxg2hahLRWLP_R4qMELcmq3calJpzus7adTfqh3HJpFl_IJLweRQPHspSM.png" group-title="📺 PREMIUM PLAY TV",หนังเอเชีย เครดิตช่อง Moo7
-#EXTVLCOPT:http-user-agent=ห้ามแชร์
-http://45.144.165.223:9090/memfs/2d8a0d34-c005-45f6-9a20-85efe6186a0a.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://googlestreamthai.sytes.net/images/hwEKphjWX_0D_67iyvpU5Sjjjt1grdWy_75PfZEoAeX3u4kmx_M4hSOWsmWvVvZnWiik65BP9U3QWoE_irvWmOvs_hiLlfGwXR9VmhOTuLLT4kjOV3AH3xNt8tmbKGwc.png" group-title="📺 PREMIUM PLAY TV",อินเตอร์  เครดิตช่อง Moo7
-#EXTVLCOPT:http-user-agent=ห้ามแชร์
-http://45.144.165.223:9090/memfs/3ef36d57-1d43-4502-ba80-9453b3bcbf05.m3u8
-#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://img2.pic.in.th/pic/-Healthy-Care-Logo_20250129_020436_0000.png",หนังไทย เครดิตช่อง Moo7
-#EXTVLCOPT:http-user-agent=ห้ามแชร์
-http://45.144.165.223:9090/memfs/bac4e40a-9545-4c92-b778-c2a836aeab0b.m3u8
-#EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://i.ibb.co/b5tS24Gb/karaoke.png",คาราโอเกะ เครดิตช่อง Moo7
-#EXTVLCOPT:http-user-agent=ห้ามแชร์
-http://45.144.165.223:9090/memfs/b312e2fa-74a8-41e3-9466-1beb5c9afda8.m3u8
 
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://d2duuy9yo5pldo.cloudfront.net/dashboard-resources/roviosupport/720/8d5278ae-fb5c-4373-b6e3-c6f0f6ae4ff9.webp",PlayID AngryBirds1
 #EXTVLCOPT:http-user-agent=playidtv
-http://playid.ddnsgeek.com:8080/live/Natt/12345/19222.m3u8
+#http://playid.ddnsgeek.com:8080/live/Natt/12345/19222.m3u8
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://d2duuy9yo5pldo.cloudfront.net/dashboard-resources/roviosupport/720/8d5278ae-fb5c-4373-b6e3-c6f0f6ae4ff9.webp",PlayID AngryBirds2
 #EXTVLCOPT:http-user-agent=playidtv
-http://playid.ddnsgeek.com:8080/live/Natt/12345/19218.m3u8
+#http://playid.ddnsgeek.com:8080/live/Natt/12345/19218.m3u8
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://i.ibb.co/Q7vHFFZx/logo-iplay.png",IPLAY Media
 #EXTVLCOPT:http-user-agent=playidtv
-http://45.144.165.187:8080/playidtv1/12345/37
+#http://45.144.165.187:8080/playidtv1/12345/37
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://i.ibb.co/ZfTTHnv/Background-Eraser-20250113-055833796.jpg", PlayID Movie
 #EXTVLCOPT:http-user-agent=playidtv
-http://45.144.165.187:8080/playidtv1/12345/17788
+#http://45.144.165.187:8080/playidtv1/12345/17788
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://i.ibb.co/zhx7GzP0/playidmov2.png", PlayID Movie 2
 #EXTVLCOPT:http-user-agent=playidtv
-http://45.144.165.187:8080/playidtv1/12345/18833
+#http://45.144.165.187:8080/playidtv1/12345/18833
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://i.ibb.co/rwBz8xN/hrr.png", PlayID สยองขวัญ
 #EXTVLCOPT:http-user-agent=playidtv
-http://45.144.165.187:8080/playidtv1/12345/15672
+#http://45.144.165.187:8080/playidtv1/12345/15672
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV"tvg-id="" tvg-logo="https://i.ibb.co/nMygLJzn/Playidmov1.png",PlayID HITS2K
 #EXTVLCOPT:http-user-agent=playidtv
-http://45.144.165.187:8080/playidtv1/12345/15675
+#http://45.144.165.187:8080/playidtv1/12345/15675
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://i.ibb.co/4f3nLNP/playtvthai.png",PLAYTV MOVIE
 #EXTVLCOPT:http-user-agent=playidtv
-http://45.144.165.187:8080/playidtv1/12345/11052
+#http://45.144.165.187:8080/playidtv1/12345/11052
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://i.ibb.co/GvmwFpv/movth.png", PlayID หนังไทย
 #EXTVLCOPT:http-user-agent=playidtv
-http://45.144.165.187:8080/live/playidtv1/12345/9198.m3u8
+#http://45.144.165.187:8080/live/playidtv1/12345/9198.m3u8
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://i.ibb.co/x5LCMKZ/20250108-170408.png", PLAYIDTV เป็นต่อ
 #EXTVLCOPT:http-user-agent=playidtv
-http://45.144.165.187:8080/playidtv1/12345/17715
+#http://45.144.165.187:8080/playidtv1/12345/17715
 #EXTINF:-1 group-title="📺 PREMIUM PLAY TV" tvg-id="" tvg-logo="https://i.ibb.co/jZ7P3hJ/vvt.png",PlayID STREAM 2
 #EXTVLCOPT:http-user-agent=playidtv
-http://45.144.165.187:8080/playidtv1/12345/11051
+#http://45.144.165.187:8080/playidtv1/12345/11051
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://45.150.128.170:8080/images/cb0880574c042710862bc5b02ff693c0.png" group-title="📺 PREMIUM PLAY TV",CONCERTS
 #EXTVLCOPT:http-user-agent=playidtv
-http://45.144.165.187:8080/playidtv1/12345/18671
+#http://45.144.165.187:8080/playidtv1/12345/18671
 
 --------------------------------------------------------------------------------------
 ###BallThai###
@@ -2216,13 +2176,13 @@ https://webhdrunns.iosplayer.ru/ddh2/premium775/mono.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://i.ibb.co/pjQFsZD9/true4k.png" group-title="8️⃣ ช่องกีฬา4K", ลิงค์จะเปิด แค่ เสาร์-อาทิตย์ หรือ มีแข่ง
 #EXTVLCOPT:http-user-agent=playidtv
-http://playid.ddnsgeek.com:8080/live/Natt/12345/89.m3u8
-http://45.144.165.187:8080/live/playidtv1/12345/90.m3u8
+#http://playid.ddnsgeek.com:8080/live/Natt/12345/89.m3u8
+#http://45.144.165.187:8080/live/playidtv1/12345/90.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://45.144.165.187:8080/images/c40061e5636458fc9928a739a84fbeb3.png" group-title="8️⃣ ช่องกีฬา4K", True Premier Football 1
 #EXTVLCOPT:http-user-agent=playidtv
-http://45.144.165.187:8080/live/playidtv1/12345/18747.m3u8
-http://myserver.myphuket.net:25461/live/test1/test1/26.
-#https://github.com/user-attachments/assets/4f36ec6a-3679-47cb-ad78-dd0c6d217ecf
+#http://45.144.165.187:8080/live/playidtv1/12345/18747.m3u8
+http://myserver.myphuket.net:25461/live/test1/test1/26.m3u8
+https://github.com/user-attachments/assets/4f36ec6a-3679-47cb-ad78-dd0c6d217ecf
 
 
 #EXTINF:-1 tvg-id="10031" tvg-name="英超-1" tvg-logo="https://gitee.com/ttxsxs/home-tv/raw/master/tvicon/SliveYC.png" group-title="8️⃣ ช่องกีฬา4K",UK: Sky Sports Premier League FHD 1
