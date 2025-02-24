@@ -1261,22 +1261,7 @@ https://cdnsv1.bunnycdncloud.com/andaman888th/truesport5/th-sport/truesport5/chu
 https://cdnsv1.bunnycdncloud.com/andaman888th/truesport6/th-sport/truesport7/chunks.m3u8
 
 
-#EXTINF:-1 tvg-id=""  tvg-logo="https://cms.dmpcdn.com/livetv/2023/07/18/7cb4aae0-2515-11ee-9407-9367a664b338_webp_original.webp" group-title="6️⃣ ช่องกีฬา",Golf Channel Asian
-http://iptv12k.com:35461/live/654321/123456/651.m3u8
-#EXTINF:-1 tvg-id=""  tvg-logo="https://i.ibb.co/9HBJp44q/golf-ch.png" group-title="6️⃣ ช่องกีฬา",Golf Channel
-http://49.0.64.96:8007/GOLF
-#EXTINF:-1 tvg-id=""  tvg-logo="https://i.ibb.co/60kkgs2x/logo-HIFIGHT.png" group-title="6️⃣ ช่องกีฬา",HIFIGHT
-http://49.0.64.96:8007/HIFIGHT
-#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-logo="https://img2.pic.in.th/pic/308864143_166781909281516_6364889195803126705_n.jpg", HiSports HD
-http://203.154.243.89:11001/hisport?m3u8
-#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-logo="https://i.ibb.co/tMGhSds1/logo-tennis-tv.png",Tennis HD
-http://49.0.64.96:8007/TENNIS
-#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-logo="https://i.ibb.co/pgJmNNT/TOPFIGHT.png",Top Fight HD
-http://49.0.64.96:8007/TOPFIGHT
-#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-id="" tvg-logo="https://i.ibb.co/60wV9wY1/s-1366-x.png" , GINX SPORT
-http://49.0.64.96:8007/GINX
-#EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-id="" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fb/NBC_Sports_Washington.png" , NBC Sports Washington
-http://49.0.64.96:8007/NBA
+
 
 #EXTINF:-1 group-title="6️⃣ ช่องกีฬา" tvg-id="" tvg-logo="https://raz-media.se/wp-content/uploads/2022/04/fight-sports.png" ,Fight Sports
 https://cdn08jtedge.indihometv.com/dassdvr/133/fightsport/manifest.mpd
