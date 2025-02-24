@@ -2403,12 +2403,6 @@ https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionholly
 
 #EXTINF:-1 tvg-id=""  tvg-logo="https://w7.pngwing.com/pngs/758/128/png-transparent-television-channel-music-box-ua-streaming-television-others-television-emblem-text.png" group-title="1️⃣ 1️⃣ ช่องมิวสิคและดนตรี",MUSIC BOX
 https://bestcommt2.github.io/m3u8/music%20box.m3u8
-#EXTINF:-1 tvg-id=""  tvg-logo="https://i.ibb.co/JRrw8YxS/M2-ROCK.png" group-title="1️⃣ 1️⃣ ช่องมิวสิคและดนตรี",M2rock HD
-http://49.0.64.96:8007/M2ROCK
-#EXTINF:-1 tvg-id=""  tvg-logo="https://i.ibb.co/LDmsSMbz/M4-jazz.png" group-title="1️⃣ 1️⃣ ช่องมิวสิคและดนตรี",M4JAZZ HD
-http://49.0.64.96:8007/M4JAZZ
-#EXTINF:-1 tvg-id=""  tvg-logo="https://i.ibb.co/GQBG7k8D/M6-country.png" group-title="1️⃣ 1️⃣ ช่องมิวสิคและดนตรี",M6country HD
-http://49.0.64.96:8007/M6COUNTRY
 #EXTINF:-0 tvg-id="" tvg-name="" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/mtv-uk.png" group-title="1️⃣ 1️⃣ ช่องมิวสิคและดนตรี",MTV
 http://178.162.225.182:2082/live/Tourobox1-y85tOTzw47/Att3piLtZf/422.m3u8
 #EXTINF:-1 tvg-id=""  tvg-logo="https://i.imgur.com/pyOjdZs.png" group-title="1️⃣ 1️⃣ ช่องมิวสิคและดนตรี",RetroMusicTV
