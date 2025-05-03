@@ -154,7 +154,11 @@
   },
   {
     name: 'ดูการ์ตูน',
-    channels: [100,101,102,103,104,105,106,107,108,109,110,111],
+    channels: [100,101,102,103,104,105,106,107,108,109,110,],
+  },
+   {
+    name: 'ดูบอลไทย',
+    channels: [111,112,113,114,115,116,117,118],
   },
 ];
 
@@ -261,17 +265,24 @@
        'ช่อง 98 ASIAN FOOD CHANNEL',
        'ช่อง 99 ASIAN FOOD CHANNEL BK',
 	    'ช่อง 100  DREAMWORKS',
-		'ช่อง 101  DREAMWORKS',
-		'ช่อง 102  CARTOON NETWORK',
-		'ช่อง 103  CARTOON NETWORK BK',
-		'ช่อง 104  SPARK PLAY',
-		'ช่อง 105  NICK JR',
-		'ช่อง 106  BOOMERANG',
-		'ช่อง 107  CARTOONITO',
-		'ช่อง 108  DISNEP CHANNEL',
-		'ช่อง 109  DISNEP CHANNEL BK',
-		'ช่อง 110  NICK LODEON',
-		'ช่อง 111  NICK LODEON BK',
+		'ช่อง 101  CARTOON NETWORK',
+		'ช่อง 102  CARTOON NETWORK BK',
+		'ช่อง 103  SPARK PLAY',
+		'ช่อง 104  NICK JR',
+		'ช่อง 105 BOOMERANG',
+		'ช่อง 106  CARTOONITO',
+		'ช่อง 107  DISNEP CHANNEL',
+		'ช่อง 108  DISNEP CHANNEL BK',
+		'ช่อง 109  NICK LODEON',
+		'ช่อง 110  NICK LODEON BK',
+		'BallThai 1',
+		'BallThai 2',
+		'BallThai 3',
+		'BallThai 4',
+		'BallThai 5',
+		'BallThai 6',
+		'BallThai 7',
+		'BallThai 8',
     ];
 
     const channelLogos = [
@@ -658,43 +669,43 @@ let session = null;
   }
 
 
-  if (channelNames[index] === 'ผู้เช่า') {
-    const iframeUrl = 'https://fw4free.com/player2.php?channel=1622792&id=53';
+  if (channelNames[index] === 'BallThai 1') {
+    const iframeUrl = 'https://keela2.com/stream/22/index.m3u8?token=mvFWafOIir5JDlQN';
     loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
-  if (channelNames[index] === 'ผาดำคำไอ่') {
-    const iframeUrl = 'https://fw4free.com/player2.php?channel=1637922&id=53';
+  if (channelNames[index] === 'BallThai 2') {
+    const iframeUrl = 'https://keela2.com/stream/23/index.m3u8?token=mvFWafOIir5JDlQN';
     loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
-  if (channelNames[index] === '404 สุขีนิรันดร์..') {
-    const iframeUrl = 'https://fw4free.com/player2.php?channel=1648586&id=53';
+  if (channelNames[index] === 'BallThai 3') {
+    const iframeUrl = 'https://keela2.com/stream/24/index.m3u8?token=mvFWafOIir5JDlQN';
     loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
-  if (channelNames[index] === 'The Red Envelope (2025) ซองแดงแต่งผี') {
-    const iframeUrl = 'https://main.24playerhd.com/newplaylist/6be9ca7114ef03c9c244114a/6be9ca7114ef03c9c244114a.m3u8';
+  if (channelNames[index] === 'BallThai 4') {
+    const iframeUrl = 'https://keela2.com/stream/25/index.m3u8?token=mvFWafOIir5JDlQN';
     loadChannel(iframeUrl, false); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
-  if (channelNames[index] === 'ช่อง FW MOVIE') {
-    const iframeUrl = 'https://www.inwiptv.org/player_demo.php?channel=95262';
+  if (channelNames[index] === 'BallThai 5') {
+    const iframeUrl = 'https://keela2.com/stream/26/index.m3u8?token=mvFWafOIir5JDlQN';
     loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
-  if (channelNames[index] === 'ช่อง FW SOV') {
-    const iframeUrl = 'https://www.inwiptv.org/player_demo.php?channel=94898';
+  if (channelNames[index] === 'BallThai 6') {
+    const iframeUrl = 'https://keela2.com/stream/27/index.m3u8?token=mvFWafOIir5JDlQN';
     loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
-  if (channelNames[index] === 'ช่อง FW TOON') {
-    const iframeUrl = 'https://www.inwiptv.org/player_demo.php?channel=92941';
+  if (channelNames[index] === 'BallThai 7') {
+    const iframeUrl = 'https://keela2.com/stream/28/index.m3u8?token=mvFWafOIir5JDlQN';
     loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
-  if (channelNames[index] === 'ช่อง FW DOC') {
-    const iframeUrl = 'https://www.inwiptv.org/player_demo.php?channel=91303';
+  if (channelNames[index] === 'BallThai 8') {
+    const iframeUrl = 'https://keela2.com/stream/29/index.m3u8?token=mvFWafOIir5JDlQN';
     loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
