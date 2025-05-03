@@ -681,7 +681,7 @@ let session = null;
   const xml = await getPlaylist(session, playBaseUrls[index]);
   console.log("🚀 ~ loadChannelByIndex ~ xml:", xml)
 
-  const isMovieCategory = categories.find(cat => cat.name === 'สารคดี'||cat.name === '20+')?.channels.includes(index);
+  const isMovieCategory = categories.find(cat => cat.name === 'ดูหนัง'||cat.name === '20+')?.channels.includes(index);
 
   if (isMovieCategory) {
     // ดึงและ decode url ที่อยู่ใน <url> แทน
