@@ -485,12 +485,7 @@
       'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-mixmajor&kauth=',
       'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-mangkorn&kauth=',
       'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-monoplus&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-filmasia&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-filmasia&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-filmasia&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-filmasia&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-filmasia&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-filmasia&kauth=',
+      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-filmasia&kauth=',   
       'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-discoverybpk&kauth=',
       'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-discovery&kauth=',
       'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-discovery&kauth=',
@@ -744,7 +739,7 @@ let session = null;
       const fixedUrl = decodedUrl.replace('playlist.m3u8', 'chunk.m3u8');
       loadChannel(fixedUrl);
     } else {
-      alert('ไม่พบลิงก์ภาพยนตร์ ❌');
+      alert('ไม่พบลิงก์ playlist ❌');
     }
   } else {
     // หมวดอื่น ใช้วิธีเดิม
