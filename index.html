@@ -149,7 +149,7 @@
     channels: [64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93],
   },
   {
-    name: 'ภาพยนตร์',
+    name: 'สารคดี',
     channels: [94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129],
   },
   {
@@ -397,7 +397,7 @@
 
     // กำหนด playBaseUrls เอง
     const playBaseUrls = [
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-ch8&kauth=',
+      'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-epl1&kauth=',
       'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-epl1bkp&kauth=',
       'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-epl2&kauth=',
       'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-epl2bkp&kauth=',
@@ -732,7 +732,7 @@ let session = null;
   const xml = await getPlaylist(session, playBaseUrls[index]);
   console.log("🚀 ~ loadChannelByIndex ~ xml:", xml)
 
-  const isMovieCategory = categories.find(cat => cat.name === 'ภาพยนตร์'||cat.name === '20+')?.channels.includes(index);
+  const isMovieCategory = categories.find(cat => cat.name === 'สารคดี'||cat.name === '20+')?.channels.includes(index);
 
   if (isMovieCategory) {
     // ดึงและ decode url ที่อยู่ใน <url> แทน
@@ -743,7 +743,7 @@ let session = null;
       const fixedUrl = decodedUrl.replace('playlist.m3u8', 'chunk.m3u8');
       loadChannel(fixedUrl);
     } else {
-      alert('ไม่พบลิงก์ภาพยนตร์ ❌');
+      alert('ไม่พบลิงก์ playlist ❌');
     }
   } else {
     // หมวดอื่น ใช้วิธีเดิม
