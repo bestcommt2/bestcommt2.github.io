@@ -1,51 +1,66 @@
-<!doctype html>
-<html lang="en">
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="zxx">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" name="viewport">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>play</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="fuckid">
+	<meta name="keywords" content="fuckid">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
 
-    <title>TRUE BallThai 5</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0px;
-        }
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-        .jwplayer {
-            position: absolute !important;
-        }
+	<!-- Stylesheets -->
 
-        .jwplayer.jw-flag-aspect-mode {
-            min-height: 100%;
-            max-height: 100%;
-        }
+	<link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">   
+	<style type="text/css" >
+		body {
+				margin: 0;
+				padding: 0;
+				background-color: black;
+			}
+		.video-container {
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+				overflow: hidden;
+				}
+		video {
+				position: absolute;
+				z-index: 10;
+				width: 100%;
+				height: 100vh;
+				max-width: none;
+			}
     </style>
-</head>
 <body>
-    <div id="jwplayerDiv"></div>
-    <script src="//content.jwplatform.com/libraries/SAHhwvZq.js"></script>
-    <script type="text/javascript">
-        // Use the PHP configuration directly within the JavaScript
-        var config = {"file":"https://keela2.com/stream/26/index.m3u8?token=mvFWafOIir5JDlQN};
-
-        jwplayer("jwplayerDiv").setup({
-            file: config.file,
-            position: 'bottom',
-            autostart: true,
-            stretching: "",
-            width: "100%",
-            type: "dash",
-            drm: {
-                clearkey: {
-                    keyId: config.drm.clearkey.keyId,
-                    key: config.drm.clearkey.key
-                }
-            }
-        });
-    </script>
+	<div class="video-container">			
+				<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+				<video id="video" controls="controls" width="100%" align="center" src=""></video>
+				<script>
+				var video = document.getElementById("video");
+				if(Hls.isSupported()){
+					var hls = new Hls();
+					hls.loadSource("https://keela2.com/stream/26/index.m3u8?token=mvFWafOIir5JDlQN");
+					hls.attachMedia(video);
+					hls.on(Hls.Events.MANIFEST_PARSED,function()
+					{
+						video.play();
+					});
+				}
+				else if (video.canPlayType("application/vnd.apple.mpegurl"))
+				{
+					video.src = "";
+					video.addEventListener("canplay",function()
+					{
+						video.play();
+					});
+				}
+				</script>
+	</div>
 </body>
 </html>
