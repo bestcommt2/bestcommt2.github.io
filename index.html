@@ -521,14 +521,6 @@
 	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-disney2bkp_720&kauth=',
 	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-nickelodeon_720&kauth=',
 	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-nickelodeon_1080&kauth=',
-	  'https://keela2.com/stream/22/index.m3u8?token=mvFWafOIir5JDlQN',
-	  'https://keela2.com/stream/23/index.m3u8?token=mvFWafOIir5JDlQN',
-	  'https://keela2.com/stream/24/index.m3u8?username=PrVx9n8jKo&password=hw4bIEKgiM',
-	  'https://keela2.com/stream/25/index.m3u8?username=PrVx9n8jKo&password=hw4bIEKgiM',
-	  'https://keela2.com/stream/26/index.m3u8?username=PrVx9n8jKo&password=hw4bIEKgiM',
-	  'https://keela2.com/stream/27/index.m3u8?username=PrVx9n8jKo&password=hw4bIEKgiM',
-	  'https://keela2.com/stream/28/index.m3u8?token=mvFWafOIir5JDlQN',
-	  'https://keela2.com/stream/29/index.m3u8?token=mvFWafOIir5JDlQN',
     ];
 
     // ฟังก์ชันดึง playlist URL
@@ -710,11 +702,11 @@ let session = null;
     return;
   }
   if (channelNames[index] === ' 5') {
-    const iframeUrl = 'https://keela2.com/stream/26/index.m3u8?token=mvFWafOIir5JDlQN';
+    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth1.html';
     loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
-  if (channelNames[index] === ' 6') {
+  if (channelNames[index] === 'BallThai 6') {
     const iframeUrl = 'https://keela2.com/stream/27/index.m3u8?token=mvFWafOIir5JDlQN';
     loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
