@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MY TV</title>
+  <title>FUCKIDPLUS</title>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
 
@@ -61,7 +61,7 @@
       outline: none;
     }
     .channel-button img {
-      width: 40px;
+      width: 80px;
       height: 40px;
       border-radius: 5px;
       margin-bottom: 5px;
@@ -146,144 +146,171 @@
   },
   {
     name: 'บันเทิง',
-    channels: [64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93],
+    channels: [64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88],
   },
   {
-    name: 'ภาพยนตร์',
-    channels: [94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140],
+    name: 'สารคดี',
+    channels: [89,90,91,92,93,94,95,96,97,98,99,100,101,],
   },
-  // {
-  //   name: 'Tv Blue',
-  //   channels: [130,131,132,133],
-  // },
-    {
-    name: 'ดูหนังออนไลน์',
-    channels: [200],
+  {
+    name: 'ดูการ์ตูน',
+    channels: [102,103,104,105,106,107,108,109,110,111,112,],
   },
+     {
+    name: 'เพลงและดนตรี',
+    channels: [113,],
+  },
+     {
+    name: 'ข่าว',
+    channels: [114,115,116,117,118,119,120,121,122,123,124,125,],
+  },
+   {
+    name: 'ดูบอลไทย',
+    channels: [126,127,128,129,130,131,132,133],
+  },
+   {
+    name: '3BB',
+    channels: [134],
+  },
+ 
 ];
 
 
     const channelNames = [
-      'ช่อง EPL 1', 'ช่อง EPL 1 Backup', 'ช่อง EPL 2', 'ช่อง EPL 2 Backup',
-      'ช่อง EPL 3', 'ช่อง EPL 3 Backup', 'ช่อง EPL 4', 'ช่อง EPL 4 Backup',
-      'ช่อง EPL 5', 'ช่อง EPL 5 Backup','ช่อง Bein 1', 'ช่อง Bein 1 Backup',
-      'ช่อง Bein 2', 'ช่อง Bein 2 Backup','ช่อง Bein 3', 'ช่อง Bein 3 Backup',
-      'ช่อง Bein HD 1',
-      'ช่อง Bein HD 2',
-      'ช่อง Bein HD 3',
-      'ช่อง Bein HD 4',
-      'ช่อง Bein HD 5',
-      'ช่อง Bein HD 6',
-      'ช่อง Bein HD 7',
-      'ช่อง Bein HD 8',
-      'ช่อง Bein HD 9',
-      'ช่อง Bein HD 10',
-      'ช่อง Bein HD 11',
-      'ช่อง Bein HD 12',
-      'ช่อง CH3 HD',
-      'ช่อง CH3 HD Backup',
-      'ช่อง CH5 HD',
-      'ช่อง CH5 HD Backup',
-      'ช่อง CH7 HD',
-      'ช่อง CH7 HD Backup',
-      'ช่อง CH9 HD',
-      'ช่อง CH9 HD Backup',
-      'ช่อง WorkPoint HD',
-      'ช่อง WorkPoint HD Backup',
-      'ช่อง GMM HD',
-      'ช่อง GMM HD Backup',
-      'ช่อง MONO HD',
-      'ช่อง MOMO HD Backup',
-      'ช่อง CH8 HD',
-      'ช่อง CH8 HD Backup',
-      'ช่อง ONE HD',
-      'ช่อง ONE HD Backup',
-      'ช่อง Amarin TV HD',
-      'ช่อง Amarin TV HD Backup',
-      'ช่อง Thairath TV HD',
-      'ช่อง Thairath TV HD Backup',
-      'ช่อง PPTV HD',
-      'ช่อง PPTV HD Backup',
-      'ช่อง TRUE 4 U HD',
-      'ช่อง TRUE 4 U HD Backup',
-      'ช่อง Nation TV HD',
-      'ช่อง Nation TV HD Backup',
-      'ช่อง JKN TV HD',
-      'ช่อง JKN TV HD Backup',
-      'ช่อง TNN TV HD',
-      'ช่อง TNN TV HD Backup',
-      'ช่อง Thai PBS TV HD',
-      'ช่อง Thai PBS TV HD Backup',
-      'ช่อง NBT TV HD',
-      'ช่อง NBT TV HD Backup',
-      'ช่อง ASIAN MORE',
-      'ช่อง Warner TV',
-      'ช่อง Waner TV Backup',
-      'ช่อง HBO TV',
-      'ช่อง HBO Family TV',
-      'ช่อง HBO HIT TV',
-      'ช่อง HBO Signature TV',
-      'ช่อง MAX HD TV',
-      'ช่อง MAX HD TV Backup',
-      'ช่อง AXN TV',
-      'ช่อง AXN TV Backup',
-      'ช่อง BLUE ANT TV',
-      'ช่อง BLUE Extreme TV',
-      'ช่อง FILM HD',
-      'ช่อง FILM 2 HD',
-      'ช่อง SERIES',
-      'ช่อง MOVIE HIT TV',
-      'ช่อง Xzyte TV',
-      'ช่อง TRUE THAI FILM TV',
-      'ช่อง Celestial TV',
-      'ช่อง TVN TV',
-      'ช่อง MIX MAJOR TV',
-      'ช่อง มังกร TV',
-      'ช่อง MONO PLUS TV',
-      'ช่อง FILM ASIA TV',
-      'ช่อง FW MOVIE',
-      'ช่อง FW SOV',
-      'ช่อง FW TOON',
-      'ช่อง FW DOC',
-      'ช่อง FW SPORT',
-      '4K Red One - เรด วัน (พากย์ไทย)',
-      '4K Gladiator II - แกลดดิเอเตอร์ นักรบผู้กล้า ผ่าแผ่นดินทรราช 2',
-      '4K Kraven the Hunter - เครเว่น เดอะ ฮันเตอร์',
-      '4K Sonic the Hedgehog 3 - โซนิค เดอะ เฮดจ์ฮ็อก 3',
-      '4K Alien: Romulus - เอเลี่ยน: โรมูลัส',
-      '4K Deadpool & Wolverine เดดพูล & วูล์ฟเวอรีน',
-      '4K The Fall Guy - สตันท์แมนคนจริง',
-      '4K Furiosa: A Mad Max Saga - ฟูริโอซ่า มหากาพย์แมดแม็กซ์',
-      '4K Godzilla Minus One (พากย์ไทย)',
-      '4K Blue Beetle',
-      '4K Black Panther: Wakanda Forever',
-      'Judge Bao: Academy Intrigue - เปาบุ้นจิ้นกับโรงเรียนลึกลับ (พากย์ไทย)',
-      '4K Avengers: Infinity War',
-      'Spider-Man: No Way Home',
-      'Postman ไปรษณีย์ 4 โลก',
-      'Logan - โลแกน เดอะ วูล์ฟเวอรีน',
-      '4K Harry Potter and the Sorcerer s Stone',
-      '4K Harry Potter and the Chamber of Secrets',
-      '4K Harry Potter and the Prisoner of Azkaban',
-      '4K Harry Potter and the Goblet of Fire',
-      '4K Harry Potter and the Order of the Phoenix',
-      '4K Harry Potter and the Half-Blood Prince',
-      '4K Harry Potter and the Deathly Hallows: Part 1',
-      '4K Harry Potter and the Deathly Hallows: Part 2',
-      'ถนนอาถรรพ์ ภาค 1',
-      'ถนนอาถรรพ์ ภาค 2',
-      'ถนนอาถรรพ์ ภาค 3',
-      'ถนนอาถรรพ์ ภาค 4',
-      'The Red Envelope (2025) ซองแดงแต่งผี',
-      'ผู้เช่า',
-      'ผาดำคำไอ่',
-      '404 สุขีนิรันดร์..',
-      'EPL 1 BLUE',
-      'EPL 2 BLUE',
-      'EPL 3 BLUE',
-      'EPL 4 BLUE',
-      'EPL 5 BLUE',
-      'BEIN 5 ONLINE',
+'ช่อง 0 EPL 1',
+'ช่อง 1 EPL 1 Backup',
+ 'ช่อง 2 EPL 2',
+ 'ช่อง 3 EPL 2 Backup',
+ 'ช่อง 4  EPL 3',
+'ช่อง  5 EPL 3 Backup',
+ 'ช่อง 6 EPL 4',
+ 'ช่อง 7  EPL 4 Backup',
+'ช่อง  8 EPL 5', 
+'ช่อง 9  EPL 5 Backup',
+ 'ช่อง 10  Bein 1',
+'ช่อง 11  Bein 1 Backup',
+ 'ช่อง 12  Bein 2', 
+ 'ช่อง 13 Bein 2 Backup',
+'ช่อง 14 Bein 3',
+'ช่อง 15  Bein 3 Backup',
+      'ช่อง 16 Bein HD 1',
+      'ช่อง 17 Bein HD 2',
+      'ช่อง 18 Bein HD 3',
+      'ช่อง 19 Bein HD 4',
+      'ช่อง 20 Bein HD 5',
+      'ช่อง 21 Bein HD 6',
+      'ช่อง 22 Bein HD 7',
+      'ช่อง 23 Bein HD 8',
+      'ช่อง 24 Bein HD 9',
+      'ช่อง 25 Bein HD 10',
+      'ช่อง 26 Bein HD 11',
+      'ช่อง 27 Bein HD 12',
+      'ช่อง 28 CH3 HD',
+      'ช่อง 29 CH3 HD Backup',
+      'ช่อง 30 CH5 HD',
+      'ช่อง 31 CH5 HD Backup',
+      'ช่อง 32 CH7 HD',
+      'ช่อง 33 CH7 HD Backup',
+      'ช่อง 34 CH9 HD',
+      'ช่อง 35 CH9 HD Backup',
+      'ช่อง 36  WorkPoint HD',
+      'ช่อง 37 WorkPoint HD Backup',
+      'ช่อง 38 GMM HD',
+      'ช่อง 39 GMM HD Backup',
+      'ช่อง 40 MONO HD',
+      'ช่อง 41 MOMO HD Backup',
+      'ช่อง 42 CH8 HD',
+      'ช่อง 43 CH8 HD Backup',
+      'ช่อง 44 ONE HD',
+      'ช่อง 45 ONE HD Backup',
+      'ช่อง 46 Amarin TV HD',
+      'ช่อง 47 Amarin TV HD Backup',
+      'ช่อง 48 Thairath TV HD',
+      'ช่อง 49 Thairath TV HD Backup',
+      'ช่อง 50 PPTV HD',
+      'ช่อง 51 PPTV HD Backup',
+      'ช่อง 52 TRUE 4 U HD',
+      'ช่อง 53 TRUE 4 U HD Backup',
+      'ช่อง 54 Nation TV HD',
+      'ช่อง 55 Nation TV HD Backup',
+      'ช่อง 56 JKN TV HD',
+      'ช่อง 57 JKN TV HD Backup',
+      'ช่อง 58 TNN TV HD',
+      'ช่อง 59 TNN TV HD Backup',
+      'ช่อง 60 Thai PBS TV HD',
+      'ช่อง 61 Thai PBS TV HD Backup',
+      'ช่อง 62 NBT TV HD',
+      'ช่อง 63 NBT TV HD Backup',
+      'ช่อง 64 ASIAN MORE',
+      'ช่อง 65 Warner TV',
+      'ช่อง 66 Waner TV Backup',
+      'ช่อง 67 HBO TV',
+      'ช่อง 68 HBO Family TV',
+      'ช่อง 69 HBO HIT TV',
+      'ช่อง 70 HBO Signature TV',
+      'ช่อง 71 MAX HD TV',
+      'ช่อง 72 MAX HD TV Backup',
+      'ช่อง 73 AXN TV',
+      'ช่อง 74 AXN TV Backup',
+      'ช่อง 75 BLUE ANT TV',
+      'ช่อง 76 BLUE Extreme TV',
+      'ช่อง 77 FILM HD',
+      'ช่อง 78 FILM 2 HD',
+      'ช่อง 79 SERIES',
+      'ช่อง 80 MOVIE HIT TV',
+      'ช่อง 81 Xzyte TV',
+      'ช่อง 82 TRUE THAI FILM TV',
+      'ช่อง 83 Celestial TV',
+      'ช่อง 84 TVN TV',
+      'ช่อง 85 MIX MAJOR TV',
+      'ช่อง 86 มังกร TV',
+      'ช่อง 87 MONO PLUS TV',
+      'ช่อง 88 FILM ASIA TV',
+      'ช่อง 89 Discovery',
+      'ช่อง 90 Discovery',
+      'ช่อง 91 Discovery BK',
+      'ช่อง 92 History',
+       'ช่อง 93 History BK',
+	    'ช่อง 94  FoodNetwork',
+       'ช่อง 95 TLC BK',
+       'ช่อง 96 TLC',
+       'ช่อง 97 EXPLORE LIFE',
+	   'ช่อง 98 EXPLORE WILD',
+	   'ช่อง 99 EXPLORE SCI',
+       'ช่อง 100 ASIAN FOOD CHANNEL',
+       'ช่อง 101 ASIAN FOOD CHANNEL BK',
+	    'ช่อง 102  DREAMWORKS',
+		'ช่อง 103  CARTOON NETWORK',
+		'ช่อง 104  CARTOON NETWORK BK',
+		'ช่อง 105  SPARK PLAY',
+		'ช่อง 106  NICK JR',
+		'ช่อง 107 BOOMERANG',
+		'ช่อง 108  CARTOONITO',
+		'ช่อง 109  DISNEP CHANNEL',
+		'ช่อง 110  DISNEP CHANNEL BK',
+		'ช่อง 111  NICK LODEON',
+		'ช่อง 112 NICK LODEON BK',
+		'ช่อง 113 MTV',
+		'ช่อง 114 TOP NEW',
+		'ช่อง 115 TV รัฐสภา',
+		'ช่อง 116 CNN',
+		'ช่อง 117 BLOOMBERG',
+		'ช่อง 118 FOX NEWS',
+		'ช่อง 119 RT NEWS',
+		'ช่อง 120 EURO NEWS',
+		'ช่อง 121 CNBC NEWS',
+		'ช่อง 122 BBC WORLD NEWS',
+		'ช่อง 123 NHK WORLD',
+		'ช่อง 124 CCTV4',
+		'ช่อง 125 NEWS1',
+		'BallThai 1',
+		'BallThai 2',
+		'BallThai 3',
+		'BallThai 4',
+		'BallThai 5',
+		'BallThai 6',
+		'BallThai 7',
+		'BallThai 8',
     ];
 
     const channelLogos = [
@@ -368,50 +395,56 @@
       'https://static.uflixtv.com/images/tv/channels_icons/sd-mangkorn.png',
       'https://static.uflixtv.com/images/tv/channels_icons/th-monoplus.png',
       'https://static.uflixtv.com/images/tv/channels_icons/sd-filmasia.png',
-      'https://www.fileinw.com/postor/20240429213309FWMOV.jpg',
+      'https://static.uflixtv.com/images/tv/channels_icons/sd-discovery.png',
+      'https://static.uflixtv.com/images/tv/channels_icons/sd-discovery.png',
+      'https://static.uflixtv.com/images/tv/channels_icons/th-discovery.png',
+      'https://static.uflixtv.com/images/tv/channels_icons/hd-history.png',
+      'https://static.uflixtv.com/images/tv/channels_icons/th-history.png',
+      'https://static.uflixtv.com/images/tv/channels_icons/th-food.png',
+      'https://static.uflixtv.com/images/tv/channels_icons/sd-tlcbkp.png',
+      'https://static.uflixtv.com/images/tv/channels_icons/th-tlc.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/sd-explifebkp.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/sd-expwildbkp.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/sd-expscibkp.png',
+      'https://static.uflixtv.com/images/tv/channels_icons/sd-asianfoodbkp.png',
+      'https://static.uflixtv.com/images/tv/channels_icons/th-asianfood.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/hd-dreamworks.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/sd-cartoonnetworkbkp.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/th-cartoonnetwork.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/sd-sparkplaybkp.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/th-nickjr.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/sd-boomerang.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/uk-cartoonito.png',
+	  'https://static.uflixtv.com/images/tv/png/uflix-disney2a.png',
+	  'https://static.uflixtv.com/images/tv/png/uflix-disney2a.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/sd-nickelodeon.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/sd-nickelodeonbkp.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/sd-mtvasia.png',
+	  'https://static.uflixtv.com/images/tv/png/hd-topnews.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/sd-tptv.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/hd-cnn.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/sd-bloomberg.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/us-foxnews.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/uk-rt.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/sd-euronews.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/us-cnbc.png',
+	  'https://static.uflixtv.com/images/tv/png/hd-bbcworldnews.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/sd-nhkworld.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/sd-cctv4.png',
+	  'https://static.uflixtv.com/images/tv/channels_icons/sd-news1.png',
+	  'https://truegether.true.th/hubfs/assets_pages/entertainment/images/Logo-TVS-NOW_BALL-THAI.png',
+	  'https://truegether.true.th/hubfs/assets_pages/entertainment/images/Logo-TVS-NOW_BALL-THAI.png',
+	  'https://truegether.true.th/hubfs/assets_pages/entertainment/images/Logo-TVS-NOW_BALL-THAI.png',
+	  'https://truegether.true.th/hubfs/assets_pages/entertainment/images/Logo-TVS-NOW_BALL-THAI.png',
+	  'https://truegether.true.th/hubfs/assets_pages/entertainment/images/Logo-TVS-NOW_BALL-THAI.png',
+	  'https://truegether.true.th/hubfs/assets_pages/entertainment/images/Logo-TVS-NOW_BALL-THAI.png',
+	  'https://truegether.true.th/hubfs/assets_pages/entertainment/images/Logo-TVS-NOW_BALL-THAI.png',
+	  'https://truegether.true.th/hubfs/assets_pages/entertainment/images/Logo-TVS-NOW_BALL-THAI.png',
+    'https://www.fileinw.com/postor/20240429213309FWMOV.jpg',
       'https://www.fileinw.com/postor/20240429213326FWSOV.jpg',
       'https://www.fileinw.com/postor/20240429213651FWTOON.jpg',
       'https://www.fileinw.com/postor/20240617204638FWDoc.jpg',
       'https://www.fileinw.com/postor/20240429213640FWsport.jpg',
-      'https://cloud.ufxtv.com/images/vod/thumbs/ozii9hzha6cy1h5l0o2zarov90fopfqkqljm59vmjczqvxy21tz4jjmv83ui0z46.jpg',
-      'https://cloud.ufxtv.com/images/vod/thumbs/lxqes0s091zqz7zkzg8gawocr9hjaxeqtxou8x5tibr091zfmf79ihy6mvot5mj3.jpg',
-      'https://cloud.ufxtv.com/images/vod/thumbs/f4abk16eos1yt01qzdbyfk1098j1nx0r98fe0gj9h5anjrfltebtuvgu2e87qjw2.jpg',
-      'https://cloud.ufxtv.com/images/vod/thumbs/6x1d7z9daf0sdl875xeg158n2ck6eej2ajhpnlldmndkqi5c405kwzpqvknyy8tg.jpg',
-      'https://cloud.ufxtv.com/images/vod/thumbs/ymq70ctbe6hgsf7baq9e402z34o8gwoy84jgbo3afbva9f0as6lfxa5ax6gpk1mq.jpg',
-      'https://cloud.ufxtv.com/images/vod/thumbs/0myldcwwzhcyf86e7a4dt5ygft8e7hldge2kub8xjwkxwdngncb8ma0h45z41u5g.jpg',
-      'https://cloud.ufxtv.com/images/vod/thumbs/b5f48kk6t3qww3u286okv9lgapdmkdx9w5lpmnwnmbody52n2qpztpqao207z25o.jpg',
-      'https://cloud.ufxtv.com/images/vod/thumbs/5fvujh43939p4l79zhxy3fczm52zc82wxkj442h5jv1lp6pvdscyd5c2fltay2p2.jpg',
-      'https://cloud.ufxtv.com/images/vod/thumbs/u707rqwjmlknx8vsx5bpg1ytmzjl58guzv747125mke5wrh390gj91c39qsgvr07.jpg',
-      'https://cloud.ufxtv.com/images/vod/thumbs/ns6c37fwvx3482330h48tt344o2rxmw57r91quoeo5402e2dbqgytdsyaqfyzqe0.jpg',
-      'https://cloud.ufxtv.com/images/vod/thumbs/leesfexbgcl201hutmw2chec11c672kwhjkdbprnjse9q4ucl8l007ocek6c11cr.jpg',
-      'https://cloud.ufxtv.com/images/vod/thumbs/spioen3nfvzwf4a8aexdxill48cnu8f6r3jzy5gh2nd0ul8edkyj7vu5xkf8weax.jpg',
-      'https://cloud.ufxtv.com/images/vod/thumbs/0syh0lilhtp4fg6y0nouetyijcl3iuojmn0n8i9qcyurf0qfofa288lsl7v41kno.jpg?r=34',
-      'https://cloud.ufxtv.com/images/vod/thumbs/mhrso1ghcmdggnv0m1gvuwqrimi2mkb8230q5g7h2lyj9ukwv0rqwihf50hrlt0n.jpg',
-      'https://cloud.ufxtv.com/images/vod/thumbs/yxncxoxpj3agjs5x65vk127t00zui8rr94rb9m5c8v0mz7okmt4s7bh53ha676yt.jpg',
-      'https://cloud.ufxtv.com/images/vod/thumbs/ngu9kivd8sonyik71w7vfo388cxxh2j4jde3v9h425r0oc8q8flo4pwd1uajxtog.jpg',
-      'https://cloud.ufxtv.com/images/vod/thumbs/j5ij3xiw0uy2lt57wnha5cg2x8m7v0xf6fy9cg5db4fwxl4u8m4eylhwu33q405a.png',
-      'https://cloud.ufxtv.com/images/vod/thumbs/3cgqcynf8nd2ev6saxemnons696qga1kmhazfyeolrq0mwswu7jhv792hgsxquhd.jpg?r=48',
-      'https://cloud.ufxtv.com/images/vod/thumbs/f3jskp5vtlsr7wlgiquhcbd6fgwjh2tx6dpr3vnwhfopca5v10cdbqkr7hbpj5mp.jpg?r=48',
-      'https://cloud.ufxtv.com/images/vod/thumbs/crcrpqgbh6b4241xblf7sp99527vxo89gl16bhhtntyqxzn8l3gdspnxsvtpk1z0.jpg?r=48',
-      'https://cloud.ufxtv.com/images/vod/thumbs/7r2xc26myvnd9zfs0v7enb0lsfpmmouugxrszxfys2c22rv2m2h9diu6xksj9mdp.jpg?r=48',
-      'https://cloud.ufxtv.com/images/vod/thumbs/m07yhpr5iqvgqjpbm5pevcco85ds7dtud0svpk08avo0feb1j1gfds3mxhe4u7y7.jpg?r=48',
-      'https://cloud.ufxtv.com/images/vod/thumbs/4jxykkshlcyybpnjo0ixnn3u39tal7xqqvobghs1tr05goo4o72cu56yfz9176ry.jpg?r=48',
-      'https://cloud.ufxtv.com/images/vod/thumbs/2f9iw1kqtkw98kexsg9mmgl1gu2n1ul39ul6w6xpqtzzeew6u6thmej38mq9gcdq.jpg?r=48',
-      'https://cloud.ufxtv.com/images/vod/thumbs/4u079e4mndjevduzsmkeufxzlyam8t9cn9jxnoka24pyhky96in1xk1jjb5r4e4s.jpg?r=48',
-      'https://cloud.ufxtv.com/images/vod/thumbs/26dlrb6fjd3wuyxai0g09tdzj9auslivswgj7nyq12nv1l5jlmkufyty74szpbvh.jpg?r=48',
-      'https://cloud.ufxtv.com/images/vod/thumbs/v3sxuucxb1n6nue0zrq2t3bz2bzxo0lk3ehx8uvjviqjd4jcw9fpdqpg2pdrpzbs.jpg?r=48',
-      'https://cloud.ufxtv.com/images/vod/thumbs/gya36c2iz2ctmlnqfmnz8p0tbxj14q6797tbt3c8s1kaxvvo6k3pows81h8k0udt.jpg?r=48',
-      'https://www.24-hd.com/wp-content/uploads/2025/04/The-Red-Envelope-2025-%E0%B8%8B%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%94%E0%B8%87%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%87%E0%B8%9C%E0%B8%B5-187x269.png',
-      'https://img.inwiptv.net/postor/20250227112222wBrbYlOVXRfeefvfgeJI5btS1Ow.jpg',
-      'https://img.inwiptv.net/postor/202503201153391pIrritKjpz6itW6GYLAItCbxqC.jpg',
-      'https://img.inwiptv.net/postor/20250404060436z2TWhTRFzriygLygsjTbIHFYcQW.jpg',
-      'https://rentapi.blackboxsys.net/images/png/epl-1.png',
-      'https://rentapi.blackboxsys.net/images/png/epl-2.png',
-      'https://rentapi.blackboxsys.net/images/png/epl-3.png',
-      'https://rentapi.blackboxsys.net/images/png/epl-4.png',
-      'https://rentapi.blackboxsys.net/images/png/epl-5.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-bein5.png',
-      'https://cloud.ufxtv.com/images/vod/thumbs/4u079e4mndjevduzsmkeufxzlyam8t9cn9jxnoka24pyhky96in1xk1jjb5r4e4s.jpg?r=48',
     ];
 
     // กำหนด playBaseUrls เอง
@@ -505,44 +538,43 @@
       'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-mangkorn&kauth=',
       'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-monoplus&kauth=',
       'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-filmasia&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-filmasia&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-filmasia&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-filmasia&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-filmasia&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-filmasia&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=ozii9hzha6cy1h5l0o2zarov90fopfqkqljm59vmjczqvxy21tz4jjmv83ui0z46&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=lxqes0s091zqz7zkzg8gawocr9hjaxeqtxou8x5tibr091zfmf79ihy6mvot5mj3&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=f4abk16eos1yt01qzdbyfk1098j1nx0r98fe0gj9h5anjrfltebtuvgu2e87qjw2&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=6x1d7z9daf0sdl875xeg158n2ck6eej2ajhpnlldmndkqi5c405kwzpqvknyy8tg&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=ymq70ctbe6hgsf7baq9e402z34o8gwoy84jgbo3afbva9f0as6lfxa5ax6gpk1mq&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=0myldcwwzhcyf86e7a4dt5ygft8e7hldge2kub8xjwkxwdngncb8ma0h45z41u5g&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=b5f48kk6t3qww3u286okv9lgapdmkdx9w5lpmnwnmbody52n2qpztpqao207z25o&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=5fvujh43939p4l79zhxy3fczm52zc82wxkj442h5jv1lp6pvdscyd5c2fltay2p2&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=u707rqwjmlknx8vsx5bpg1ytmzjl58guzv747125mke5wrh390gj91c39qsgvr07&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=ns6c37fwvx3482330h48tt344o2rxmw57r91quoeo5402e2dbqgytdsyaqfyzqe0&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=leesfexbgcl201hutmw2chec11c672kwhjkdbprnjse9q4ucl8l007ocek6c11cr&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=spioen3nfvzwf4a8aexdxill48cnu8f6r3jzy5gh2nd0ul8edkyj7vu5xkf8weax&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=0syh0lilhtp4fg6y0nouetyijcl3iuojmn0n8i9qcyurf0qfofa288lsl7v41kno&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=mhrso1ghcmdggnv0m1gvuwqrimi2mkb8230q5g7h2lyj9ukwv0rqwihf50hrlt0n&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=yxncxoxpj3agjs5x65vk127t00zui8rr94rb9m5c8v0mz7okmt4s7bh53ha676yt&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=ngu9kivd8sonyik71w7vfo388cxxh2j4jde3v9h425r0oc8q8flo4pwd1uajxtog&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=j5ij3xiw0uy2lt57wnha5cg2x8m7v0xf6fy9cg5db4fwxl4u8m4eylhwu33q405a&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=3cgqcynf8nd2ev6saxemnons696qga1kmhazfyeolrq0mwswu7jhv792hgsxquhd&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=f3jskp5vtlsr7wlgiquhcbd6fgwjh2tx6dpr3vnwhfopca5v10cdbqkr7hbpj5mp&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=crcrpqgbh6b4241xblf7sp99527vxo89gl16bhhtntyqxzn8l3gdspnxsvtpk1z0&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=7r2xc26myvnd9zfs0v7enb0lsfpmmouugxrszxfys2c22rv2m2h9diu6xksj9mdp&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=m07yhpr5iqvgqjpbm5pevcco85ds7dtud0svpk08avo0feb1j1gfds3mxhe4u7y7&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=4jxykkshlcyybpnjo0ixnn3u39tal7xqqvobghs1tr05goo4o72cu56yfz9176ry&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=2f9iw1kqtkw98kexsg9mmgl1gu2n1ul39ul6w6xpqtzzeew6u6thmej38mq9gcdq&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=4u079e4mndjevduzsmkeufxzlyam8t9cn9jxnoka24pyhky96in1xk1jjb5r4e4s&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=26dlrb6fjd3wuyxai0g09tdzj9auslivswgj7nyq12nv1l5jlmkufyty74szpbvh&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=v3sxuucxb1n6nue0zrq2t3bz2bzxo0lk3ehx8uvjviqjd4jcw9fpdqpg2pdrpzbs&res=720&vod_sound=auto&kauth=',
-      'https://cloud.ufxtv.com/api/vod/play2/?vod_type=movie&vod_content_id=gya36c2iz2ctmlnqfmnz8p0tbxj14q6797tbt3c8s1kaxvvo6k3pows81h8k0udt&res=720&vod_sound=auto&kauth=',
-      'https://fw4free.com/player2.php?channel=1655580&id=53',
-      'https://fw4free.com/player2.php?channel=1637922&id=53',
-      'https://fw4free.com/player2.php?channel=1637922&id=53',
-      'https://fw4free.com/player2.php?channel=1637922&id=53',
-      'https://fw4free.com/player2.php?channel=1637922&id=53',
+      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-discoverybkp&kauth=',
+      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-discovery&kauth=',
+      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-discovery&kauth=',
+      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-history&kauth=',
+      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-history&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-foodnetwork&kauth=',
+      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-tlc&kauth=',
+      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-tlc&kauth=',
+      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-explife&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-expwild&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-expsci&kauth=',
+      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-asianfood&kauth=',
+      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-asianfood&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-dreamworks&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-cartoonnetwork&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-cartoonnetwork&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-sparkplay&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-nickjr&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-boomerang&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=uk-cartoonito&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-disney2&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-disney2bkp_720&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-nickelodeon_720&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-nickelodeon_1080&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-mtvasia&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-topnews&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-tptv&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-cnn&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-bloomberg&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=us-foxnews&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=uk-rt&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-euronews&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=us-cnbc&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-bbcworldnews&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-nhkworld&kauth=',
+	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-cctv4&kauth=',
+		'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-news1&kauth=',
     ];
 
     // ฟังก์ชันดึง playlist URL
@@ -609,8 +641,8 @@ function showChannelsInCategory(catIndex) {
   const category = categories[catIndex];
 
   
-  if (category.name === 'ดูหนังออนไลน์') {
-    window.open('http://guflix.streaming-fast.com/WEB/index.html', '_self');
+  if (category.name === '3BB') {
+    window.open('https://bestcommt2.github.io/3bb/3bb.html', '_self');
     return;
   }
 
@@ -703,43 +735,43 @@ let session = null;
   }
 
 
-  if (channelNames[index] === 'ผู้เช่า') {
-    const iframeUrl = 'https://fw4free.com/player2.php?channel=1622792&id=53';
+  if (channelNames[index] === 'BallThai 1') {
+    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth1.html';
     loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
-  if (channelNames[index] === 'ผาดำคำไอ่') {
-    const iframeUrl = 'https://fw4free.com/player2.php?channel=1637922&id=53';
+  if (channelNames[index] === 'BallThai 2') {
+    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth2.html';
     loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
-  if (channelNames[index] === '404 สุขีนิรันดร์..') {
-    const iframeUrl = 'https://fw4free.com/player2.php?channel=1648586&id=53';
+  if (channelNames[index] === 'BallThai 3') {
+    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth3.html';
     loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
-  if (channelNames[index] === 'The Red Envelope (2025) ซองแดงแต่งผี') {
-    const iframeUrl = 'https://main.24playerhd.com/newplaylist/6be9ca7114ef03c9c244114a/6be9ca7114ef03c9c244114a.m3u8';
-    loadChannel(iframeUrl, false); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
-    return;
-  }
-  if (channelNames[index] === 'ช่อง FW MOVIE') {
-    const iframeUrl = 'https://www.inwiptv.org/player_demo.php?channel=95262';
+  if (channelNames[index] === 'BallThai 4') {
+    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth4.html';
     loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
-  if (channelNames[index] === 'ช่อง FW SOV') {
-    const iframeUrl = 'https://www.inwiptv.org/player_demo.php?channel=94898';
+  if (channelNames[index] === 'BallThai 5') {
+    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth5.html';
     loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
-  if (channelNames[index] === 'ช่อง FW TOON') {
-    const iframeUrl = 'https://www.inwiptv.org/player_demo.php?channel=92941';
+  if (channelNames[index] === 'BallThai 6') {
+    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth6.html';
     loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
-  if (channelNames[index] === 'ช่อง FW DOC') {
-    const iframeUrl = 'https://www.inwiptv.org/player_demo.php?channel=91303';
+  if (channelNames[index] === 'BallThai 7') {
+    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth7.html';
+    loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
+    return;
+  }
+  if (channelNames[index] === 'BallThai 8') {
+    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth8.html';
     loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
@@ -749,32 +781,7 @@ let session = null;
     return;
   }
   if (channelNames[index] === 'EPL 1 BLUE') {
-    const iframeUrl = 'https://r3-sn-5fo-c37ed248.googleuservideo.com:8443/Premier1_720/tracks-v1a1/mono.m3u8?token=c2VydmVyX3RpbWU9MTAvMTYvMjA4NCAwNDozNTozMCBQTSZoYXNoX3ZhbHVlPU5tcXNJSlAyVFY3N0IzZzUwUktBQmc9PSZ2YWxpZG1pbnV0ZXM9NSZzdHJtX2xlbj0wJmlkPXdlYi05NzU';
-    loadChannel(iframeUrl, false); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
-    return;
-  }
-  if (channelNames[index] === 'EPL 2 BLUE') {
-    const iframeUrl = 'https://r3-sn-5fo-c37ed248.googleuservideo.com:8443/Premier2_720/tracks-v1a1/mono.m3u8?token=c2VydmVyX3RpbWU9MTAvMTYvMjA4NCAwNDozNTozMCBQTSZoYXNoX3ZhbHVlPU5tcXNJSlAyVFY3N0IzZzUwUktBQmc9PSZ2YWxpZG1pbnV0ZXM9NSZzdHJtX2xlbj0wJmlkPXdlYi05NzU';
-    loadChannel(iframeUrl, false); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
-    return;
-  }
-  if (channelNames[index] === 'EPL 3 BLUE') {
-    const iframeUrl = 'https://r3-sn-5fo-c37ed248.googleuservideo.com:8443/Premier3_720/tracks-v1a1/mono.m3u8?token=c2VydmVyX3RpbWU9MTAvMTYvMjA4NCAwNDozNTozMCBQTSZoYXNoX3ZhbHVlPU5tcXNJSlAyVFY3N0IzZzUwUktBQmc9PSZ2YWxpZG1pbnV0ZXM9NSZzdHJtX2xlbj0wJmlkPXdlYi05NzU';
-    loadChannel(iframeUrl, false); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
-    return;
-  }
-  if (channelNames[index] === 'EPL 4 BLUE') {
-    const iframeUrl = 'https://r3-sn-5fo-c37ed248.googleuservideo.com:8443/Premier4_720/tracks-v1a1/mono.m3u8?token=c2VydmVyX3RpbWU9MTAvMTYvMjA4NCAwNDozNTozMCBQTSZoYXNoX3ZhbHVlPU5tcXNJSlAyVFY3N0IzZzUwUktBQmc9PSZ2YWxpZG1pbnV0ZXM9NSZzdHJtX2xlbj0wJmlkPXdlYi05NzU';
-    loadChannel(iframeUrl, false); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
-    return;
-  }
-  if (channelNames[index] === 'EPL 5 BLUE') {
-    const iframeUrl = 'https://r3-sn-5fo-c37ed248.googleuservideo.com:8443/Premier5_720/tracks-v1a1/mono.m3u8?token=c2VydmVyX3RpbWU9MTAvMTYvMjA4NCAwNDozNTozMCBQTSZoYXNoX3ZhbHVlPU5tcXNJSlAyVFY3N0IzZzUwUktBQmc9PSZ2YWxpZG1pbnV0ZXM9NSZzdHJtX2xlbj0wJmlkPXdlYi05NzU';
-    loadChannel(iframeUrl, false); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
-    return;
-  }
-  if (channelNames[index] === 'BEIN 5 ONLINE') {
-    const iframeUrl = 'https://365liveball.com/channels-schedules?channel=bein5';
+    const iframeUrl = 'http://tbtv.me:2095/play/live.php?mac=00:1a:79:80:09:03&stream=186561&extension=m3u8';
     loadChannel(iframeUrl, false); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
     return;
   }
@@ -783,7 +790,7 @@ let session = null;
   const xml = await getPlaylist(session, playBaseUrls[index]);
   console.log("🚀 ~ loadChannelByIndex ~ xml:", xml)
 
-  const isMovieCategory = categories.find(cat => cat.name === 'ภาพยนตร์'||cat.name === '20+')?.channels.includes(index);
+  const isMovieCategory = categories.find(cat => cat.name === 'ดูหนัง'||cat.name === '20+')?.channels.includes(index);
 
   if (isMovieCategory) {
     // ดึงและ decode url ที่อยู่ใน <url> แทน
@@ -794,7 +801,7 @@ let session = null;
       const fixedUrl = decodedUrl.replace('playlist.m3u8', 'chunk.m3u8');
       loadChannel(fixedUrl);
     } else {
-      alert('ไม่พบลิงก์ภาพยนตร์ ❌');
+      alert('ไม่พบลิงก์ playlist ❌');
     }
   } else {
     // หมวดอื่น ใช้วิธีเดิม
