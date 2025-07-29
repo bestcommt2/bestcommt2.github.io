@@ -1,20 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>TrueSportHD3 with Video.js</title>
-  <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet">
-</head>
+<head><meta charset="UTF-8"><title>Stream Player</title></head>
 <body>
-  <video id="my-video" class="video-js vjs-default-skin" controls width="640" height="360"></video>
-  <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
+  <video id="video" width="640" controls></video>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <script>
-    const player = videojs('my-video');
-    player.src({
-      src: 'https://rr3-ic3d-ndjcs.huaweicdncloud.com/dooball2you/truesporthd3/playlist.m3u8',
-      type: 'application/x-mpegURL'
-    });
-    player.play();
+    async function fetchM3u8() {
+      const resp = await fetch('https://168dooball.io/ztvapi/generator.php?cid=truesporthd3&bid=…');
+      const text = await resp.text();
+      const decoded = atob(text);  // ถอด base64
+      console.log(decoded);        // ตรวจสอบ output
+      let url = decoded;
+      try {
+        const obj = JSON.parse(decoded);
+        url = obj.url;
+      } catch{}
+      return url;
+    }
+
+    (async () => {
+      const video = document.getElementById('video');
+      const videoSrc = await fetchM3u8();
+      console.log('m3u8 URL:', videoSrc);
+
+      if (!videoSrc) {
+        alert('ไม่พบลิงก์ .m3u8');
+        return;
+      }
+
+      if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(videoSrc);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = videoSrc;
+        video.addEventListener('loadedmetadata', () => video.play());
+      } else {
+        alert('เบราว์เซอร์ไม่รองรับ HLS');
+      }
+    })();
   </script>
 </body>
 </html>
