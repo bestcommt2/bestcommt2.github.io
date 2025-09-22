@@ -1,908 +1,315 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FUCKIDPLUS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-
-    .container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-}
-
-.responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 50%;
-  height: 50%;
-  border: none;
-}
-    body {
-      background-color: #250;
-      padding: 20px;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: auto;
-      font-family: 'Prompt', sans-serif;
-    }
-    video {
-      width: 50%;
-      max-width: 500px;
-      border: 4px solid #fff;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-    .channels {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
-    .channel-button {
-      background-color: #222;
-      color: white;
-      padding: 10px;
-      border-radius: 10px;
-      border: 2px solid #fff;
-      cursor: pointer;
-      text-align: center;
-      width: 120px;
-      font-family: 'Prompt', sans-serif;
-      outline: none;
-    }
-    .channel-button img {
-      width: 80px;
-      height: 40px;
-      border-radius: 5px;
-      margin-bottom: 5px;
-    }
-    .channel-button:hover,
-    .channel-button:focus {
-      background-color: #444;
-    }
-
-    .channel-number {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 36px;
-      color: #fff;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 10px;
-      border-radius: 10px;
-      display: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUCKIDHD++3BBTV</title>
+    <script src="https://ssl.p.jwpcdn.com/player/v/8.26.0/jwplayer.js"></script>
+    <script>
+        jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #player {
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: 16/9; /* ทำให้วิดีโอรักษาสัดส่วน */
+        }
+        #channel-list {
+            margin: 10px auto;
+            max-width: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+        }
+        .channel {
+            cursor: pointer;
+            padding: 5px;
+            background: #222;
+            border: 1px solid #444;
+            border-radius: 5px;
+            text-align: center;
+            width: 50px;
+        }
+        .channel img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+        .channel:hover {
+            background: #000;
+        }
+    </style>
 </head>
-
-    <video id="video" controls autoplay></video>
-   <div class="container" id="iframe-container" style="display: none;">
-    <iframe class="responsive-iframe" id="channel-frame" src="" allowfullscreen></iframe>
-  </div>
-    
-    <div id="categories" class="channels"></div>
-  <div class="channels" id="channels"></div>
-
-  <div id="channelNumber" class="channel-number">12</div>
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-  
-  <script>
-    const video = document.getElementById('video');
-    const channelNumberDiv = document.getElementById('channelNumber');
-    function toggleBorder() {
-    if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement) {
-      video.style.border = 'none';  // ลบ border เมื่อเต็มจอ
-    } else {
-      video.style.border = '4px solid #fff';  // เพิ่ม border เมื่อออกจากโหมดเต็มจอ
-    }
-  }
-
-  // การตรวจจับเมื่อเข้าสู่/ออกจากโหมดเต็มจอ
-  document.addEventListener('fullscreenchange', toggleBorder);
-  document.addEventListener('webkitfullscreenchange', toggleBorder);
-  document.addEventListener('mozfullscreenchange', toggleBorder);
-
-  // ในกรณีที่เป็นเบราว์เซอร์ที่ไม่รองรับ fullscreenchange
-  video.addEventListener('dblclick', function() {
-    if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement) {
-      if (video.requestFullscreen) {
-        video.requestFullscreen();
-      } else if (video.webkitRequestFullscreen) {
-        video.webkitRequestFullscreen();
-      } else if (video.mozRequestFullScreen) {
-        video.mozRequestFullScreen();
-      }
-    }
-  });
-    const channelsDiv = document.getElementById('channels');
-    let selectedIndex = 0;
-
-    const categories = [
-  {
-    name: 'พรีเมียร์ลีก',
-    channels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], // index จาก channelNames/playBaseUrls
-  },
-  {
-    name: 'Bein Sport',
-    channels: [10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27],
-  },
-  {
-    name: 'Digital Tv',
-    channels: [28,29,30,31,32,33,34,35,36,37,38,38,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63],
-  },
-  {
-    name: 'บันเทิง',
-    channels: [64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88],
-  },
-  {
-    name: 'สารคดี',
-    channels: [89,90,91,92,93,94,95,96,97,98,99,100,101,],
-  },
-  {
-    name: 'ดูการ์ตูน',
-    channels: [102,103,104,105,106,107,108,109,110,111,112,],
-  },
-     {
-    name: 'เพลงและดนตรี',
-    channels: [113,],
-  },
-     {
-    name: 'ข่าว',
-    channels: [114,115,116,117,118,119,120,121,122,123,124,125,],
-  },
-   {
-    name: 'ดูบอลไทย',
-    channels: [126,127,128,129,130,131,132,133],
-  },
-   {
-    name: '3BB',
-    channels: [134],
-  },
- 
-];
-
-
-    const channelNames = [
-'ช่อง 0 EPL 1',
-'ช่อง 1 EPL 1 Backup',
- 'ช่อง 2 EPL 2',
- 'ช่อง 3 EPL 2 Backup',
- 'ช่อง 4  EPL 3',
-'ช่อง  5 EPL 3 Backup',
- 'ช่อง 6 EPL 4',
- 'ช่อง 7  EPL 4 Backup',
-'ช่อง  8 EPL 5', 
-'ช่อง 9  EPL 5 Backup',
- 'ช่อง 10  Bein 1',
-'ช่อง 11  Bein 1 Backup',
- 'ช่อง 12  Bein 2', 
- 'ช่อง 13 Bein 2 Backup',
-'ช่อง 14 Bein 3',
-'ช่อง 15  Bein 3 Backup',
-      'ช่อง 16 Bein HD 1',
-      'ช่อง 17 Bein HD 2',
-      'ช่อง 18 Bein HD 3',
-      'ช่อง 19 Bein HD 4',
-      'ช่อง 20 Bein HD 5',
-      'ช่อง 21 Bein HD 6',
-      'ช่อง 22 Bein HD 7',
-      'ช่อง 23 Bein HD 8',
-      'ช่อง 24 Bein HD 9',
-      'ช่อง 25 Bein HD 10',
-      'ช่อง 26 Bein HD 11',
-      'ช่อง 27 Bein HD 12',
-      'ช่อง 28 CH3 HD',
-      'ช่อง 29 CH3 HD Backup',
-      'ช่อง 30 CH5 HD',
-      'ช่อง 31 CH5 HD Backup',
-      'ช่อง 32 CH7 HD',
-      'ช่อง 33 CH7 HD Backup',
-      'ช่อง 34 CH9 HD',
-      'ช่อง 35 CH9 HD Backup',
-      'ช่อง 36  WorkPoint HD',
-      'ช่อง 37 WorkPoint HD Backup',
-      'ช่อง 38 GMM HD',
-      'ช่อง 39 GMM HD Backup',
-      'ช่อง 40 MONO HD',
-      'ช่อง 41 MOMO HD Backup',
-      'ช่อง 42 CH8 HD',
-      'ช่อง 43 CH8 HD Backup',
-      'ช่อง 44 ONE HD',
-      'ช่อง 45 ONE HD Backup',
-      'ช่อง 46 Amarin TV HD',
-      'ช่อง 47 Amarin TV HD Backup',
-      'ช่อง 48 Thairath TV HD',
-      'ช่อง 49 Thairath TV HD Backup',
-      'ช่อง 50 PPTV HD',
-      'ช่อง 51 PPTV HD Backup',
-      'ช่อง 52 TRUE 4 U HD',
-      'ช่อง 53 TRUE 4 U HD Backup',
-      'ช่อง 54 Nation TV HD',
-      'ช่อง 55 Nation TV HD Backup',
-      'ช่อง 56 JKN TV HD',
-      'ช่อง 57 JKN TV HD Backup',
-      'ช่อง 58 TNN TV HD',
-      'ช่อง 59 TNN TV HD Backup',
-      'ช่อง 60 Thai PBS TV HD',
-      'ช่อง 61 Thai PBS TV HD Backup',
-      'ช่อง 62 NBT TV HD',
-      'ช่อง 63 NBT TV HD Backup',
-      'ช่อง 64 ASIAN MORE',
-      'ช่อง 65 Warner TV',
-      'ช่อง 66 Waner TV Backup',
-      'ช่อง 67 HBO TV',
-      'ช่อง 68 HBO Family TV',
-      'ช่อง 69 HBO HIT TV',
-      'ช่อง 70 HBO Signature TV',
-      'ช่อง 71 MAX HD TV',
-      'ช่อง 72 MAX HD TV Backup',
-      'ช่อง 73 AXN TV',
-      'ช่อง 74 AXN TV Backup',
-      'ช่อง 75 BLUE ANT TV',
-      'ช่อง 76 BLUE Extreme TV',
-      'ช่อง 77 FILM HD',
-      'ช่อง 78 FILM 2 HD',
-      'ช่อง 79 SERIES',
-      'ช่อง 80 MOVIE HIT TV',
-      'ช่อง 81 Xzyte TV',
-      'ช่อง 82 TRUE THAI FILM TV',
-      'ช่อง 83 Celestial TV',
-      'ช่อง 84 TVN TV',
-      'ช่อง 85 MIX MAJOR TV',
-      'ช่อง 86 มังกร TV',
-      'ช่อง 87 MONO PLUS TV',
-      'ช่อง 88 FILM ASIA TV',
-      'ช่อง 89 Discovery',
-      'ช่อง 90 Discovery',
-      'ช่อง 91 Discovery BK',
-      'ช่อง 92 History',
-       'ช่อง 93 History BK',
-	    'ช่อง 94  FoodNetwork',
-       'ช่อง 95 TLC BK',
-       'ช่อง 96 TLC',
-       'ช่อง 97 EXPLORE LIFE',
-	   'ช่อง 98 EXPLORE WILD',
-	   'ช่อง 99 EXPLORE SCI',
-       'ช่อง 100 ASIAN FOOD CHANNEL',
-       'ช่อง 101 ASIAN FOOD CHANNEL BK',
-	    'ช่อง 102  DREAMWORKS',
-		'ช่อง 103  CARTOON NETWORK',
-		'ช่อง 104  CARTOON NETWORK BK',
-		'ช่อง 105  SPARK PLAY',
-		'ช่อง 106  NICK JR',
-		'ช่อง 107 BOOMERANG',
-		'ช่อง 108  CARTOONITO',
-		'ช่อง 109  DISNEP CHANNEL',
-		'ช่อง 110  DISNEP CHANNEL BK',
-		'ช่อง 111  NICK LODEON',
-		'ช่อง 112 NICK LODEON BK',
-		'ช่อง 113 MTV',
-		'ช่อง 114 TOP NEW',
-		'ช่อง 115 TV รัฐสภา',
-		'ช่อง 116 CNN',
-		'ช่อง 117 BLOOMBERG',
-		'ช่อง 118 FOX NEWS',
-		'ช่อง 119 RT NEWS',
-		'ช่อง 120 EURO NEWS',
-		'ช่อง 121 CNBC NEWS',
-		'ช่อง 122 BBC WORLD NEWS',
-		'ช่อง 123 NHK WORLD',
-		'ช่อง 124 CCTV4',
-		'ช่อง 125 NEWS1',
-		'BallThai 1',
-		'BallThai 2',
-		'BallThai 3',
-		'BallThai 4',
-		'BallThai 5',
-		'BallThai 6',
-		'BallThai 7',
-		'BallThai 8',
-    ];
-
-    const channelLogos = [
-      'https://rentapi.blackboxsys.net/images/png/epl-1.png', 'https://rentapi.blackboxsys.net/images/png/epl-1bkp.png',
-      'https://rentapi.blackboxsys.net/images/png/epl-2.png', 'https://rentapi.blackboxsys.net/images/png/epl-2bkp.png',
-      'https://rentapi.blackboxsys.net/images/png/epl-3.png', 'https://rentapi.blackboxsys.net/images/png/epl-3bkp.png',
-      'https://rentapi.blackboxsys.net/images/png/epl-4.png', 'https://rentapi.blackboxsys.net/images/png/epl-4bkp.png',
-      'https://rentapi.blackboxsys.net/images/png/epl-5.png', 'https://rentapi.blackboxsys.net/images/png/epl-5bkp.png',
-      'https://static.uflixtv.com/images/tv/png/epl-bein1.png', 'https://static.uflixtv.com/images/tv/png/epl-bein1bkp.png',
-      'https://static.uflixtv.com/images/tv/png/epl-bein2.png', 'https://static.uflixtv.com/images/tv/png/epl-bein2bkp.png',
-      'https://static.uflixtv.com/images/tv/png/epl-bein3.png', 'https://static.uflixtv.com/images/tv/png/epl-bein3bkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-bein1.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-bein2.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-bein3.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-bein4.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-bein5.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-bein6.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-bein7.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-bein8.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-bein9.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-bein10.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-bein11.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-bein12.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-ch3.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-ch3bkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-ch5.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-ch5bkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-ch7.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-ch7bkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-mcot.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-mcotbkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-workpoint.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-workpointbkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-gmmchannel.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-gmmchannelbkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-mono.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-monobkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-ch8.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-ch8bkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-gmmone.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-gmmonebkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-amarin.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-amarinbkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-thairath.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-thairathbkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-pptv.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-pptvbkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-24u.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/th-24u.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-nation.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-nationbkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-new.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-newbkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-tnn24.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-tnn24bkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-tpbs.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/th-tpbs.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-nbt.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-nbtbkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-asianmore.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-warnertv.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-warnertvbkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/th-hbo.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/th-hbofamily.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/th-hbohits.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/th-hbosignature.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-cinemax.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-cinemaxbkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-axn.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-axnbkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/th-blueant.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/th-blueantex.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-tfilm.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-tfilm2.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-series.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-moviehits.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-xzyte.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-thaifilm.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-celestial.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/th-tvn.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-mixmajor.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-mangkorn.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/th-monoplus.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-filmasia.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-discovery.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-discovery.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/th-discovery.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/hd-history.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/th-history.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/th-food.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-tlcbkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/th-tlc.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/sd-explifebkp.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/sd-expwildbkp.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/sd-expscibkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/sd-asianfoodbkp.png',
-      'https://static.uflixtv.com/images/tv/channels_icons/th-asianfood.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/hd-dreamworks.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/sd-cartoonnetworkbkp.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/th-cartoonnetwork.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/sd-sparkplaybkp.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/th-nickjr.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/sd-boomerang.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/uk-cartoonito.png',
-	  'https://static.uflixtv.com/images/tv/png/uflix-disney2a.png',
-	  'https://static.uflixtv.com/images/tv/png/uflix-disney2a.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/sd-nickelodeon.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/sd-nickelodeonbkp.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/sd-mtvasia.png',
-	  'https://static.uflixtv.com/images/tv/png/hd-topnews.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/sd-tptv.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/hd-cnn.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/sd-bloomberg.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/us-foxnews.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/uk-rt.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/sd-euronews.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/us-cnbc.png',
-	  'https://static.uflixtv.com/images/tv/png/hd-bbcworldnews.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/sd-nhkworld.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/sd-cctv4.png',
-	  'https://static.uflixtv.com/images/tv/channels_icons/sd-news1.png',
-	  'https://truegether.true.th/hubfs/assets_pages/entertainment/images/Logo-TVS-NOW_BALL-THAI.png',
-	  'https://truegether.true.th/hubfs/assets_pages/entertainment/images/Logo-TVS-NOW_BALL-THAI.png',
-	  'https://truegether.true.th/hubfs/assets_pages/entertainment/images/Logo-TVS-NOW_BALL-THAI.png',
-	  'https://truegether.true.th/hubfs/assets_pages/entertainment/images/Logo-TVS-NOW_BALL-THAI.png',
-	  'https://truegether.true.th/hubfs/assets_pages/entertainment/images/Logo-TVS-NOW_BALL-THAI.png',
-	  'https://truegether.true.th/hubfs/assets_pages/entertainment/images/Logo-TVS-NOW_BALL-THAI.png',
-	  'https://truegether.true.th/hubfs/assets_pages/entertainment/images/Logo-TVS-NOW_BALL-THAI.png',
-	  'https://truegether.true.th/hubfs/assets_pages/entertainment/images/Logo-TVS-NOW_BALL-THAI.png',
-    'https://www.fileinw.com/postor/20240429213309FWMOV.jpg',
-      'https://www.fileinw.com/postor/20240429213326FWSOV.jpg',
-      'https://www.fileinw.com/postor/20240429213651FWTOON.jpg',
-      'https://www.fileinw.com/postor/20240617204638FWDoc.jpg',
-      'https://www.fileinw.com/postor/20240429213640FWsport.jpg',
-    ];
-
-    // กำหนด playBaseUrls เอง
-    const playBaseUrls = [
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-epl1&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-epl1bkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-epl2&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-epl2bkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-epl3&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-epl3bkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-epl4&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-epl4bkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-epl5&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-epl5bkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-bein1&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=epl-bein1&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-bein2&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=epl-bein2&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-bein3&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=epl-bein3&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-bein1&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-bein2&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-bein3&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-bein4&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-bein5&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-bein6&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-bein7&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-bein8&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-bein9&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-bein10&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-bein11&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-bein12&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-ch3&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-ch3bkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-ch5&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-ch5bkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-ch7&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-ch7bkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-mcot&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-mcotbkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-workpoint&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-workpointbkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-gmmchannel&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-gmmchannelbkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-mono&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-monobkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-ch8&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-ch8bkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-gmmone&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-gmmonebkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-amarin&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-amarinbkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-thairath&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-thairathbkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-pptv&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-pptvbkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-24u&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-24u&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-nation&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-nationbkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-new&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-newbkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-tnn24&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-tnn24bkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-tpbs&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-tpbs&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-nbt&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-nbtbkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-asianmore&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-warnertv&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-warnertvbkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-hbo&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-hbofamily&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-hbohits&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-hbosignature&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-cinemax&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-cinemax&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-axn&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-axnbkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-blueant&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-blueantex&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-tfilm&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-tfilm2&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-series&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-moviehits&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-xzyte&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-thaifilm&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-celestial&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-tvn&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-mixmajor&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-mangkorn&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-monoplus&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-filmasia&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-discoverybkp&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-discovery&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-discovery&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-history&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-history&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-foodnetwork&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-tlc&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-tlc&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-explife&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-expwild&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-expsci&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-asianfood&kauth=',
-      'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-asianfood&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-dreamworks&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-cartoonnetwork&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-cartoonnetwork&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-sparkplay&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-nickjr&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-boomerang&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=uk-cartoonito&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-disney2&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=uflix-disney2bkp_720&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-nickelodeon_720&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=th-nickelodeon_1080&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-mtvasia&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-topnews&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-tptv&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-cnn&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-bloomberg&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=us-foxnews&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=uk-rt&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-euronews&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=us-cnbc&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=hd-bbcworldnews&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-nhkworld&kauth=',
-	  'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-cctv4&kauth=',
-		'https://cloud.ufxtv.com/api/tv/channels/play/?c=sd-news1&kauth=',
-    ];
-
-    // ฟังก์ชันดึง playlist URL
-    async function getPlaylist(user_loggedsession, playBaseUrl) {
-  let playUrl = `${playBaseUrl}&user_loggedsession=${user_loggedsession}`;
-  let response = await fetch(playUrl);
-  let text = await response.text();
-
-  // ถ้า session หมดอายุ
-  if (text.includes('session failed')) {
-    user_loggedsession = await login();
-    playUrl = `${playBaseUrl}&user_loggedsession=${user_loggedsession}`;
-    response = await fetch(playUrl);
-    text = await response.text();
-  }
-
-  // เช็คว่ามีข้อมูลที่ใช้ได้
-  const hasClearUrl = text.includes('<clear_url>');
-  const hasMovieUrl = text.includes('<url>');
-
-  return (hasClearUrl || hasMovieUrl) ? text : null;
-}
-
-    
-
-
-
-
-// ดึง session ใหม่
-async function login() {
-  const response = await fetch('https://cloud.ufxtv.com/api/user/login/?user_email=BE0134&user_password=1111&kauth=');
-  const text = await response.text();
-  const sessionMatch = text.match(/<user_loggedsession>(.*?)<\/user_loggedsession>/);
-  return sessionMatch ? sessionMatch[1] : null;
-}
-
-
-    // ดึง clear_url จาก response XML
-    function extractClearUrl(xml) {
-      const match = xml.match(/<clear_url>(.*?)<\/clear_url>/);
-      return match ? match[1] : null;
-    }
-
-    function renderCategories() {
-  const categoriesDiv = document.getElementById('categories');
-  categoriesDiv.innerHTML = '';
-  categoriesDiv.style.display = 'flex';
-  channelsDiv.style.display = 'none';
-
-  categories.forEach((cat, idx) => {
-    const button = document.createElement('div');
-    button.classList.add('channel-button');
-    button.tabIndex = 0;
-    button.innerHTML = `<div>${idx + 1}. ${cat.name}</div>`;
-    button.onclick = () => showChannelsInCategory(idx);
-    button.onkeydown = (e) => {
-      if (e.key === 'Enter') showChannelsInCategory(idx);
-    };
-    categoriesDiv.appendChild(button);
-  });
-}
-
-function showChannelsInCategory(catIndex) {
-  const category = categories[catIndex];
-
-  
-  if (category.name === '3BB') {
-    window.open('https://bestcommt2.github.io/3bb/3bb.html', '_self');
-    return;
-  }
-
-  // แสดงช่องของหมวดที่เลือก
-  channelsDiv.innerHTML = '';
-  channelsDiv.style.display = 'flex';
-  document.getElementById('categories').style.display = 'none';
-
-  category.channels.forEach(i => renderPlaylist(i));
-
-  // เพิ่มปุ่มย้อนกลับ
-  const backBtn = document.createElement('div');
-  backBtn.classList.add('channel-button');
-  backBtn.innerHTML = '🔙 ย้อนกลับ';
-  backBtn.tabIndex = 0;
-  backBtn.onclick = renderCategories;
-  backBtn.onkeydown = (e) => {
-    if (e.key === 'Enter') renderCategories();
-  };
-  channelsDiv.appendChild(backBtn);
-}
-
-
-
-
-    // แสดงผลลัพธ์แบบ playlist
-    function renderPlaylist(index) {
-  const button = document.createElement('div');
-  button.classList.add('channel-button');
-  button.tabIndex = 0;
-  button.innerHTML = ` 
-    <img src="${channelLogos[index]}" alt="${channelNames[index]}">
-    <div>${index + 1}. ${channelNames[index]}</div>
-  `;
-
-  // โหลด playlist เมื่อผู้ใช้คลิก
-  button.onclick = () => loadChannelByIndex(index);
-  button.onkeydown = (e) => {
-    if (e.key === 'Enter') {
-      loadChannelByIndex(index);
-    }
-  };
-
-  channelsDiv.appendChild(button);
-}
-
-    // ฟังก์ชันในการโหลดช่องที่เลือก
-function loadChannel(url, useIframe = false) {
-  const video = document.getElementById('video');
-  const iframe = document.getElementById('channel-frame');
-  const iframeContainer = document.getElementById('iframe-container');
-
-  if (useIframe) {
-    // 👉 ซ่อนวิดีโอ แล้วโชว์ iframe
-    video.style.display = 'none';
-    iframeContainer.style.display = 'block';
-    iframe.src = url;
-  } else {
-    // 👉 ซ่อน iframe แล้วโชว์ video
-    iframeContainer.style.display = 'none';
-    video.style.display = 'block';
-
-    if (Hls.isSupported()) {
-     const hls = new Hls({
-  liveSyncDurationCount: 3,
-  liveMaxLatencyDurationCount: 10
-});
-hls.loadSource(url);
-hls.attachMedia(video);
-
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = url;
-    } else {
-      alert('เบราว์เซอร์ของคุณไม่รองรับ HLS 😥');
-    }
-  }
-}
-
-
-
-let session = null;
-    // Main
-    async function loadChannelByIndex(index) {
-  if (!session) {
-    session = await login();
-    if (!session) {
-      alert("ไม่สามารถเข้าสู่ระบบได้ ❌");
-      return;
-    }
-  }
-
-
-  if (channelNames[index] === 'BallThai 1') {
-    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth1.html';
-    loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
-    return;
-  }
-  if (channelNames[index] === 'BallThai 2') {
-    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth2.html';
-    loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
-    return;
-  }
-  if (channelNames[index] === 'BallThai 3') {
-    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth3.html';
-    loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
-    return;
-  }
-  if (channelNames[index] === 'BallThai 4') {
-    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth4.html';
-    loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
-    return;
-  }
-  if (channelNames[index] === 'BallThai 5') {
-    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth5.html';
-    loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
-    return;
-  }
-  if (channelNames[index] === 'BallThai 6') {
-    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth6.html';
-    loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
-    return;
-  }
-  if (channelNames[index] === 'BallThai 7') {
-    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth7.html';
-    loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
-    return;
-  }
-  if (channelNames[index] === 'BallThai 8') {
-    const iframeUrl = 'https://bestcommt2.github.io/true/play%20ballth8.html';
-    loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
-    return;
-  }
-  if (channelNames[index] === 'ช่อง FW SPORT') {
-    const iframeUrl = 'https://www.inwiptv.org/player_demo.php?channel=89782';
-    loadChannel(iframeUrl, true); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
-    return;
-  }
-  if (channelNames[index] === 'EPL 1 BLUE') {
-    const iframeUrl = 'http://tbtv.me:2095/play/live.php?mac=00:1a:79:80:09:03&stream=186561&extension=m3u8';
-    loadChannel(iframeUrl, false); // ไม่ต้อง await ถ้า loadChannel ไม่เป็น async ก็ได้
-    return;
-  }
-
-
-  const xml = await getPlaylist(session, playBaseUrls[index]);
-  console.log("🚀 ~ loadChannelByIndex ~ xml:", xml)
-
-  const isMovieCategory = categories.find(cat => cat.name === 'ดูหนัง'||cat.name === '20+')?.channels.includes(index);
-
-  if (isMovieCategory) {
-    // ดึงและ decode url ที่อยู่ใน <url> แทน
-    const match = xml.match(/<url>(.*?)<\/url>/);
-    if (match) {
-      const encodedUrl = match[1];
-      const decodedUrl = decodeURIComponent(encodedUrl);
-      const fixedUrl = decodedUrl.replace('playlist.m3u8', 'chunk.m3u8');
-      loadChannel(fixedUrl);
-    } else {
-      alert('ไม่พบลิงก์ playlist ❌');
-    }
-  } else {
-    // หมวดอื่น ใช้วิธีเดิม
-    const clearUrl = extractClearUrl(xml);
-    if (clearUrl) {
-      const fixedUrl = clearUrl.replace('playlist.m3u8', 'chunks.m3u8');
-      loadChannel(fixedUrl);
-    } else {
-      alert('ไม่พบลิงก์ playlist ❌');
-    }
-  }
-}
-
-// ฟังก์ชันหลัก
-(async () => {
-  session = await login();
-  if (!session) {
-    alert("ไม่สามารถเข้าสู่ระบบได้ ❌");
-    return;
-  }
-
-  renderCategories(); // ไม่ต้องโหลดช่องทั้งหมดทันที
-})();
-
-
-    // การควบคุมโดยใช้ปุ่มลูกศร
-    let currentKey = ''
-    document.addEventListener('keydown', (e) => {
-      const buttons = document.querySelectorAll('.channel-button');
-      if (e.key === 'ArrowDown') {
-        selectedIndex = (selectedIndex + 3) % buttons.length; // เลื่อนลง 3 ช่อง
-        buttons[selectedIndex].focus();
-      } else if (e.key === 'ArrowUp') {
-        selectedIndex = (selectedIndex - 3 + buttons.length) % buttons.length; // เลื่อนขึ้น 3 ช่อง
-        buttons[selectedIndex].focus();
-      } else if (e.key === 'ArrowLeft') {
-        selectedIndex = (selectedIndex - 1 + buttons.length) % buttons.length; // เลื่อนซ้าย 1 ช่อง
-        buttons[selectedIndex].focus();
-      } else if (e.key === 'ArrowRight') {
-        selectedIndex = (selectedIndex + 1) % buttons.length; // เลื่อนขวา 1 ช่อง
-        buttons[selectedIndex].focus();
-      }
-
-
-      
-  if (!isNaN(e.key)) {
-      currentKey += e.key;  
-      showChannelNumber(parseInt(currentKey)); 
-  } else {
-    currentKey = ''
-  }
-
-    // แสดงหมายเลขช่องที่เลือก
-    function showChannelNumber(channelNumber) {
-  channelNumberDiv.textContent = channelNumber;
-  channelNumberDiv.style.display = 'flex';
-
-  setTimeout(() => {
-    channelNumberDiv.style.display = 'none';
-    currentKey = '';
-
-    const index = channelNumber - 1;
-    if (index < 0 || index >= channelNames.length) return;
-
-    // หา category ที่ช่องนี้อยู่
-    const catIndex = categories.findIndex(cat => cat.channels.includes(index));
-    if (catIndex === -1) return;
-
-    // แสดงหมวดหมู่ที่เกี่ยวข้อง
-    showChannelsInCategory(catIndex);
-
-    // เล่นช่องทันที
-    setTimeout(() => {
-      loadChannelByIndex(index);
-
-      const buttons = document.querySelectorAll('.channel-button');
-      const btn = Array.from(buttons).find(b => b.innerText.includes(channelNames[index]));
-      if (btn) {
-        btn.focus();
-      }
-    }, 300); // หน่วงเวลาเล็กน้อยเพื่อให้ปุ่มถูกเรนเดอร์ก่อน
-  }, 1000); // แสดงหมายเลขก่อนโหลด
-}
-
-    });
-
-    // เพิ่มการเข้าสู่โหมด fullscreen เมื่อ video เริ่มเล่น
-    video.addEventListener('play', () => {
-  // ตรวจสอบว่าเป็นอุปกรณ์มือถือหรือไม่
-  if (/Mobi|Android/i.test(navigator.userAgent)) {
-    if (video.requestFullscreen) {
-      video.requestFullscreen();
-    } else if (video.mozRequestFullScreen) { // Firefox
-      video.mozRequestFullScreen();
-    } else if (video.webkitRequestFullscreen) { // Chrome, Safari and Opera
-      video.webkitRequestFullscreen();
-    } else if (video.msRequestFullscreen) { // IE/Edge
-      video.msRequestFullscreen();
-    }
-  }
-});
-  </script>
+<body>
+    <div id="player"></div>
+    <div id="channel-list"></div>
+    <script>
+        const channels = [
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/ch5new.logo.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/5/5.mpd",
+                keyId: "87db4361f7894655a4656e9c8b935a02",
+                key: "b025a4b950df41158a87cfc8d6f2ac34"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/0001.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/2/2.mpd",
+                keyId: "ca20a93cf8e3421dafbd5bdb1990081b",
+                key: "86ae86a7391c481ea93eecdb740f0a14"
+                },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0014.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/3/3.mpd",
+                keyId: "4d4426a505f64382a9841155d721cee6",
+                key: "0f4770219ccb4be5836a7517057e51c3"
+                },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/ALTV.PNG",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/4/4.mpd",
+                keyId: "1e98456bcbea44b7ad05831387e364ef",
+                key: "3d14fd4f9d3149a79b35a7124fccbd67"
+                },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/T-SPorts_7_Final.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/7/7.mpd",
+                keyId: "6187523f92b9475bb5b192f70cef1342",
+                key: "5119311f482144d58dacabc5bc1fa4ba"
+                },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0048.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/10/10.mpd",
+                keyId: "5da46688fd1e4ed5b085a12519b9dc4e",
+                key: "fd07bcf33823447180f53f6540f74ccb"
+                },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/R2_0053.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/16/16.mpd",
+                keyId: "9ebedc957e934d2b9023e4e60b97af73",
+                key: "7bcb4363df74457bbafedec1a864e6b6"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/JKN18.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/18/18.mpd",
+                keyId: "333de6034a1d45fe91c829539caf1149",
+                key: "2710efc048ca44bba4c2b57397989a26"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0021.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/22/22.mpd",
+                keyId: "87db4361f7894655a4656e9c8b935a02",
+                key: "b025a4b950df41158a87cfc8d6f2ac34"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//0015_R.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/23/23.mpd",
+                keyId: "87db4361f7894655a4656e9c8b935a02",
+                key: "b025a4b950df41158a87cfc8d6f2ac34"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0054.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/24/24.mpd",
+                keyId: "87db4361f7894655a4656e9c8b935a02",
+                key: "b025a4b950df41158a87cfc8d6f2ac34"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0019.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/25/25.mpd",
+                keyId: "87db4361f7894655a4656e9c8b935a02",
+                key: "b025a4b950df41158a87cfc8d6f2ac34"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//0006.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/27/27.mpd",
+                keyId: "87db4361f7894655a4656e9c8b935a02",
+                key: "b025a4b950df41158a87cfc8d6f2ac34"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0016.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/29/29.mpd",
+                keyId: "87db4361f7894655a4656e9c8b935a02",
+                key: "b025a4b950df41158a87cfc8d6f2ac34"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/MCOT_new.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/30/30.mpd",
+                keyId: "87db4361f7894655a4656e9c8b935a02",
+                key: "b025a4b950df41158a87cfc8d6f2ac34"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0012.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/31/31.mpd",
+                keyId: "87db4361f7894655a4656e9c8b935a02",
+                key: "b025a4b950df41158a87cfc8d6f2ac34"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0013_R.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/32/32.mpd",
+                keyId: "9d76aea451d441a4913d4d70c4e586ab",
+                key: "051027a6ff54494b949ba792928e9008"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/LOGO3HD.PNG",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/33/33.mpd",
+                keyId: "9d76aea451d441a4913d4d70c4e586ab",
+                key: "051027a6ff54494b949ba792928e9008"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0018.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/35/35.mpd",
+                keyId: "4d4426a505f64382a9841155d721cee6",
+                key: "0f4770219ccb4be5836a7517057e51c3"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/AmarinTV_NEW512.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/34/34.mpd",
+                keyId: "4d4426a505f64382a9841155d721cee6",
+                key: "0f4770219ccb4be5836a7517057e51c3"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/PPTV_2024e.jpg",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/36/36.mpd",
+                keyId: "4d4426a505f64382a9841155d721cee6",
+                key: "0f4770219ccb4be5836a7517057e51c3"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//Cartoonito.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/ais/play/302/302.mpd",
+                keyId: "ad2371259d34404cb89d54a4dc88dcd3",
+                key: "1ba155e345c4456ba891cbee9b3e1c4c"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/LOGO_Nickelodeon2.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/ais/play/303/303.mpd",
+                keyId: "9130a6448a74430794d355b48b56a64c",
+                key: "c2f4d3288cdb43cf81e519ceb414dd6f"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/Nickjr_2024.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/ais/play/304/304.mpd",
+                keyId: "641c3f0e676d49d18c2082e093380e69",
+                key: "e06f3a2e327643249c3831ab199c4015"
+            },
+            {
+                name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE///channelicon//3BBAsian_new.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/ais/play/101/101.mpd",
+                keyId: "dac6cbd9d17a451bb76386f52469e0e9",
+                key: "2e2ac52cadf843459915eaa1a9b95e48"
+            },
+            {
+             name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE///channelicon//Mono29Plus_new.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/ais/play/109/109.mpd",
+                keyId: "072eeb02f6744f838fcc8f0ef36b312e",
+                key: "b797c12f2dd64728aae23fd3c8ef275c"    
+            },
+            {
+             name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/R_0148.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/ais/play/103/103.mpd",
+                keyId: "9c5735afb4fd402580360aed8364469c",
+                key: "128d55d9ac2b47ad85f86b5d08320179"    
+            },
+            {
+             name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//0149.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/ais/play/104/104.mpd",
+                keyId: "0db89bae851440a5994f5893ad480494",
+                key: "d88ef77eaedf4451a65be2e0bf6eabde"    
+            },
+            {
+             name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//0151.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/ais/play/105/105.mpd",
+                keyId: "7c04b8e7aa524afea879b2ed1aef8242",
+                key: "91e72b75fcb94c3bb36cceb741afd621"    
+            },
+            {
+             name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0150.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/ais/play/106/106.mpd",
+                keyId: "07b138f30ad3441ca5a2f476e550af25",
+                key: "826ee4deef4b45cfafd5f79a591b15c6"    
+            },
+            {
+             name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/0147.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/ais/play/107/107.mpd",
+                keyId: "f48caba466394e93b50780f21798787a",
+                key: "9a074a10db4342e7937076b3e52f6029"    
+            },
+            {
+             name: "",
+                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE///channelicon//3BBsports1_new.png",
+                file: "https://cri-streamer3.cdn.3bbtv.com:8443/ais/play/401/401.mpd",
+                keyId: "678bbba596584ad895d2923fb0255e82",
+                key: "c55471086c824112b217743a31abdf8f"    
+            }
+  ];
+        function loadPlayer(channel) {
+            jwplayer("player").setup({
+                file: channel.file,
+                type: "dash",
+                drm: {
+                    clearkey: {
+                        keyId: channel.keyId,
+                        key: channel.key
+                    }
+                },
+                width: "100%",
+                aspectratio: "16:9",
+                autostart: true,
+                mute: false
+            });
+        }
+        const channelList = document.getElementById("channel-list");
+        channels.forEach(channel => {
+            const div = document.createElement("div");
+            div.className = "channel";
+            div.innerHTML = `<img src="${channel.logo}" alt="${channel.name}"><br>${channel.name}`;
+            div.onclick = () => loadPlayer(channel);
+            channelList.appendChild(div);
+        });
+        // เริ่มเล่นเมื่อผู้ใช้กดปุ่ม
+        document.getElementById("startPlayback").onclick = () => {
+            loadPlayer(channels[0]); // โหลดช่องแรก
+            document.getElementById("startPlayback").style.display = "none"; // ซ่อนปุ่ม
+        };
+    </script>
 </body>
 </html>
