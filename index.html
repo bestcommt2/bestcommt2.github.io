@@ -3,307 +3,931 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FUCKIDHD++TV</title>
-    <script src="https://ssl.p.jwpcdn.com/player/v/8.26.0/jwplayer.js"></script>
-    <script>
-        jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
-    </script>
+    <title>ช่องทีวีออนไลน์</title>
     <style>
-        body {
+        :root {
+            --primary-color: #ff5722;
+            --secondary-color: #ff9800;
+            --dark-bg: #111;
+            --channel-bg: #222;
+            --text-color: #fff;
+            --channel-size: 80px;
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-color);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: var(--primary-color);
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        footer {
+            background: var(--channel-bg);
+            padding: 10px;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        /* Categories bar */
+        .categories {
+            display: flex;
+            background: var(--channel-bg);
+            padding: 10px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            flex-shrink: 0;
+        }
+
+        .categories::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category {
+            padding: 10px 20px;
+            margin: 0 5px;
+            background: #333;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.3s;
+        }
+
+        .category.active {
+            background: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Add channel button in categories */
+        .add-channel-btn {
+            padding: 10px 20px;
+            margin: 0 5px;
+            background: #4CAF50;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            border: none;
+            font-weight: bold;
+        }
+
+        /* Channels grid */
+        .channels-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(var(--channel-size), 1fr));
+            gap: 20px;
+            align-content: start;
+        }
+
+        .channel {
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-        #player {
-            width: 100%;
-            max-width: 100%;
-            aspect-ratio: 16/9; /* ทำให้วิดีโอรักษาสัดส่วน */
-        }
-        #channel-list {
-            margin: 10px auto;
-            max-width: 800px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-            justify-content: center;
-        }
-        .channel {
             cursor: pointer;
-            padding: 5px;
-            background: #222;
-            border: 1px solid #444;
-            border-radius: 5px;
-            text-align: center;
-            width: 50px;
+            transition: transform 0.2s;
         }
+
+        .channel:hover {
+            transform: scale(1.05);
+        }
+
         .channel img {
+            width: var(--channel-size);
+            height: var(--channel-size);
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .channel-name {
+            margin-top: 8px;
+            text-align: center;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+        }
+
+        /* Video player */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 100;
+            display: none;
+        }
+
+        .video-container.active {
+            display: block;
+        }
+
+        .video-player {
+            width: 100%;
+            height: 100%;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        /* Loading spinner */
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
             width: 50px;
             height: 50px;
-            margin-bottom: 5px;
+            animation: spin 1s ease-in-out infinite;
+            display: none;
         }
-        .channel:hover {
-            background: #000;
+
+        /* Add channel modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 200;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: var(--dark-bg);
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .modal-content input, .modal-content select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .modal-actions button {
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .modal-actions .confirm {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .modal-actions .cancel {
+            background: #f44336;
+            color: white;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
     </style>
-</head>
+
 <body>
-    <div id="player"></div>
-    <div id="channel-list"></div>
+    <header>ช่องทีวีออนไลน์</header>
+
+    <!-- Categories bar -->
+    <div class="categories" id="categories">
+        <div class="category active" data-category="all">ทั้งหมด</div>
+        <div class="category" data-category="ทีวีดิจิตอล">ทีวีดิจิตอล</div>  
+        <div class="category" data-category="การ์ตูน">การ์ตูน</div>
+        <div class="category" data-category="sports">กีฬา</div>
+        <div class="category" data-category="movie">ภาพยนตร์</div>
+        <div class="category" data-category="news">ข่าว</div>
+        <div class="category" data-category="entertainment">บันเทิง</div>
+        <div class="category" data-category="การศึกษา">การศึกษา</div>
+        <button class="add-channel-btn" id="openModalBtn">+ เพิ่มช่อง</button>
+    </div>
+
+    <!-- Channels grid -->
+    <div class="channels-container" id="channelsContainer">
+        <!-- Channels will be loaded here -->
+    </div>
+
+    <!-- Video player (hidden by default) -->
+    <div class="video-container" id="videoContainer">
+        <video class="video-player" id="videoPlayer" controls></video>
+        <button class="back-btn" id="backBtn">←</button>
+        <div class="loading" id="loadingSpinner"></div>
+    </div>
+
+    <!-- Add Channel Modal -->
+    <div class="modal" id="addChannelModal">
+        <div class="modal-content">
+            <h3>เพิ่มช่องใหม่</h3>
+            <input type="text" id="channelName" placeholder="ชื่อช่อง" required>
+            <input type="text" id="channelLogo" placeholder="ลิงก์โลโก้ (ไม่จำเป็น)">
+            <input type="text" id="channelSrc" placeholder="ลิงก์สตรีม (m3u8)" required>
+            <select id="channelCategory" required>
+                <option value="" disabled selected>เลือกหมวดหมู่</option>
+                <option value="all">ทั้งหมด</option>
+                <option value="ทีวีดิจิตอล">ทีวีดิจิตอล</option>
+                <option value="sports">กีฬา</option>
+                <option value="movie">ภาพยนตร์</option>
+                <option value="news">ข่าว</option>
+                <option value="entertainment">บันเทิง</option>
+                <option value="การศึกษา">การศึกษา</option>
+            </select>
+            <div class="modal-actions">
+                <button class="cancel" id="cancelBtn">ยกเลิก</button>
+                <button class="confirm" id="confirmBtn">เพิ่มช่อง</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>ดัดแปลงและพัฒนาโดย FUCKID+++3.0</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script>
-        const channels = [
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/ch5new.logo.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/5/5.mpd",
-                keyId: "87db4361f7894655a4656e9c8b935a02",
-                key: "b025a4b950df41158a87cfc8d6f2ac34"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/0001.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/2/2.mpd",
-                keyId: "ca20a93cf8e3421dafbd5bdb1990081b",
-                key: "86ae86a7391c481ea93eecdb740f0a14"
+        document.addEventListener('DOMContentLoaded', () => {
+            // DOM elements
+            const categories = document.getElementById('categories');
+            const channelsContainer = document.getElementById('channelsContainer');
+            const videoContainer = document.getElementById('videoContainer');
+            const videoPlayer = document.getElementById('videoPlayer');
+            const backBtn = document.getElementById('backBtn');
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            const openModalBtn = document.getElementById('openModalBtn');
+            const addChannelModal = document.getElementById('addChannelModal');
+            const cancelBtn = document.getElementById('cancelBtn');
+            const confirmBtn = document.getElementById('confirmBtn');
+            
+            // Sample channel data
+            let channels = [                
+                {
+                    "name": "NBT",
+                    "logo": "https://media-mvtv.imgix.net/channel/115_y_fFG0J46IoYNzUjVKatsbL7vZByxiMqTm.png",
+                    "src": "https://cdn-edge-ott.prd.go.th/live_vlc/smil:2609-b4a6-64b3-1431-5e64/chunklist_w507269531_b2128000.m3u8",
+                    "category": "ทีวีดิจิตอล"
                 },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0014.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/3/3.mpd",
-                keyId: "4d4426a505f64382a9841155d721cee6",
-                key: "0f4770219ccb4be5836a7517057e51c3"
+                {
+                    "name": "TPBS",
+                    "logo": "https://media-mvtv.imgix.net/channel/116_y_cze67bhJwH8CIOaqnULfg0kKPAs2TQW1.png",
+                    "src": "https://thaipbs-live.cdn.byteark.com/live/playlist.m3u8",
+                    "category": "ทีวีดิจิตอล"
                 },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/ALTV.PNG",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/4/4.mpd",
-                keyId: "1e98456bcbea44b7ad05831387e364ef",
-                key: "3d14fd4f9d3149a79b35a7124fccbd67"
+                {
+                    "name": "ALTV",
+                    "logo": "https://media-mvtv.imgix.net/channel/117_y_8JTfbUnwW9t2kuVh6ZpONEqv7MeBIsQR.png",
+                    "src": "https://thaipbs-ujxrch.cdn.byteark.com/live/playlist.m3u8",
+                    "category": "ทีวีดิจิตอล"
                 },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/T-SPorts_7_Final.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/7/7.mpd",
-                keyId: "6187523f92b9475bb5b192f70cef1342",
-                key: "5119311f482144d58dacabc5bc1fa4ba"
+                {
+                    "name": "5HD",
+                    "logo": "https://media-mvtv.imgix.net/channel/118_y_0kEyP9Yrw5jTWflXevIZ1Dqhoa2mi4QO.png",
+                    "src": "https://639bc5877c5fe.streamlock.net/tv5hdlive/tv5hdlive/playlist.m3u8",
+                    "category": "ทีวีดิจิตอล"
                 },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0048.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/10/10.mpd",
-                keyId: "5da46688fd1e4ed5b085a12519b9dc4e",
-                key: "fd07bcf33823447180f53f6540f74ccb"
+                {
+                    "name": "TPTV",
+                    "logo": "https://media-mvtv.imgix.net/channel/120_y_VSgE7P9GiDCxrhFWUALYpvzfM12cdqmH.png",
+                    "src": "https://tv-live.tpchannel.org/live/tv_1080p.m3u8",
+                    "category": "ทีวีดิจิตอล"
                 },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/R2_0053.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/16/16.mpd",
-                keyId: "9ebedc957e934d2b9023e4e60b97af73",
-                key: "7bcb4363df74457bbafedec1a864e6b6"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/JKN18.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/18/18.mpd",
-                keyId: "333de6034a1d45fe91c829539caf1149",
-                key: "2710efc048ca44bba4c2b57397989a26"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0021.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/22/22.mpd",
-                keyId: "87db4361f7894655a4656e9c8b935a02",
-                key: "b025a4b950df41158a87cfc8d6f2ac34"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//0015_R.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/23/23.mpd",
-                keyId: "87db4361f7894655a4656e9c8b935a02",
-                key: "b025a4b950df41158a87cfc8d6f2ac34"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0054.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/24/24.mpd",
-                keyId: "87db4361f7894655a4656e9c8b935a02",
-                key: "b025a4b950df41158a87cfc8d6f2ac34"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0019.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/25/25.mpd",
-                keyId: "87db4361f7894655a4656e9c8b935a02",
-                key: "b025a4b950df41158a87cfc8d6f2ac34"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//0006.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/27/27.mpd",
-                keyId: "87db4361f7894655a4656e9c8b935a02",
-                key: "b025a4b950df41158a87cfc8d6f2ac34"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0016.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/29/29.mpd",
-                keyId: "87db4361f7894655a4656e9c8b935a02",
-                key: "b025a4b950df41158a87cfc8d6f2ac34"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/MCOT_new.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/30/30.mpd",
-                keyId: "87db4361f7894655a4656e9c8b935a02",
-                key: "b025a4b950df41158a87cfc8d6f2ac34"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0012.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/31/31.mpd",
-                keyId: "87db4361f7894655a4656e9c8b935a02",
-                key: "b025a4b950df41158a87cfc8d6f2ac34"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0013_R.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/32/32.mpd",
-                keyId: "9d76aea451d441a4913d4d70c4e586ab",
-                key: "051027a6ff54494b949ba792928e9008"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/LOGO3HD.PNG",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/33/33.mpd",
-                keyId: "9d76aea451d441a4913d4d70c4e586ab",
-                key: "051027a6ff54494b949ba792928e9008"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0018.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/35/35.mpd",
-                keyId: "4d4426a505f64382a9841155d721cee6",
-                key: "0f4770219ccb4be5836a7517057e51c3"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/AmarinTV_NEW512.png",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/34/34.mpd",
-                keyId: "4d4426a505f64382a9841155d721cee6",
-                key: "0f4770219ccb4be5836a7517057e51c3"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/PPTV_2024e.jpg",
-                file: "https://cri-streamer3.cdn.3bbtv.com:8443/3bb/live/36/36.mpd",
-                keyId: "4d4426a505f64382a9841155d721cee6",
-                key: "0f4770219ccb4be5836a7517057e51c3"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//Cartoonito.png",
-                file: "https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/302/302.mpd",
-                keyId: "ad2371259d34404cb89d54a4dc88dcd3",
-                key: "1ba155e345c4456ba891cbee9b3e1c4c"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/LOGO_Nickelodeon2.png",
-                file: "https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/303/303.mpd",
-                keyId: "9130a6448a74430794d355b48b56a64c",
-                key: "c2f4d3288cdb43cf81e519ceb414dd6f"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/Nickjr_2024.png",
-                file: "https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/304/304.mpd",
-                keyId: "641c3f0e676d49d18c2082e093380e69",
-                key: "e06f3a2e327643249c3831ab199c4015"
-            },
-            {
-                name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE///channelicon//3BBAsian_new.png",
-                file: "https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/101/101.mpd",
-                keyId: "dac6cbd9d17a451bb76386f52469e0e9",
-                key: "2e2ac52cadf843459915eaa1a9b95e48"
-            },
-            {
-             name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE///channelicon//Mono29Plus_new.png",
-                file: "https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/109/109.mpd",
-                keyId: "072eeb02f6744f838fcc8f0ef36b312e",
-                key: "b797c12f2dd64728aae23fd3c8ef275c"    
-            },
-            {
-             name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/R_0148.png",
-                file: "https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/103/103.mpd",
-                keyId: "9c5735afb4fd402580360aed8364469c",
-                key: "128d55d9ac2b47ad85f86b5d08320179"    
-            },
-            {
-             name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//0149.png",
-                file: "https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/104/104.mpd",
-                keyId: "0db89bae851440a5994f5893ad480494",
-                key: "d88ef77eaedf4451a65be2e0bf6eabde"    
-            },
-            {
-             name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//0151.png",
-                file: "https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/105/105.mpd",
-                keyId: "7c04b8e7aa524afea879b2ed1aef8242",
-                key: "91e72b75fcb94c3bb36cceb741afd621"    
-            },
-            {
-             name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0150.png",
-                file: "https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/106/106.mpd",
-                keyId: "07b138f30ad3441ca5a2f476e550af25",
-                key: "826ee4deef4b45cfafd5f79a591b15c6"    
-            },
-            {
-             name: "",
-                logo: "https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/0147.png",
-                file: "https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/107/107.mpd?ck=eyJmNDhjYWJhNDY2Mzk0ZTkzYjUwNzgwZjIxNzk4Nzg3YSI6IjlhMDc0YTEwZGI0MzQyZTc5MzcwNzZiM2U1MmY2MDI5In0%3D&headers=eyJvcmlnaW4iOiJodHRwczovL2F5YS1zdHJlYW1lcjIuY2RuLjNiYnR2LmNvbTo4NDQzLzNiYi9saXZlLzEwNy8xMDcubXBkIn0%3D&image=aHR0cHM6Ly8zYmJ0di5jby50aC93cC1jb250ZW50L3RoZW1lcy9jaGFuZ3dhdHRhbmEvaW1nL2NoYW5uZWwvbmV3MjAyMi9DaW5lbWF4LnBuZw%3D%3D&title=CINEMAX",
-                keyId: "f48caba466394e93b50780f21798787a",
-                key: "9a074a10db4342e7937076b3e52f6029"    
-            },
-	
-  ];
-        function loadPlayer(channel) {
-            jwplayer("player").setup({
-                file: channel.file,
-                type: "dash",
-                drm: {
-                    clearkey: {
-                        keyId: channel.keyId,
-                        key: channel.key
+                {
+                    "name": "JKN18",
+                    "logo": "https://media-mvtv.imgix.net/channel/122_y_bzfht4O5uRNHylcq1D6nV9TvxmdXWaQP.png",
+                    "src": "https://lb1-live-mv.v2h-cdn.com/hls/ffda/jkn18/jkn18.m3u8",
+                    "category": "ทีวีดิจิตอล"
+                },
+                {
+                    "name": "Nation",
+                    "logo": "https://media-mvtv.imgix.net/channel/123_y_3vyW276UFjIStew9DHJNs8AGKfdmZXpu.png",
+                    "src": "https://lb1-live-mv.v2h-cdn.com/hls/ffcc/goyjo/goyjo.m3u8",
+                    "category": "ทีวีดิจิตอล"
+                },
+                {
+                    "name": "Workpoint",
+                    "logo": "https://media-mvtv.imgix.net/channel/124_y_1PI2djLbMJpXO0n5oywKiNDzsWfTuFg4.png",
+                    "src": "https://global-media.sooplive.com/live/workpoint/master.m3u8",
+                    "category": "ทีวีดิจิตอล"
+                },
+                {
+                    "name": "True24",
+                    "logo": "https://media-mvtv.imgix.net/channel/125_y_vQwogyPUC1FsRhK9TmzSWqb8YI6aktcM.png",
+                    "src": "https://lb1-live-mv.v2h-cdn.com/hls/ffca/true24/true24.m3u8",
+                    "category": "ทีวีดิจิตอล"
+                },
+                {
+                    "name": "GMM25",
+                    "logo": "https://media-mvtv.imgix.net/channel/126_y_6PH49bDqlg1aSxGoNUdT83R5Jkeyf2mB.png",
+                    "src": "https://lb1-live-mv.v2h-cdn.com/hls/ffbf/gmm25/gmm25.m3u8",
+                    "category": "ทีวีดิจิตอล"
+                },
+                {
+                    "name": "ช่อง 8",
+                    "logo": "https://media-mvtv.imgix.net/channel/127_y_uhsXzFBxYD6Wq2mpZeIUb4M7RK1ECkn8.png",
+                    "src": "https://lb1-live-mv.v2h-cdn.com/hls/ffbe/ch8/ch8.m3u8",
+                    "category": "ทีวีดิจิตอล"
+                },
+                {
+                    "name": "MONO 29",
+                    "logo": "https://media-mvtv.imgix.net/channel/128_y_KUvdGmb2hpV41ni5rCk9OlFoXePMA80Q.png",
+                    "src": "https://lb1-live-mv.v2h-cdn.com/hls/ffbc/mono29/mono29.m3u8",
+                    "category": "ทีวีดิจิตอล"
+                },
+                {
+                    "name": "MCOT",
+                    "logo": "https://media-mvtv.imgix.net/channel/129_y_hG7Nj2qWnldBu0fkMDyvT8CwYXLI649F.png",
+                    "src": "https://lb1-live-mv.v2h-cdn.com/hls/ffbb/mcot/mcot.m3u8",
+                    "category": "ทีวีดิจิตอล"
+                },
+                {
+                    "name": "ONE",
+                    "logo": "https://media-mvtv.imgix.net/channel/130_y_3Lx4j6ZzpIidKPqChaF2QRYeWorw79Jv.png",
+                    "src": "https://lb1-live-mv.v2h-cdn.com/hls/ffba/one/one.m3u8",
+                    "category": "ทีวีดิจิตอล"
+                },
+                {
+                    "name": "Thairath",
+                    "logo": "https://media-mvtv.imgix.net/channel/131_y_iJmHlFadZ0G8EhIYMw2A3OfbN1Qpzgou.png",
+                    "src": "https://lb1-live-mv.v2h-cdn.com/hls/ffaf/thairath/thairath.m3u8",
+                    "category": "ทีวีดิจิตอล"
+                },
+                {
+                    "name": "3HD",
+                    "logo": "https://media-mvtv.imgix.net/channel/132_y_TFYiXWvrUf4s8tbIwJ29S3zMNeqghGmB.png",
+                    "src": "https://lb1-live-mv.v2h-cdn.com/hls/ffae/3hd/3hd.m3u8",
+                    "category": "ทีวีดิจิตอล"
+                },
+                {
+                    "name": "Amarin",
+                    "logo": "https://media-mvtv.imgix.net/channel/133_y_kLIyaJt3VoGD8sqrHnhKPjZUQ0RE6mu4.png",
+                    "src": "https://lb1-live-mv.v2h-cdn.com/hls/ffad/amarin/amarin.m3u8",
+                    "category": "ทีวีดิจิตอล"
+                },
+                {
+                    "name": "7HD",
+                    "logo": "https://media-mvtv.imgix.net/channel/134_y_YTkIZJDsbmX26owPRpAFSfW0eyz95vn4.png",
+                    "src": "https://lb1-live-mv.v2h-cdn.com/hls/ffac/gohg/gohg.m3u8",
+                    "category": "ทีวีดิจิตอล"
+                },
+                {
+                    "name": "PPTV",
+                    "logo": "https://media-mvtv.imgix.net/channel/135_y_7hl4KHdwBqS0VGNCskrDLyci538zY2Qx.png",
+                    "src": "https://lb1-live-mv.v2h-cdn.com/hls/ffab/pptv/pptv.m3u8",
+                    "category": "ทีวีดิจิตอล"
+                },
+
+                {
+                    name: "BOOMERANG",
+                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Boomerang_tv_logo.png/640px-Boomerang_tv_logo.png",
+                    src: "https://lb1-live-mv.v2h-cdn.com/hls/fffa/boomerang/boomerang.m3u8",
+                    category: "การ์ตูน"
+                },
+                {
+                    name: "BOOM ANIME",
+                    logo: "https://img5.pic.in.th/file/secure-sv1/IMG_20250718_183505.jpg",
+                    src: "https://lb1-live-mv.v2h-cdn.com/hls/ffbd/boomanime/boomanime.m3u8",
+                    category: "การ์ตูน"
+                },
+				        {
+                    name: "Moonbug",
+                    logo: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Moonbug2ndLogo.png",
+                    src: "http://moonbug-rokuus.amagi.tv/1080p-cc/index.m3u8",
+                    category: "การ์ตูน"
+                },
+				        {
+                    name: "Pet Collective1",
+                    logo: "https://i.imgur.com/w7RdSIk.png",
+                    src: "https://the-pet-collective-international-in.samsung.wurl.tv/3000.m3u8",
+                    category: "การ์ตูน"
+                },
+				        {
+                    name: "PetClub TV2",
+                    logo: "https://i.imgur.com/ykPNNwQ.png",
+                    src: "https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-petclub-samsungnz/playlist.m3u8",
+                    category: "การ์ตูน"
+                },
+				        {
+                    name: "Zoo Moo (1080p)",
+                    logo: "https://images.squarespace-cdn.com/content/v1/5c4104e7af209609ea6f281b/b440d39b-935e-4b40-9b6d-edc3d94f11b9/Primary+Logo.png",
+                    src: "https://amg01553-blueantmediaasi-zoomoonz-samsungnz-rdufn.amagi.tv/playlist/amg01553-blueantmediaasi-zoomoonz-samsungnz/playlist.m3u8",
+                    category: "การ์ตูน"
+                },
+				        {
+                    name: "BabyFirst.us",
+                    logo: "https://i.ibb.co/TxmtLxqQ/pngegg.png",
+                    src: "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/c8d16110-566c-4e95-a1df-55d175e9e201/manifest.m3u8",
+                    category: "การ์ตูน"
+                },
+				
+				
+
+				
+				
+				
+                {
+                    name: "AsianMovie",
+                    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS19-KD8FYnedTlrRUSiJcJGnXEpqy7Wf2lmApnpf2v-o4j2WCHuEj9IbPc&s=10",
+                    src: "http://45.144.165.223:9090/memfs/2d8a0d34-c005-45f6-9a20-85efe6186a0a.m3u8",
+                    category: "movie"
+                },
+                {
+                    name: "Thai Movie",
+                    logo: "https://img2.pic.in.th/pic/images563ae4e8f84f959a.jpeg",
+                    src: "http://45.144.165.223:9090/memfs/bac4e40a-9545-4c92-b778-c2a836aeab0b.m3u8",
+                    category: "movie"
+                },
+                
+                // News Channels
+                {
+                    name: "BBC NEWS",
+                    logo: "https://www.fileinw.com/postor/20250409093426BBCNEWS.jpg",
+                    src: "http://freelive2.inwstream.com:1935/freelive-edge/fwdoc_fw-iptv.stream/playlist.m3u8",
+                    category: "news"
+                },
+                {
+                    name: "Intermovie",
+                    logo: "https://img2.pic.in.th/pic/IMG_20250719_144111.jpg",
+                    src: "http://45.144.165.223:9090/memfs/3ef36d57-1d43-4502-ba80-9453b3bcbf05.m3u8",
+                    category: "movie"
+                },
+                {
+                    name:"Cool",
+                    logo: "https://img5.pic.in.th/file/secure-sv1/images4b565d7d478ea652.png",
+                    src: "http://live-iptv.cool-channel.com/cool/live-720P.m3u8",
+                    category: "movie"
+                },
+               {
+                    name:"TTD7",
+                    logo: "https://media-mvtv.imgix.net/channel/102_y_H9WxnVREmrDL72MFQ86Ycwkzhg3yGTBU.png",
+                    src: "https://psiiptv-b.sky-cdn.com/ttd07-playlist/tracks-v1a1/mono.m3u8",
+                    category: "movie"
+                },
+                {
+                    name:"TTD8",
+                    logo: "https://media-mvtv.imgix.net/channel/103_y_jm5ykb0fX7vZCTGAtcHdSz8LarVKiFJE.png",
+                    src: "https://psiiptv-b.sky-cdn.com/ttd07-playlist/tracks-v1a1/mono.m3u8",
+                    category: "movie"
+                },
+                {
+                    name:"TTD9",
+                    logo: "https://media-mvtv.imgix.net/channel/104_y_Jf2RiAdxLZINXazDvEMGr5Hg3YFCuQ7k.png",
+                    src: "https://psiiptv-b.sky-cdn.com/ttd09-playlist/tracks-v1a1/mono.m3u8",
+                    category: "movie"
+                },
+                {
+                    name: "karaoke🎤 ",             
+                    logo: "https://i.ibb.co/b5tS24Gb/karaoke.png",
+                    src: "http://45.144.165.223:9090/memfs/b312e2fa-74a8-41e3-9466-1beb5c9afda8.m3u8",
+                    category: "entertainment"
+                },
+                {
+                    name: "ถิ่นใต้",
+                    logo: "https://www.fileinw.com/postor/20240421225339ถิ่นใต้.jpg",
+                    src: "http://freelive2.inwstream.com:1935/freelive-edge/the_battle.stream/chunks.m3u8",
+                    category: "entertainment"
+                },
+                {
+                    name: "GAGS",
+                    logo: "https://www.fileinw.com/postor/20240429213343just_for_laughs_gags.jpg",
+                    src: "http://freelive2.inwstream.com:1935/freelive-edge/gags_fw-iptv.stream/chunks.m3u8",
+                    category: "entertainment"
+                },
+                {
+                    name: "อีสานทีวี",
+                    logo: "https://media-mvtv.imgix.net/channel/108_y_1ag4BfHbDWT63hVJMuCwGKjIXdYnNv0q.png",
+                    src: "https://psiiptv-b.sky-cdn.com/ttd20-playlist/tracks-v1a1/mono.m3u8",
+                    category: "entertainment"
+                },
+                
+                // Sports Channels
+                {
+                    name: "channel8thailand",
+                    logo: "https://www.tvjaa.com/storage/tv-channels/channel8thailand.png",
+                    src: "https://cdn-th-vip.login.in.th/ch8/ch8/chunklist_w1808236465.m3u8",
+                    category: "movie"
+                },
+                {
+                    name: "maxsport1",
+                    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxRlw08TgtxtmLbbRb96hVIicFeCkgYSZBS2DLdK-Im_bN-jZF5_NT3Bx3&s=10",
+                    src: "https://www.livedoomovies.com:4432/Monomax_Live_1HD/chunklist.m3u8",
+                    category: "sports"
+                 },
+                 {
+                    name: "maxsport2",
+                    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxRlw08TgtxtmLbbRb96hVIicFeCkgYSZBS2DLdK-Im_bN-jZF5_NT3Bx3&s=10",
+                    src: "https://219.livedoomovies.com:4431/Monomax_Live_1HD/chunklist.m3u8",
+                    category: "sports"
+                 },
+                 {
+                    name: "maxsport3",
+                    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxRlw08TgtxtmLbbRb96hVIicFeCkgYSZBS2DLdK-Im_bN-jZF5_NT3Bx3&s=10",
+                    src: "https://www.livedoomovies.com:4432/Monomax_Live_3HD/chunklist.m3u8",
+                    category: "sports"
+                 },
+                 {
+                    name: "maxsport4",
+                    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxRlw08TgtxtmLbbRb96hVIicFeCkgYSZBS2DLdK-Im_bN-jZF5_NT3Bx3&s=10",
+                    src: "https://www.livedoomovies.com:4432/Monomax_Live_4HD/chunklist.m3u8",
+                    category: "sports"
+                 },
+                 {
+                    name: "maxsport5",
+                    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxRlw08TgtxtmLbbRb96hVIicFeCkgYSZBS2DLdK-Im_bN-jZF5_NT3Bx3&s=10",
+                    src: "https://www.livedoomovies.com:4432/Monomax_Live_5HD/chunklist.m3u8",
+                    category: "sports"
+                 },
+                {
+                    name: "Spotv",
+                    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPpAuJxMKdxKDrgJ1j-RL4RUJ_LD86ZdMjbA7bm8EFfFi8oP0Th6pvy6Y&s=10",
+                    src: "https://www.livedoomovies.com:4432/02_foxsport_720p/chunklist.m3u8",
+                    category: "sports"
+                },
+                {
+                    name: "Spotv2",
+                    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMhgWf-sIriE9zho9ApOr-uEOjMqPkuIyw5Q&s",
+                    src: "https://wahyu1ptv.pages.dev/SPOTV2-HD.m3u8",
+                    category: "sports"
+                },
+                {
+                    name: "Truesporthd",
+                    logo: "https://cms.dmpcdn.com/livetv/2024/01/16/cdd42d20-b44d-11ee-9687-e7ccd66e1ea3_webp_original.webp",
+                    src: "https://www.livedoomovies.com:4432/02_2sporthd1_720p/chunklist.m3u8",
+                    category: "sports"
+                },
+                {
+                    name: "Truesporthd2",
+                    logo: "https://cms.dmpcdn.com/livetv/2024/01/16/ce5c21d0-b44d-11ee-aa7d-afe908f95743_webp_original.webp",
+                    src: "https://www.livedoomovies.com:4432/02_2sporthd2_720p/chunklist.m3u8",
+                    category: "sports"
+                },
+                {
+                    name: "Truesporthd3",
+                    logo: "https://cms.dmpcdn.com/livetv/2024/01/16/ce9707f0-b44d-11ee-8e80-c3f417d0d932_webp_original.webp",
+                    src: "https://www.livedoomovies.com:4432/02_2sporthd3_720p/chunklist.m3u8",
+                    category: "sports"
+                },
+                {
+                    name: "Truesporthd4",
+                    logo: "https://cms.dmpcdn.com/livetv/2023/12/15/759492c0-9aea-11ee-a6e1-935fb41ffad5_webp_original.webp",
+                    src: "https://www.livedoomovies.com:4432/02_2sporthd4_720p/chunklist.m3u8",
+                    category: "sports"
+                },
+                {
+                    name: "Truesport5",
+                    logo: "https://cms.dmpcdn.com/livetv/2024/01/16/cf4a2b50-b44d-11ee-aa7d-afe908f95743_webp_original.webp",
+                    src: "https://www.livedoomovies.com:4432/02_sport5_480p/chunklist.m3u8",
+                    category: "sports"
+                },
+                {
+                    name: "Truesport7",
+                    logo: "https://cms.dmpcdn.com/livetv/2024/01/16/cff0f2a0-b44d-11ee-9687-e7ccd66e1ea3_webp_original.webp",
+                    src: "https://www.livedoomovies.com:4432/02_sport7_480p/chunklist.m3u8",
+                    category: "sports"
+                },
+                {
+                    name: "TennisHD",
+                    logo: "https://cms.dmpcdn.com/livetv/2023/04/28/f65ea900-e595-11ed-86b8-bb40638e3c49_webp_original.webp",
+                    src: "https://www.livedoomovies.com:4432/02_TennisHD_720p/chunklist.m3u8",
+                    category: "sports"
+                },
+                {
+                    name: "DW",
+                    logo: "https://www.tvjaa.com/storage/tv-channels/dw.png",
+                    src: "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8",
+                    category: "news"
+                },
+                {
+                    name: "aljazeera",
+                    logo: "https://www.tvjaa.com/storage/tv-channels/aljazeera.png",
+                    src: "https://live-hls-web-aje-fa.thehlive.com/alternative/AJE/01.m3u8",
+                    category: "news"
+                },
+                {
+                    name: "CNA",
+                    logo: "https://www.channelnewsasia.com/sites/default/themes/mc_cna_theme/images/logo.svg?v=2",
+                    src: "https://mediacorp-videosbclive.akamaized.net/8a496e61361c4079a0e16d8f09e79df9/ap-southeast-1/6057994443001/profile_0/chunklist.m3u8",
+                    category: "news"
+                },
+                {
+                    name: "Topnews",
+                    logo: "https://www.tvjaa.com/storage/tv-channels/topnews.png",
+                    src: "https://live.topnews.co.th/hls/topnews_a_720.m3u8",
+                    category: "news"
+                },
+                {
+                    name: "News1",
+                    logo: "https://www.tvjaa.com/storage/tv-channels/news1.png",
+                    src: "https://server1.streamssl.com/stream/news1_hi.m3u8",
+                    category: "news"
+                },
+                {
+                    name: "rama",
+                    logo: "https://www.tvjaa.com/storage/tv-channels/ramachannel.png",
+                    src: "https://ramach.ddns.net/live/ramalive/index.m3u8",
+                    category: "news"
+                },
+                {
+                    "name": "DLTV1",
+                    "logo": "https://media-mvtv.imgix.net/channel/136_y_tPkVabFhc7iUGQdmlEDC5IxvJZj4326M.png",
+                    "src": "https://cdn-live.dltv.ac.th/dltv01.m3u8",
+                    "category": "การศึกษา"
+                },
+                {
+                    "name": "DLTV2",
+                    "logo": "https://media-mvtv.imgix.net/channel/137_y_yQOMjhFVupi8I1oal5TScnbkfAYtJC2v.png",
+                    "src": "https://cdn-live.dltv.ac.th/dltv02.m3u8",
+                    "category": "การศึกษา"
+                },
+                {
+                    "name": "DLTV3",
+                    "logo": "https://media-mvtv.imgix.net/channel/138_y_NrPWRcyIBzbd5kJ3n8MqHDOmoVpA19fS.png",
+                    "src": "https://cdn-live.dltv.ac.th/dltv03.m3u8",
+                    "category": "การศึกษา"
+                },
+                {
+                    "name": "DLTV4",
+                    "logo": "https://media-mvtv.imgix.net/channel/139_y_gx6RdEWuPqjBnAwoCI2mrltX5vJU4bDO.png",
+                    "src": "https://cdn-live.dltv.ac.th/dltv04.m3u8",
+                    "category": "การศึกษา"
+                },
+                {
+                    "name": "DLTV5",
+                    "logo": "https://media-mvtv.imgix.net/channel/140_y_0NYqGlHdDfQeZFoSUcMWsx1rtOyTXb78.png",
+                    "src": "https://cdn-live.dltv.ac.th/dltv05.m3u8",
+                    "category": "การศึกษา"
+                },
+                {
+                    "name": "DLTV6",
+                    "logo": "https://media-mvtv.imgix.net/channel/141_y_gIp8YiEP6MQsdeb9hjKcBFmUHVw1kNxy.png",
+                    "src": "https://cdn-live.dltv.ac.th/dltv06.m3u8",
+                    "category": "การศึกษา"
+                },
+                {
+                    "name": "DLTV7",
+                    "logo": "https://media-mvtv.imgix.net/channel/142_y_U53zK2mOiFQ9xsCMS7AJrvTtoEf6dpIc.png",
+                    "src": "https://cdn-live.dltv.ac.th/dltv07.m3u8",
+                    "category": "การศึกษา"
+                },
+                {
+                    "name": "DLTV8",
+                    "logo": "https://media-mvtv.imgix.net/channel/143_y_k4YNqBSgRW1OndxQuU6Pac0CMJVKIf57.png",
+                    "src": "https://cdn-live.dltv.ac.th/dltv08.m3u8",
+                    "category": "การศึกษา"
+                },
+                {
+                    "name": "DLTV9",
+                    "logo": "https://media-mvtv.imgix.net/channel/144_y_9yo8mDwnI5OLgCHKvfsZ42BMXTzEbrSe.png",
+                    "src": "https://cdn-live.dltv.ac.th/dltv09.m3u8",
+                    "category": "การศึกษา"
+                },
+                {
+                    "name": "DLTV10",
+                    "logo": "https://media-mvtv.imgix.net/channel/145_y_9Fkli2DoLIP0EX56AHW74MhquQKfng1a.png",
+                    "src": "https://cdn-live.dltv.ac.th/dltv10.m3u8",
+                    "category": "การศึกษา"
+                },
+                {
+                    "name": "DLTV11",
+                    "logo": "https://media-mvtv.imgix.net/channel/146_y_5LVm0hDdr2N19IOlU3MAtqscKSk6xgZe.png",
+                    "src": "https://cdn-live.dltv.ac.th/dltv11.m3u8",
+                    "category": "การศึกษา"
+                },
+                {
+                    "name": "DLTV12",
+                    "logo": "https://media-mvtv.imgix.net/channel/147_y_Uel5LZmKGoutv2PJiFIx60jayQbpnzqT.png",
+                    "src": "https://cdn-live.dltv.ac.th/dltv12.m3u8",
+                    "category": "การศึกษา"
+                },
+                {
+                    "name": "DLTV13",
+                    "logo": "https://media-mvtv.imgix.net/channel/148_y_23K7iaWFMTnyxjfH5NIhUpCgZc8SB4s9.png",
+                    "src": "https://cdn-live.dltv.ac.th/dltv13.m3u8",
+                    "category": "การศึกษา"
+                },
+                {
+                    "name": "DLTV14",
+                    "logo": "https://media-mvtv.imgix.net/channel/149_y_EzhGev4MFkQUOR08CdZisfP5Lnw9Jx6A.png",
+                    "src": "https://cdn-live.dltv.ac.th/dltv14.m3u8",
+                    "category": "การศึกษา"
+                },
+                {
+                    "name": "DLTV15",
+                    "logo": "https://media-mvtv.imgix.net/channel/150_y_eUWs21cyV38ARS0OZmtgILodzKiJqfaD.png",
+                    "src": "https://cdn-live.dltv.ac.th/dltv15.m3u8",
+                    "category": "การศึกษา"
+                },
+                {
+                    "name": "DLTV15",
+                    "logo": "https://media-mvtv.imgix.net/channel/150_y_eUWs21cyV38ARS0OZmtgILodzKiJqfaD.png",
+                    "src": "https://cdn-live.dltv.ac.th/dltv15.m3u8",
+                    "category": "การศึกษา"
+                },
+
+                // เพิ่มช่องอื่นๆ ตามต้องการ
+            ];
+
+            // Current state
+            let currentCategory = 'all';
+            let hls = null;
+
+            // Initialize the app
+            function init() {
+                renderChannels();
+                setupEventListeners();
+            }
+
+            // Render channels based on current category
+            function renderChannels() {
+                const filteredChannels = currentCategory === 'all' 
+                    ? channels 
+                    : channels.filter(channel => channel.category === currentCategory);
+                
+                channelsContainer.innerHTML = filteredChannels.map(channel => `
+                    <div class="channel" data-src="${channel.src}">
+                        <img src="${channel.logo || 'https://via.placeholder.com/80?text=No+Logo'}" alt="${channel.name}" onerror="this.src='https://via.placeholder.com/80?text=No+Logo'">
+                        <div class="channel-name">${channel.name}</div>
+                    </div>
+                `).join('');
+            }
+
+            // Play selected channel
+            function playChannel(src) {
+                showLoading();
+                videoContainer.classList.add('active');
+                
+                if (Hls.isSupported()) {
+                    if (hls) hls.destroy();
+                    
+                    hls = new Hls();
+                    hls.loadSource(src);
+                    hls.attachMedia(videoPlayer);
+                    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                        videoPlayer.play();
+                        hideLoading();
+                    });
+                } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+                    videoPlayer.src = src;
+                    videoPlayer.addEventListener('loadedmetadata', () => {
+                        videoPlayer.play();
+                        hideLoading();
+                    });
+                } else {
+                    alert('Browser does not support HLS streaming');
+                    hideLoading();
+                }
+            }
+
+            // Show loading spinner
+            function showLoading() {
+                loadingSpinner.style.display = 'block';
+            }
+
+            // Hide loading spinner
+            function hideLoading() {
+                loadingSpinner.style.display = 'none';
+            }
+
+            // Add custom channel
+            function addCustomChannel() {
+                const name = document.getElementById('channelName').value;
+                const logo = document.getElementById('channelLogo').value;
+                const src = document.getElementById('channelSrc').value;
+                const category = document.getElementById('channelCategory').value;
+                
+                if (name && src && category) {
+                    channels.push({
+                        name,
+                        logo,
+                        src,
+                        category
+                    });
+                    
+                    // Clear inputs and close modal
+                    document.getElementById('channelName').value = '';
+                    document.getElementById('channelLogo').value = '';
+                    document.getElementById('channelSrc').value = '';
+                    document.getElementById('channelCategory').value = '';
+                    
+                    addChannelModal.style.display = 'none';
+                    renderChannels();
+                } else {
+                    alert('กรุณากรอกข้อมูลให้ครบถ้วน');
+                }
+            }
+
+            // Setup event listeners
+            function setupEventListeners() {
+                // Category selection
+                categories.addEventListener('click', (e) => {
+                    const category = e.target.closest('.category');
+                    if (category) {
+                        document.querySelectorAll('.category').forEach(c => 
+                            c.classList.remove('active'));
+                        category.classList.add('active');
+                        currentCategory = category.dataset.category;
+                        renderChannels();
                     }
-                },
-                width: "100%",
-                aspectratio: "16:9",
-                autostart: true,
-                mute: false
-            });
-        }
-        const channelList = document.getElementById("channel-list");
-        channels.forEach(channel => {
-            const div = document.createElement("div");
-            div.className = "channel";
-            div.innerHTML = `<img src="${channel.logo}" alt="${channel.name}"><br>${channel.name}`;
-            div.onclick = () => loadPlayer(channel);
-            channelList.appendChild(div);
+                });
+
+                // Channel selection
+                channelsContainer.addEventListener('click', (e) => {
+                    const channel = e.target.closest('.channel');
+                    if (channel) {
+                        playChannel(channel.dataset.src);
+                    }
+                });
+
+                // Back button
+                backBtn.addEventListener('click', () => {
+                    videoContainer.classList.remove('active');
+                    if (hls) hls.destroy();
+                    videoPlayer.pause();
+                });
+
+                // Open modal button
+                openModalBtn.addEventListener('click', () => {
+                    addChannelModal.style.display = 'flex';
+                });
+
+                // Cancel button
+                cancelBtn.addEventListener('click', () => {
+                    addChannelModal.style.display = 'none';
+                });
+
+                // Confirm button
+                confirmBtn.addEventListener('click', addCustomChannel);
+
+                // Close modal when clicking outside
+                addChannelModal.addEventListener('click', (e) => {
+                    if (e.target === addChannelModal) {
+                        addChannelModal.style.display = 'none';
+                    }
+                });
+
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && videoContainer.classList.contains('active')) {
+                        videoContainer.classList.remove('active');
+                        if (hls) hls.destroy();
+                        videoPlayer.pause();
+                    }
+                    if (e.key === 'Escape' && addChannelModal.style.display === 'flex') {
+                        addChannelModal.style.display = 'none';
+                    }
+                });
+            }
+
+            // Start the app
+            init();
         });
-        // เริ่มเล่นเมื่อผู้ใช้กดปุ่ม
-        document.getElementById("startPlayback").onclick = () => {
-            loadPlayer(channels[0]); // โหลดช่องแรก
-            document.getElementById("startPlayback").style.display = "none"; // ซ่อนปุ่ม
-        };
     </script>
 </body>
-</html>
+</html> 
