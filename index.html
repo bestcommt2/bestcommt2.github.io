@@ -1,98 +1,216 @@
-<!doctype html>
-<html lang="th">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Login</title>
-  <style>
-    :root{
-      --bg1:#0f172a;
-      --bg2:#0b1220;
-      --accent1:#7c3aed;
-      --accent2:#06b6d4;
-      --muted: rgba(255,255,255,0.7);
-      --error:#ef4444;
-      --success:#10b981;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;display:grid;place-items:center;height:100vh;
-      font-family:Inter,Arial,sans-serif;
-      background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#fff;
-    }
-    .card{
-      width:100%;max-width:400px;background:rgba(255,255,255,0.03);
-      border-radius:16px;padding:28px;box-shadow:0 10px 25px rgba(0,0,0,0.5);
-      backdrop-filter: blur(8px);
-    }
-    h1{margin:0 0 20px;font-size:24px;text-align:center}
-    label{display:block;font-size:14px;color:var(--muted);margin-bottom:6px}
-    .field{margin-bottom:16px;position:relative}
-    input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);
-      background:rgba(255,255,255,0.05);color:#fff;font-size:15px;outline:none}
-    input:focus{border-color:var(--accent1);box-shadow:0 0 0 2px rgba(124,58,237,0.4)}
-    .btn{width:100%;padding:12px;border:none;border-radius:10px;font-size:15px;font-weight:600;
-      background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff;cursor:pointer}
-    .message{margin-top:12px;padding:12px;border-radius:10px;font-weight:600;font-size:14px}
-    .message.error{background:rgba(239,68,68,0.12);color:var(--error)}
-    .message.success{background:rgba(16,185,129,0.12);color:var(--success)}
-  </style>
-</head>
-<body>
-  <div class="card">
-    <h1>เข้าสู่ระบบ</h1>
-    <form id="loginForm" onsubmit="return handleSubmit(event)">
-      <label for="email">อีเมล</label>
-      <div class="field">
-        <input id="email" type="email" placeholder="you@example.com" required>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>สถิตอยู่ในใจตราบนิรันดร์ น้อมสำนักในพระมหากรุณาธิคุณเป็นล้นพ้นอันหาที่สุดมิได้ ข้าพระพุทธเจ้า กรกฎ วิริยะ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body, figure, a, div {
+        margin: 0;
+        padding: 0;
+        -ms-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-color: inherit;
+        /* font */
+        font-family: 'Kanit', sans-serif;
+      }
+      html, body {
+        /* สีพื้นหลัง */
+        background-color: #000;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      figure a {
+        width: 100%;
+        height: 100%;
+        float: left;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-width: 1px;
+        border-style: solid;
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+        -ms-transition: all 1s ease-out;
+        transition: all 1s ease-out;
+        /* ถ้ามีการเปลี่ยนขนาดของรูปภาพ ควรเปลี่ยนตัวเลข 100 เป็นครึ่งหนึ่งของขนาดรูปภาพด้วย */
+        box-shadow: 0 0 100px 100px rgba(0,0,0,0.7) inset;
+        -moz-box-shadow: 0 0 100px 100px rgba(0,0,0,0.7) inset;
+        -webkit-box-shadow: 0 0 100px 100px rgba(0,0,0,0.7) inset;
+      }
+      figure a:hover {
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        -webkit-box-shadow: none;
+      }
+      figure {
+        float: left;
+        display: inline-block;
+      }
+      #warper {
+        position: relative;
+        overflow: hidden;
+        border-width: 1px;
+        border-style: solid;
+        /* สีกรอบรูป */
+        border-color: #000;
+      }
+      .preview {
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        position: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        -ms-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+      }
+      /* ข้อความลิงค์ไปหน้าหลัก */
+      .next {
+        z-index: 1;
+        color: #FFF;
+        position: absolute;
+        right: 2em;
+        bottom: 2em;
+        font-size: 2em;
+        text-decoration: none;
+        background-color: rgba(0,0,0,0.2);
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        padding: 0.5em 1em;
+        -webkit-transition: background-color 0.5s ease-out;
+        -moz-transition: background-color 0.5s ease-out;
+        -ms-transition: background-color 0.5s ease-out;
+        transition: background-color 0.5s ease-out;
+      }
+      .next:hover {
+        background-color: rgba(0,0,0,0.7);
+      }
+      /* iphone and small device */
+      @media only screen and (max-width: 480px) {
+        .next {
+          right: 10px;
+          bottom: 10px;
+          font-size: 1.5em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="body">
+      <div id="warper">
+        <figure><a style="background-image:url(img/0.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/1.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/2.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/3.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/4.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/5.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/6.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/7.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/8.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/9.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/10.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/11.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/12.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/13.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/14.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/15.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/16.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/17.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/18.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/19.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/20.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/21.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/22.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/23.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/24.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/25.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/26.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/27.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/28.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/29.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/30.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/31.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/32.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/33.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/34.jpg)"></a></figure>
+        <figure><a style="background-image:url(img/35.jpg)"></a></figure>
       </div>
-      <label for="password">รหัสผ่าน</label>
-      <div class="field">
-        <input id="password" type="password" placeholder="••••••••" required>
-      </div>
-      <button class="btn" type="submit">เข้าสู่ระบบ IPTV BY FUCKIDPLUS3.0</button>
-      <div id="msg"></div>
-    </form>
-  </div>
-  <script>
-    const VALID_EMAIL = 'fuckid@gmail.com';
-    const VALID_PASS = 'admin';
-    const REDIRECT_URL = 'https://bestcommt2.github.io/tvonline.html';
-
-    function showMessage(text,type){
-      const msg = document.getElementById('msg');
-      msg.innerHTML = '';
-      const div = document.createElement('div');
-      div.className = 'message ' + type;
-      div.textContent = text;
-      msg.appendChild(div);
-    }
-
-    function handleSubmit(e){
-      e.preventDefault();
-      const email = document.getElementById('email').value.trim();
-      const pass = document.getElementById('password').value;
-      const emailOk = email.toLowerCase() === VALID_EMAIL.toLowerCase();
-      const passOk = pass === VALID_PASS;
-
-      if(emailOk && passOk){
-        showMessage('เข้าสู่ระบบสำเร็จ กำลังนำทาง…','success');
-        window.location.href = REDIRECT_URL;
-        return true;
-      }
-      if(!emailOk && passOk){
-        showMessage('เมลไม่ถูกต้อง','error');
-        return false;
-      }
-      if(emailOk && !passOk){
-        showMessage('password ของคุณไม่ถูกต้อง','error');
-        return false;
-      }
-      if(!emailOk && !passOk){
-        showMessage('ลองใหม่อีกครั้ง password และเมลไม่ถูกต้อง','error');
-        return false;
-      }
-    }
-  </script>
-</body>
+    </div>
+    <!-- ระบุ URL และหน้าที่ต้องการ เช่น index.php -->
+    <a class=next href="https://bestcommt2.github.io/Login.html">เข้าสู่เว็บไซต์...</a>
+    <script src="gajax.js"></script>
+    <script>
+      /* ขนาดรูปเล็กสูงสุด */
+      var thumb_width = 200;
+      /* จำนวนแถวของรูปภาพ */
+      var rows = 4;
+      /* slide show */
+      var drag = false,
+        warper = $G('warper'),
+        images = warper.elems('a'),
+        cols = Math.floor(images.length / rows),
+        figure_height = (100 / rows) + '%',
+        figure_width = (100 / cols) + '%',
+        ch = document.viewport.getHeight(),
+        cw = document.viewport.getWidth(),
+        w = (thumb_width * cols) * ch / (thumb_width * rows);
+      warper.style.height = ch + 'px';
+      warper.style.width = w + 'px';
+      warper.style.left = ((cw - w) / 2) + 'px';
+      var preview = $G(document.body).create('div');
+      preview.className = 'preview';
+      preview.style.left = (cw / 2) + 'px';
+      preview.style.top = (ch / 2) + 'px';
+      preview.setStyle('opacity', 0);
+      forEach(warper.elems('figure'), function () {
+        this.style.height = figure_height;
+        this.style.width = figure_width;
+      });
+      preview.addEvent("mouseup", function (e) {
+        this.style.left = (cw / 2) + 'px';
+        this.style.top = (ch / 2) + 'px';
+        this.style.width = 0;
+        this.style.height = 0;
+        preview.setStyle('opacity', 0);
+      });
+      var doClick = function (e) {
+        if (!drag) {
+          var hs = /url\(["'"](.*)["'"]\)/.exec(this.getStyle('backgroundImage'));
+          if (hs) {
+            preview.setStyle('backgroundImage', 'url(' + hs[1] + ')');
+            preview.style.left = 0;
+            preview.style.top = 0;
+            preview.style.width = cw + 'px';
+            preview.style.height = ch + 'px';
+            preview.setStyle('opacity', 1);
+          }
+        }
+      };
+      forEach(images, function () {
+        $G(this).addEvent("mouseup", doClick);
+      });
+      new GDragMove('warper', 'body', {
+        moveDrag: function () {
+          drag = true;
+          return true;
+        },
+        endDrag: function () {
+          drag = false;
+          return true;
+        }
+      });
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+  </body>
 </html>
