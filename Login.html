@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login</title>
+  <style>
+    :root{
+      --bg1:#0f172a;
+      --bg2:#0b1220;
+      --accent1:#7c3aed;
+      --accent2:#06b6d4;
+      --muted: rgba(255,255,255,0.7);
+      --error:#ef4444;
+      --success:#10b981;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;display:grid;place-items:center;height:100vh;
+      font-family:Inter,Arial,sans-serif;
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#fff;
+    }
+    .card{
+      width:100%;max-width:400px;background:rgba(255,255,255,0.03);
+      border-radius:16px;padding:28px;box-shadow:0 10px 25px rgba(0,0,0,0.5);
+      backdrop-filter: blur(8px);
+    }
+    h1{margin:0 0 20px;font-size:24px;text-align:center}
+    label{display:block;font-size:14px;color:var(--muted);margin-bottom:6px}
+    .field{margin-bottom:16px;position:relative}
+    input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);
+      background:rgba(255,255,255,0.05);color:#fff;font-size:15px;outline:none}
+    input:focus{border-color:var(--accent1);box-shadow:0 0 0 2px rgba(124,58,237,0.4)}
+    .btn{width:100%;padding:12px;border:none;border-radius:10px;font-size:15px;font-weight:600;
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff;cursor:pointer}
+    .message{margin-top:12px;padding:12px;border-radius:10px;font-weight:600;font-size:14px}
+    .message.error{background:rgba(239,68,68,0.12);color:var(--error)}
+    .message.success{background:rgba(16,185,129,0.12);color:var(--success)}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>เข้าสู่ระบบ</h1>
+    <form id="loginForm" onsubmit="return handleSubmit(event)">
+      <label for="email">อีเมล</label>
+      <div class="field">
+        <input id="email" type="email" placeholder="you@example.com" required>
+      </div>
+      <label for="password">รหัสผ่าน</label>
+      <div class="field">
+        <input id="password" type="password" placeholder="••••••••" required>
+      </div>
+      <button class="btn" type="submit">เข้าสู่ระบบ IPTV BY FUCKIDPLUS3.0</button>
+      <div id="msg"></div>
+    </form>
+  </div>
+  <script>
+    const VALID_EMAIL = 'fuckid@gmail.com';
+    const VALID_PASS = 'admin';
+    const REDIRECT_URL = 'https://bestcommt2.github.io/tvonline.html';
+
+    function showMessage(text,type){
+      const msg = document.getElementById('msg');
+      msg.innerHTML = '';
+      const div = document.createElement('div');
+      div.className = 'message ' + type;
+      div.textContent = text;
+      msg.appendChild(div);
+    }
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const pass = document.getElementById('password').value;
+      const emailOk = email.toLowerCase() === VALID_EMAIL.toLowerCase();
+      const passOk = pass === VALID_PASS;
+
+      if(emailOk && passOk){
+        showMessage('เข้าสู่ระบบสำเร็จ กำลังนำทาง…','success');
+        window.location.href = REDIRECT_URL;
+        return true;
+      }
+      if(!emailOk && passOk){
+        showMessage('เมลไม่ถูกต้อง','error');
+        return false;
+      }
+      if(emailOk && !passOk){
+        showMessage('password ของคุณไม่ถูกต้อง','error');
+        return false;
+      }
+      if(!emailOk && !passOk){
+        showMessage('ลองใหม่อีกครั้ง password และเมลไม่ถูกต้อง','error');
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
