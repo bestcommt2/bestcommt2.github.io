@@ -14,7 +14,7 @@ https://live.thaitvstream.com/play/thainews/index.m3u8
 #EXTINF:-0 tvg-id="" tvg-name="" tvg-logo="https://i.ibb.co/Frv7h5L/logo.png" group-title="สถานีทองถิ่นไทย", บางกอก channel
 https://live2.thaitvstream.com/play/gochannel/index.m3u8
 #EXTINF:-0 tvg-id="" tvg-name="" tvg-logo="https://thaitvstream.com/streaming/chiangrai/chiangrai.png" group-title="สถานีทองถิ่นไทย", chiangrai
-https://live.thaitvstream.com/play/chiangrai/index.m3u8
+https://live.thaitvstream.com/play/chiangrai/index.m3u8a
 #EXTINF:-1 group-title="สถานีทองถิ่นไทย" tvg-logo="https://raw.githubusercontent.com/KOGOCUNG/MOVIE/refs/heads/main/IMG_20250215_155454.png",Dopa Channel
 http://dopachannel.truegse.com/live/dopatv03.m3u8
 
