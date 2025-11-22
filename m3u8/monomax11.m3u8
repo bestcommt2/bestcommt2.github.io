@@ -1,4 +1,5 @@
 #EXTM3U
 #EXT-X-VERSION:3
-#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2200000
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=auto
+http://safetv.vip:8080/live/8gULQeqH3I/kbuahRdUJV/130728.m3u8
 http://ringo4532.xyz:80/play/live.php?mac=00:1A:79:D2:27:8C&stream=1776271&extension=m3u8
